@@ -1,0 +1,101 @@
+{
+  "placements": {
+    "hk100": 1,
+    "gz100": 1,
+    "sz100": 1,
+    "glg": 3,
+    "lanzhou": 5,
+    "qingdao": 5,
+    "changchun": 5,
+    "dalian": 5,
+    "wuxi": 3,
+    "xiamen": 1,
+    "chongli": 7,
+    "qilian": 7,
+    "wulong": 7,
+    "siguniang": 8,
+    "ninghai": 10,
+    "jeju": 10,
+    "yunqiu": 9,
+    "wugong": 9,
+    "lantau": 11,
+    "mogan": 11,
+    "yangshuo": 11
+  },
+  "trainings": [],
+  "library": [
+    {
+      "id": "interval",
+      "name": "间歇",
+      "cat": "路跑",
+      "tone": "orange",
+      "duration": "8×400m",
+      "desc": "高强度重复跑，提升最大摄氧与速度能力"
+    },
+    {
+      "id": "tempo",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "amber",
+      "duration": "40min",
+      "desc": "接近乳酸阈值的稳定配速，提升耐力门槛"
+    },
+    {
+      "id": "longrun",
+      "name": "长距离",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "25km",
+      "desc": "稳定低强度长距离，夯实有氧基础"
+    },
+    {
+      "id": "easy",
+      "name": "轻松跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "45min",
+      "desc": "恢复性慢跑，促进血液循环与恢复"
+    },
+    {
+      "id": "hill",
+      "name": "爬坡",
+      "cat": "越野",
+      "tone": "purple",
+      "duration": "10×坡",
+      "desc": "坡道重复训练，强化下肢力量与心肺"
+    },
+    {
+      "id": "trail",
+      "name": "越野长距离",
+      "cat": "越野",
+      "tone": "purple",
+      "duration": "30km",
+      "desc": "山地技术地形长距离，模拟比赛场景"
+    },
+    {
+      "id": "strength",
+      "name": "力量",
+      "cat": "通用",
+      "tone": "blue",
+      "duration": "40min",
+      "desc": "核心与下肢力量训练，预防伤病"
+    },
+    {
+      "id": "stretch",
+      "name": "拉伸",
+      "cat": "通用",
+      "tone": "green",
+      "duration": "15min",
+      "desc": "动态/静态拉伸，提升关节活动度"
+    },
+    {
+      "id": "recovery",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "duration": "休息日",
+      "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
+    }
+  ],
+  "_auth": "d37eaded5d98e65e360a90767cde6ea4d7f6c5d82935de424ed85fa0f2e73efc"
+}
