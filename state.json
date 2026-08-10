@@ -22,17 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "3mz0izemsnir29y",
-      "libId": "longrun",
-      "name": "长距离",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-12",
-      "duration": "25km"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
