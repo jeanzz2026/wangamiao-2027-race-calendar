@@ -24,15 +24,6 @@
   },
   "trainings": [
     {
-      "uid": "vshe58umso4s2fh",
-      "libId": "hill",
-      "name": "爬坡",
-      "cat": "越野",
-      "tone": "purple",
-      "date": "2026-08-12",
-      "duration": "10×坡"
-    },
-    {
       "uid": "p75vqaimso4s3ng",
       "libId": "strength",
       "name": "力量",
