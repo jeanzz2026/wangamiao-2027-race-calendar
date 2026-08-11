@@ -22,17 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "0d4zns0msnwo8fh",
-      "libId": "easy",
-      "name": "轻松跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-11",
-      "duration": "45min"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
