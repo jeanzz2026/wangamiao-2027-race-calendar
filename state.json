@@ -40,6 +40,15 @@
       "tone": "purple",
       "date": "2026-08-12",
       "duration": "10×坡"
+    },
+    {
+      "uid": "p75vqaimso4s3ng",
+      "libId": "strength",
+      "name": "力量",
+      "cat": "通用",
+      "tone": "blue",
+      "date": "2026-08-13",
+      "duration": "40min"
     }
   ],
   "library": [
