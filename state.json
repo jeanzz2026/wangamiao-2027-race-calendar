@@ -24,15 +24,6 @@
   },
   "trainings": [
     {
-      "uid": "zt3xtv3msq7is36",
-      "libId": "interval",
-      "name": "间歇",
-      "cat": "路跑",
-      "tone": "orange",
-      "date": "2026-01-26",
-      "duration": "8×400m"
-    },
-    {
       "uid": "4umcpqumsq7itao",
       "libId": "tempo",
       "name": "节奏跑",
