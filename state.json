@@ -40,6 +40,15 @@
       "tone": "amber",
       "date": "2026-08-10",
       "duration": "40min"
+    },
+    {
+      "uid": "g33f74omsq6j7dj",
+      "libId": "longrun",
+      "name": "长距离",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-10",
+      "duration": "25km"
     }
   ],
   "library": [
