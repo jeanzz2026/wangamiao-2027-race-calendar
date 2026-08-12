@@ -49,6 +49,15 @@
       "tone": "green",
       "date": "2026-08-25",
       "duration": "休息日"
+    },
+    {
+      "uid": "yfnz25ymsq8b3fk",
+      "libId": "trail",
+      "name": "越野长距离",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-08-24",
+      "duration": "30km"
     }
   ],
   "library": [
