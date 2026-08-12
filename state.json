@@ -22,16 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "4uya71lmsq6ntcm",
-      "libId": "custom",
-      "name": "test",
-      "cat": "路跑",
-      "tone": "blue",
-      "date": "2026-08-10"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
