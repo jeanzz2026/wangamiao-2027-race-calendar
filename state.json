@@ -58,6 +58,15 @@
       "tone": "purple",
       "date": "2026-08-24",
       "duration": "30km"
+    },
+    {
+      "uid": "r2qsx7hmsq8b6o0",
+      "libId": "longrun",
+      "name": "长距离",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-12",
+      "duration": "25km"
     }
   ],
   "library": [
