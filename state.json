@@ -40,6 +40,15 @@
       "tone": "green",
       "date": "2026-08-25",
       "duration": "15min"
+    },
+    {
+      "uid": "vdn3bgvmsq8b14o",
+      "libId": "recovery",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-25",
+      "duration": "休息日"
     }
   ],
   "library": [
