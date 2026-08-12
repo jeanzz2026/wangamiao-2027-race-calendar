@@ -22,53 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "jr5ekvemsq8axrc",
-      "libId": "strength",
-      "name": "力量",
-      "cat": "通用",
-      "tone": "blue",
-      "date": "2026-08-24",
-      "duration": "40min"
-    },
-    {
-      "uid": "aal7ob6msq8az9u",
-      "libId": "stretch",
-      "name": "拉伸",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-25",
-      "duration": "15min"
-    },
-    {
-      "uid": "vdn3bgvmsq8b14o",
-      "libId": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-25",
-      "duration": "休息日"
-    },
-    {
-      "uid": "yfnz25ymsq8b3fk",
-      "libId": "trail",
-      "name": "越野长距离",
-      "cat": "越野",
-      "tone": "purple",
-      "date": "2026-08-24",
-      "duration": "30km"
-    },
-    {
-      "uid": "r2qsx7hmsq8b6o0",
-      "libId": "longrun",
-      "name": "长距离",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-12",
-      "duration": "25km"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
