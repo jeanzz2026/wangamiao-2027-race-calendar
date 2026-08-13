@@ -22,17 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "w6n9phbmsro6dgu",
-      "libId": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-13",
-      "duration": "休息日"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
