@@ -25,14 +25,6 @@
   "trainings": [],
   "library": [
     {
-      "id": "tempo",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "amber",
-      "duration": "40min",
-      "desc": "接近乳酸阈值的稳定配速，提升耐力门槛"
-    },
-    {
       "id": "longrun",
       "name": "长距离",
       "cat": "路跑",
