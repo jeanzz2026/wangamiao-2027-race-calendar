@@ -22,35 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "wd9sw2imsri8nub",
-      "libId": "stretch",
-      "name": "拉伸",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-13",
-      "duration": "15min"
-    },
-    {
-      "uid": "czk2vtsmsri8onm",
-      "libId": "stretch",
-      "name": "拉伸",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-13",
-      "duration": "15min"
-    },
-    {
-      "uid": "dm80abvmsri8piy",
-      "libId": "stretch",
-      "name": "拉伸",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-13",
-      "duration": "15min"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
