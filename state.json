@@ -22,7 +22,17 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [],
+  "trainings": [
+    {
+      "uid": "w6n9phbmsro6dgu",
+      "libId": "recovery",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-13",
+      "duration": "休息日"
+    }
+  ],
   "library": [
     {
       "id": "interval",
@@ -87,14 +97,6 @@
       "tone": "green",
       "duration": "15min",
       "desc": "动态/静态拉伸，提升关节活动度"
-    },
-    {
-      "id": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "duration": "休息日",
-      "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
     }
   ],
   "_auth": "d37eaded5d98e65e360a90767cde6ea4d7f6c5d82935de424ed85fa0f2e73efc",
