@@ -22,7 +22,17 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [],
+  "trainings": [
+    {
+      "uid": "wd9sw2imsri8nub",
+      "libId": "stretch",
+      "name": "拉伸",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-13",
+      "duration": "15min"
+    }
+  ],
   "library": [
     {
       "id": "interval",
