@@ -40,6 +40,15 @@
       "tone": "green",
       "date": "2026-08-13",
       "duration": "15min"
+    },
+    {
+      "uid": "dm80abvmsri8piy",
+      "libId": "stretch",
+      "name": "拉伸",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-13",
+      "duration": "15min"
     }
   ],
   "library": [
