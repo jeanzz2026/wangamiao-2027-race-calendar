@@ -87,6 +87,14 @@
       "tone": "green",
       "duration": "15min",
       "desc": "动态/静态拉伸，提升关节活动度"
+    },
+    {
+      "id": "r9vic8umsrid8pm",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "充分休息使身体恢复",
+      "custom": true
     }
   ],
   "_auth": "d37eaded5d98e65e360a90767cde6ea4d7f6c5d82935de424ed85fa0f2e73efc",
