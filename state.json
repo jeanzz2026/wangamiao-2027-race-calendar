@@ -49,6 +49,15 @@
       "tone": "acid",
       "date": "2026-08-16",
       "duration": "25km"
+    },
+    {
+      "uid": "ymmgoxbmsuliqvy",
+      "libId": "easy",
+      "name": "轻松跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-16",
+      "duration": "45min"
     }
   ],
   "library": [
