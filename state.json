@@ -59,6 +59,15 @@
       "tone": "green",
       "date": "2026-08-16",
       "duration": "15min"
+    },
+    {
+      "uid": "puf0vcrmsuqmiie",
+      "libId": "interval",
+      "name": "间歇",
+      "cat": "路跑",
+      "tone": "orange",
+      "date": "2026-08-12",
+      "duration": "8×400m"
     }
   ],
   "library": [
