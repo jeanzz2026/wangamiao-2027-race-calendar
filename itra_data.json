@@ -1,0 +1,24 @@
+{
+  "runnerId": 3995441,
+  "name": "Wang YAYE",
+  "nationality": "China",
+  "age": 43,
+  "ageGroup": "F 40-44",
+  "performanceIndex": 445,
+  "level": "Intermediate 3",
+  "worldTop": "15.81%",
+  "generalStats": {
+    "finishedRaces": 6,
+    "totalDistance": "196.7 km",
+    "totalRaceTime": "42:47:23",
+    "longestRaceDistance": "53.67 km",
+    "raceWithHighElevation": "2281 m"
+  },
+  "ranking": {
+    "bestRaceRanking": 1,
+    "bestRaceRankingDate": "2025-08-24",
+    "bestRaceRankingTitle": "XINJIANG BUERJIN KANAS ULTRA - KANAS STATION - 21KM"
+  },
+  "profileUrl": "https://itra.run/RunnerSpace/yaye.wang.3995441",
+  "updatedAt": "2026-08-15T15:26:28Z"
+}
