@@ -98,6 +98,15 @@
       "tone": "amber",
       "date": "2026-08-13",
       "duration": "40min"
+    },
+    {
+      "uid": "ci8umtmmsuqn5q6",
+      "libId": "interval",
+      "name": "间歇",
+      "cat": "路跑",
+      "tone": "orange",
+      "date": "2026-08-03",
+      "duration": "8×400m"
     }
   ],
   "library": [
