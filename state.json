@@ -76,7 +76,8 @@
       "cat": "路跑",
       "tone": "acid",
       "date": "2026-08-10",
-      "duration": "25km"
+      "duration": "25km",
+      "done": true
     },
     {
       "uid": "qrmx5g5msuqmlkl",
