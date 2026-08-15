@@ -76,6 +76,15 @@
       "tone": "purple",
       "date": "2026-08-16",
       "duration": "30km"
+    },
+    {
+      "uid": "ntoyyemmsuliyce",
+      "libId": "strength",
+      "name": "力量",
+      "cat": "通用",
+      "tone": "blue",
+      "date": "2026-08-16",
+      "duration": "40min"
     }
   ],
   "library": [
