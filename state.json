@@ -22,17 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "qh2dij8msuiokkv",
-      "libId": "strength",
-      "name": "力量",
-      "cat": "通用",
-      "tone": "blue",
-      "date": "2026-08-16",
-      "duration": "40min"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
@@ -107,5 +97,5 @@
       "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
     }
   ],
-  "theme": "misty"
+  "theme": "dark"
 }
