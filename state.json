@@ -31,6 +31,15 @@
       "tone": "orange",
       "date": "2026-08-16",
       "duration": "8×400m"
+    },
+    {
+      "uid": "v70l06rmsulin12",
+      "libId": "tempo",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "amber",
+      "date": "2026-08-16",
+      "duration": "40min"
     }
   ],
   "library": [
