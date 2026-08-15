@@ -50,6 +50,15 @@
       "tone": "orange",
       "date": "2026-08-16",
       "duration": "8×400m"
+    },
+    {
+      "uid": "5goxa33msuqmby5",
+      "libId": "stretch",
+      "name": "拉伸",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-16",
+      "duration": "15min"
     }
   ],
   "library": [
