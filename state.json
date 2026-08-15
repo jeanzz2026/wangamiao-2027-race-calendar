@@ -30,7 +30,8 @@
       "cat": "越野",
       "tone": "purple",
       "date": "2026-08-16",
-      "duration": "10×坡"
+      "duration": "10×坡",
+      "done": true
     }
   ],
   "library": [
