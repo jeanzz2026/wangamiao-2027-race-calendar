@@ -89,6 +89,15 @@
       "date": "2026-08-13",
       "duration": "40min",
       "done": true
+    },
+    {
+      "uid": "wqy5203msuqn3ty",
+      "libId": "tempo",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "amber",
+      "date": "2026-08-13",
+      "duration": "40min"
     }
   ],
   "library": [
