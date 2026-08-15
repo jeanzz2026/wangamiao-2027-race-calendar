@@ -30,7 +30,8 @@
       "cat": "路跑",
       "tone": "orange",
       "date": "2026-08-03",
-      "duration": "8×400m"
+      "duration": "8×400m",
+      "done": true
     }
   ],
   "library": [
