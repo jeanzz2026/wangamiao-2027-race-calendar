@@ -30,7 +30,8 @@
       "cat": "路跑",
       "tone": "acid",
       "date": "2026-08-15",
-      "duration": "45min"
+      "duration": "45min",
+      "done": true
     }
   ],
   "library": [
