@@ -11,6 +11,7 @@
 - 两种配色：狗狗黑 / 喵喵粉
 - 撤销上一步 / 恢复初始训练库
 - 跨设备同步：连接 GitHub 后，改动自动同步到仓库
+- 页脚 12 帧小狗行走动画（透明背景精灵图，位于版权文字上方，4s 循环）
 
 ## 使用
 
@@ -35,9 +36,21 @@
 2. 本地构建：`node node_modules/vite/bin/vite.js build`。
 3. 部署：`python deploy_rest.py`。
 
+## 更新日志
+
+### v1.0.1
+- 页脚新增 12 帧小狗行走动画：透明背景精灵图，位于版权文字【大黄经纪人工作室专属定制@2026.08】上方，4s 循环。
+- 修复部分帧白色背景残留（肚子下方封闭白底口袋）与个别帧色调偏暗问题（已统一对齐体色）。
+- 保留小狗脚下的浅色爪印底座。
+
+### v1.0.0
+- 首个正式版本。
+- 赛事日历 / 训练库管理 / 双配色 / 撤销恢复。
+- 改为「连接 GitHub（自填 Fine-grained PAT）」登录模型，源码零共享凭据，陌生人无法改计划。
+
 ## 版本
 
-当前版本 **v1.0.0**，详见 [Releases](https://github.com/jeanzz2026/wangamiao-2027-race-calendar/releases)。
+当前版本 **v1.0.1**，详见 [Releases](https://github.com/jeanzz2026/wangamiao-2027-race-calendar/releases)。
 
 ## 仓库目录说明
 
