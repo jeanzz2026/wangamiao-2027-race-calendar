@@ -94,6 +94,15 @@
       "tone": "green",
       "date": "2026-08-16",
       "duration": "15min"
+    },
+    {
+      "uid": "7vlg4pcmsulj1qf",
+      "libId": "recovery",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-16",
+      "duration": "休息日"
     }
   ],
   "library": [
