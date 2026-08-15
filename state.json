@@ -22,7 +22,17 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [],
+  "trainings": [
+    {
+      "uid": "jykdbfcmsuqd62s",
+      "libId": "trail",
+      "name": "越野长距离",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-08-16",
+      "duration": "30km"
+    }
+  ],
   "library": [
     {
       "id": "interval",
