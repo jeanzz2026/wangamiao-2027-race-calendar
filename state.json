@@ -32,6 +32,24 @@
       "date": "2026-08-16",
       "duration": "10×坡",
       "done": false
+    },
+    {
+      "uid": "h38b3v3msuqmaut",
+      "libId": "longrun",
+      "name": "长距离",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-16",
+      "duration": "25km"
+    },
+    {
+      "uid": "k5smzoimsuqmb9x",
+      "libId": "interval",
+      "name": "间歇",
+      "cat": "路跑",
+      "tone": "orange",
+      "date": "2026-08-16",
+      "duration": "8×400m"
     }
   ],
   "library": [
