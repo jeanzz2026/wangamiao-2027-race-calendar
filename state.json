@@ -77,6 +77,15 @@
       "tone": "acid",
       "date": "2026-08-10",
       "duration": "25km"
+    },
+    {
+      "uid": "qrmx5g5msuqmlkl",
+      "libId": "strength",
+      "name": "力量",
+      "cat": "通用",
+      "tone": "blue",
+      "date": "2026-08-13",
+      "duration": "40min"
     }
   ],
   "library": [
