@@ -155,6 +155,14 @@
       "cat": "路跑",
       "tone": "amber",
       "custom": true
+    },
+    {
+      "id": "heiwhydmsvfb43r",
+      "name": "LSD",
+      "cat": "路跑",
+      "tone": "purple",
+      "duration": "15km以上",
+      "custom": true
     }
   ],
   "theme": "misty"
