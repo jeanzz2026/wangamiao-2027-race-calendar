@@ -60,6 +60,14 @@
       "tone": "green",
       "date": "2026-08-11",
       "duration": "休息日"
+    },
+    {
+      "uid": "u7519e7msv589ir",
+      "libId": "custom",
+      "name": "test",
+      "cat": "路跑",
+      "tone": "amber",
+      "date": "2026-08-12"
     }
   ],
   "library": [
