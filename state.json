@@ -30,7 +30,8 @@
       "cat": "通用",
       "tone": "blue",
       "date": "2026-08-16",
-      "duration": "40min"
+      "duration": "40min",
+      "done": true
     }
   ],
   "library": [
