@@ -156,6 +156,13 @@
       "tone": "blue",
       "duration": "60分钟",
       "custom": true
+    },
+    {
+      "id": "2fjm05wmsvfa7t6",
+      "name": "间歇跑",
+      "cat": "路跑",
+      "tone": "amber",
+      "custom": true
     }
   ],
   "theme": "misty"
