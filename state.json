@@ -155,6 +155,15 @@
       "tone": "acid",
       "duration": "8-10km",
       "custom": true
+    },
+    {
+      "id": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
+      "custom": true
     }
   ],
   "theme": "misty"
