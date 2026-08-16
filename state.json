@@ -156,6 +156,15 @@
       "duration": "60分钟",
       "desc": "综合",
       "custom": true
+    },
+    {
+      "id": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
+      "custom": true
     }
   ],
   "theme": "misty"
