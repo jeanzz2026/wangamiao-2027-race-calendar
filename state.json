@@ -102,14 +102,6 @@
       "desc": "坡道重复训练，强化下肢力量与心肺"
     },
     {
-      "id": "trail",
-      "name": "越野长距离",
-      "cat": "越野",
-      "tone": "purple",
-      "duration": "30km",
-      "desc": "山地技术地形长距离，模拟比赛场景"
-    },
-    {
       "id": "stretch",
       "name": "拉伸",
       "cat": "通用",
