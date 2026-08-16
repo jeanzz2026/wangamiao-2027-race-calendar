@@ -59,6 +59,15 @@
       "tone": "purple",
       "date": "2026-08-11",
       "duration": "10×坡"
+    },
+    {
+      "uid": "zrf0fg1msv6ifja",
+      "libId": "recovery",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-12",
+      "duration": "休息日"
     }
   ],
   "library": [
