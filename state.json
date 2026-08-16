@@ -40,6 +40,15 @@
       "tone": "acid",
       "date": "2026-08-15",
       "duration": "45min"
+    },
+    {
+      "uid": "5i2spmlmsvc1gxp",
+      "libId": "strength",
+      "name": "力量",
+      "cat": "通用",
+      "tone": "blue",
+      "date": "2026-08-15",
+      "duration": "40min"
     }
   ],
   "library": [
