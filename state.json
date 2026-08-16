@@ -149,6 +149,14 @@
       "duration": "6分以下配速",
       "desc": "5km以上",
       "custom": true
+    },
+    {
+      "id": "y9g62ppmsvffufz",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "desc": "跑步机15坡度",
+      "custom": true
     }
   ],
   "theme": "misty"
