@@ -94,14 +94,6 @@
   ],
   "library": [
     {
-      "id": "interval",
-      "name": "间歇",
-      "cat": "路跑",
-      "tone": "orange",
-      "duration": "8×400m",
-      "desc": "高强度重复跑，提升最大摄氧与速度能力"
-    },
-    {
       "id": "tempo",
       "name": "节奏跑",
       "cat": "路跑",
