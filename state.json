@@ -31,6 +31,15 @@
       "tone": "green",
       "date": "2026-08-16",
       "duration": "休息日"
+    },
+    {
+      "uid": "7se7yfgmsvc1fhh",
+      "libId": "easy",
+      "name": "轻松跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-15",
+      "duration": "45min"
     }
   ],
   "library": [
