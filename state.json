@@ -81,6 +81,15 @@
       "tone": "green",
       "date": "2026-08-12",
       "duration": "休息日"
+    },
+    {
+      "uid": "xwsuk1emsvf6xrt",
+      "libId": "interval",
+      "name": "间歇",
+      "cat": "路跑",
+      "tone": "orange",
+      "date": "2026-08-10",
+      "duration": "8×400m"
     }
   ],
   "library": [
