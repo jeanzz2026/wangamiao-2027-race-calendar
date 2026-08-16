@@ -69,7 +69,8 @@
       "name": "test",
       "cat": "路跑",
       "tone": "amber",
-      "date": "2026-08-12"
+      "date": "2026-08-12",
+      "done": true
     }
   ],
   "library": [
