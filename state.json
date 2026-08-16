@@ -83,15 +83,6 @@
       "duration": "休息日"
     },
     {
-      "uid": "xwsuk1emsvf6xrt",
-      "libId": "interval",
-      "name": "间歇",
-      "cat": "路跑",
-      "tone": "orange",
-      "date": "2026-08-10",
-      "duration": "8×400m"
-    },
-    {
       "uid": "xljbh2smsvf7dnr",
       "libId": "recovery",
       "name": "恢复",
