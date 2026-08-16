@@ -30,7 +30,8 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-16",
-      "duration": "休息日"
+      "duration": "休息日",
+      "done": true
     },
     {
       "uid": "7se7yfgmsvc1fhh",
@@ -51,7 +52,8 @@
       "tone": "blue",
       "date": "2026-08-15",
       "duration": "60min",
-      "note": "130"
+      "note": "130",
+      "done": true
     }
   ],
   "library": [
