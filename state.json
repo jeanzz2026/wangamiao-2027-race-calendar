@@ -178,20 +178,20 @@
       "desc": "山地技术地形长距离，模拟比赛场景"
     },
     {
-      "id": "strength",
-      "name": "力量",
-      "cat": "通用",
-      "tone": "blue",
-      "duration": "40min",
-      "desc": "核心与下肢力量训练，预防伤病"
-    },
-    {
       "id": "stretch",
       "name": "拉伸",
       "cat": "通用",
       "tone": "green",
       "duration": "15min",
       "desc": "动态/静态拉伸，提升关节活动度"
+    },
+    {
+      "id": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
+      "custom": true
     }
   ],
   "theme": "misty"
