@@ -54,6 +54,15 @@
       "duration": "60min",
       "note": "130",
       "done": true
+    },
+    {
+      "uid": "h7v1cf9msvf2od3",
+      "libId": "strength",
+      "name": "力量",
+      "cat": "通用",
+      "tone": "blue",
+      "date": "2026-08-11",
+      "duration": "40min"
     }
   ],
   "library": [
