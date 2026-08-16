@@ -30,7 +30,8 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-16",
-      "duration": "休息日"
+      "duration": "休息日",
+      "done": true
     }
   ],
   "library": [
