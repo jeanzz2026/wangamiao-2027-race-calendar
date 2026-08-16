@@ -22,17 +22,7 @@
     "mogan": 11,
     "yangshuo": 11
   },
-  "trainings": [
-    {
-      "uid": "qtl7u1hmsuqqpb6",
-      "libId": "tempo",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "amber",
-      "date": "2026-08-03",
-      "duration": "40min"
-    }
-  ],
+  "trainings": [],
   "library": [
     {
       "id": "interval",
