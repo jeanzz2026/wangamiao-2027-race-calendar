@@ -78,11 +78,11 @@
 
 ## 版本
 
-当前版本 **v1.0.3**。历史版本与发布说明见 [Releases](https://github.com/jeanzz2026/wangamiao-2027-race-calendar/releases)。
+当前版本 **v1.0.2**。历史版本与发布说明见 [Releases](https://github.com/jeanzz2026/wangamiao-2027-race-calendar/releases)。
 
 ### 更新日志
 
-#### v1.0.3（2026-08-16）
+#### v1.0.2（2026-08-16）
 - **打卡页**：打卡按钮移至每张训练卡片最底部；「已打卡」配色改为主题强调色——狗狗黑为柠檬黄底深字、喵喵粉为粉底白字，清晰可读。
 - **Banner**：「参赛·训练计划」与「2027」字号各调小 2px。
 - **云端同步修复**：登录成功时拉取 `state.json` 的 `sha`；`pushState` 遇 409 自动重拉 sha 重试一次；失败提示区分「无写入权限（需 Read and write）」与「token 已失效」。
