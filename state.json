@@ -41,7 +41,8 @@
       "cat": "路跑",
       "tone": "amber",
       "date": "2026-08-16",
-      "duration": "40min"
+      "duration": "40min",
+      "done": true
     },
     {
       "uid": "b66b2l0msv51sqd",
