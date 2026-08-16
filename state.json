@@ -192,14 +192,6 @@
       "tone": "green",
       "duration": "15min",
       "desc": "动态/静态拉伸，提升关节活动度"
-    },
-    {
-      "id": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "duration": "休息日",
-      "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
     }
   ],
   "theme": "misty"
