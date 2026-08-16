@@ -71,7 +71,7 @@
       "cat": "路跑",
       "tone": "amber",
       "date": "2026-08-12",
-      "done": true
+      "done": false
     }
   ],
   "library": [
@@ -148,5 +148,5 @@
       "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
     }
   ],
-  "theme": "misty"
+  "theme": "dark"
 }
