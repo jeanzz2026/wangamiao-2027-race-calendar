@@ -94,14 +94,6 @@
   ],
   "library": [
     {
-      "id": "hill",
-      "name": "爬坡",
-      "cat": "越野",
-      "tone": "purple",
-      "duration": "10×坡",
-      "desc": "坡道重复训练，强化下肢力量与心肺"
-    },
-    {
       "id": "stretch",
       "name": "拉伸",
       "cat": "通用",
