@@ -41,6 +41,15 @@
       "tone": "amber",
       "date": "2026-08-13",
       "duration": "40min"
+    },
+    {
+      "uid": "xky89i1msv6ic45",
+      "libId": "easy",
+      "name": "轻松跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-10",
+      "duration": "45min"
     }
   ],
   "library": [
