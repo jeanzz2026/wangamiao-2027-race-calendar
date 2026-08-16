@@ -51,6 +51,15 @@
       "tone": "acid",
       "date": "2026-08-16",
       "duration": "25km"
+    },
+    {
+      "uid": "582pek8msv53p6y",
+      "libId": "recovery",
+      "name": "恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-11",
+      "duration": "休息日"
     }
   ],
   "library": [
