@@ -149,6 +149,14 @@
       "tone": "amber",
       "desc": "跑步机15坡度",
       "custom": true
+    },
+    {
+      "id": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "desc": "真实进山户外",
+      "custom": true
     }
   ],
   "theme": "misty"
