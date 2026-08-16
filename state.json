@@ -192,6 +192,14 @@
       "tone": "green",
       "desc": "外部",
       "custom": true
+    },
+    {
+      "id": "74ytaujmsvf9bxt",
+      "name": "力量训练",
+      "cat": "通用",
+      "tone": "blue",
+      "duration": "60分钟",
+      "custom": true
     }
   ],
   "theme": "misty"
