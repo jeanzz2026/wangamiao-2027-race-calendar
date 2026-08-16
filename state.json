@@ -27,11 +27,12 @@
       "uid": "k7igsc7msv4uqpk",
       "libId": "interval",
       "name": "间歇",
-      "cat": "路跑",
+      "cat": "通用",
       "tone": "orange",
       "date": "2026-08-16",
-      "duration": "8×400m",
-      "done": false
+      "duration": "10×400m",
+      "done": false,
+      "note": "zone2"
     },
     {
       "uid": "kfdsdhnmsv51sbl",
