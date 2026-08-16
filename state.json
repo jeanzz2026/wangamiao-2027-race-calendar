@@ -50,6 +50,15 @@
       "tone": "acid",
       "date": "2026-08-10",
       "duration": "45min"
+    },
+    {
+      "uid": "eh6wiqtmsv6idqu",
+      "libId": "hill",
+      "name": "爬坡",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-08-11",
+      "duration": "10×坡"
     }
   ],
   "library": [
