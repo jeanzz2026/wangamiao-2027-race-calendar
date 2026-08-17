@@ -141,6 +141,14 @@
       "tone": "acid",
       "date": "2026-08-06",
       "duration": "8-12km"
+    },
+    {
+      "uid": "ih1gue3mswj76bu",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-07"
     }
   ],
   "library": [
