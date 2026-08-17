@@ -34,17 +34,6 @@
       "done": true
     },
     {
-      "uid": "7se7yfgmsvc1fhh",
-      "libId": "easy",
-      "name": "轻松跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-15",
-      "duration": "45min",
-      "note": "140",
-      "done": true
-    },
-    {
       "uid": "h7v1cf9msvf2od3",
       "libId": "strength",
       "name": "力量",
@@ -61,15 +50,6 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "45min"
-    },
-    {
-      "uid": "lmep6lomsvf3kdr",
-      "libId": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-12",
-      "duration": "休息日"
     },
     {
       "uid": "xljbh2smsvf7dnr",
