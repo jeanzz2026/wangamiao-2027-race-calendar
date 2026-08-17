@@ -287,6 +287,15 @@
       "tone": "amber",
       "date": "2026-08-28",
       "duration": "60分钟"
+    },
+    {
+      "uid": "ej10hz8mswjdwcl",
+      "libId": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-27",
+      "duration": "6分以下配速"
     }
   ],
   "library": [
