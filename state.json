@@ -228,6 +228,14 @@
       "tone": "amber",
       "date": "2026-08-21",
       "duration": "60分钟"
+    },
+    {
+      "uid": "r99dwafmswjc089",
+      "libId": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-08-23"
     }
   ],
   "library": [
