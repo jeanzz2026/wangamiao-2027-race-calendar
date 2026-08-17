@@ -304,6 +304,14 @@
       "tone": "acid",
       "date": "2026-08-26",
       "duration": "6分以下配速"
+    },
+    {
+      "uid": "7dwohrhmswjf8m3",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-27"
     }
   ],
   "library": [
