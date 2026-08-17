@@ -295,6 +295,15 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-29"
+    },
+    {
+      "uid": "sgcrw7mmswjf5v4",
+      "libId": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-26",
+      "duration": "6分以下配速"
     }
   ],
   "library": [
