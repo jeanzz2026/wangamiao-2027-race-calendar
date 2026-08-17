@@ -210,6 +210,15 @@
       "tone": "acid",
       "date": "2026-08-19",
       "duration": "8-12km"
+    },
+    {
+      "uid": "6bg2m6qmswjbgj3",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-20",
+      "duration": "8-12km"
     }
   ],
   "library": [
