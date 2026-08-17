@@ -151,6 +151,14 @@
       "tone": "acid",
       "date": "2026-08-13",
       "duration": "6分以下配速"
+    },
+    {
+      "uid": "hj0a0acmswj9gju",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-14"
     }
   ],
   "library": [
