@@ -24,16 +24,6 @@
   },
   "trainings": [
     {
-      "uid": "n55vkmmmsvc0zaq",
-      "libId": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-16",
-      "duration": "休息日",
-      "done": true
-    },
-    {
       "uid": "h7v1cf9msvf2od3",
       "libId": "strength",
       "name": "力量",
