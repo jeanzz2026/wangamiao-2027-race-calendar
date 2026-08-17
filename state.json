@@ -422,6 +422,14 @@
       "tone": "orange",
       "duration": "21km",
       "custom": true
+    },
+    {
+      "id": "n8tgqsamswkug16",
+      "name": "比赛-全马",
+      "cat": "路跑",
+      "tone": "orange",
+      "duration": "42km",
+      "custom": true
     }
   ],
   "theme": "misty"
