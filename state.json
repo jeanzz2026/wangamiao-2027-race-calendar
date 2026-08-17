@@ -219,6 +219,15 @@
       "tone": "acid",
       "date": "2026-08-20",
       "duration": "8-12km"
+    },
+    {
+      "uid": "oe9vkfimswjbo9f",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-08-21",
+      "duration": "60分钟"
     }
   ],
   "library": [
