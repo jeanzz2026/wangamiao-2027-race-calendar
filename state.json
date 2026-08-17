@@ -278,6 +278,15 @@
       "tone": "amber",
       "date": "2026-08-25",
       "duration": "60分钟"
+    },
+    {
+      "uid": "arqy1hymswjdpk0",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-08-28",
+      "duration": "60分钟"
     }
   ],
   "library": [
