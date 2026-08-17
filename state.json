@@ -184,6 +184,15 @@
       "tone": "amber",
       "date": "2026-08-17",
       "duration": "60分钟"
+    },
+    {
+      "uid": "xfe9to8mswjaqi0",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-18",
+      "duration": "8-12km"
     }
   ],
   "library": [
