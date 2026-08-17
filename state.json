@@ -90,6 +90,15 @@
       "tone": "green",
       "date": "2026-08-10",
       "duration": "休息日"
+    },
+    {
+      "uid": "9zvdf9smswj67pd",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-01",
+      "duration": "8-12km"
     }
   ],
   "library": [
