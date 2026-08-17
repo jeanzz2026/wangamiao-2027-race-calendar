@@ -414,6 +414,14 @@
       "tone": "orange",
       "desc": "真实参加国内外比赛",
       "custom": true
+    },
+    {
+      "id": "8kmkdowmswktven",
+      "name": "比赛-半马",
+      "cat": "路跑",
+      "tone": "orange",
+      "duration": "21km",
+      "custom": true
     }
   ],
   "theme": "misty"
