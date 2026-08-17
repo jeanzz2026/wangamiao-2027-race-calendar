@@ -312,6 +312,15 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-27"
+    },
+    {
+      "uid": "3b3b8qvmswjfc6v",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-28",
+      "duration": "8-12km"
     }
   ],
   "library": [
