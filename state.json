@@ -406,6 +406,14 @@
       "tone": "blue",
       "duration": "45-60minute",
       "custom": true
+    },
+    {
+      "id": "tnwjfkxmswklp6n",
+      "name": "比赛-越野跑",
+      "cat": "路跑",
+      "tone": "orange",
+      "desc": "真实参加国内外比赛",
+      "custom": true
     }
   ],
   "theme": "misty"
