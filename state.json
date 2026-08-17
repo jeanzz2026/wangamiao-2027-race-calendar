@@ -149,6 +149,14 @@
       "tone": "purple",
       "desc": "真实进山户外",
       "custom": true
+    },
+    {
+      "id": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "8-12km",
+      "custom": true
     }
   ],
   "theme": "misty"
