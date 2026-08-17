@@ -52,15 +52,6 @@
       "duration": "45min"
     },
     {
-      "uid": "xljbh2smsvf7dnr",
-      "libId": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-10",
-      "duration": "休息日"
-    },
-    {
       "uid": "9zvdf9smswj67pd",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
