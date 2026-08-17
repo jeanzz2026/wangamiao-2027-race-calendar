@@ -157,6 +157,13 @@
       "tone": "acid",
       "duration": "8-12km",
       "custom": true
+    },
+    {
+      "id": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "custom": true
     }
   ],
   "theme": "misty"
