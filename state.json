@@ -164,6 +164,14 @@
       "cat": "通用",
       "tone": "green",
       "custom": true
+    },
+    {
+      "id": "ur4z82cmswj5i2o",
+      "name": "游泳",
+      "cat": "路跑",
+      "tone": "blue",
+      "duration": "45-60minute",
+      "custom": true
     }
   ],
   "theme": "misty"
