@@ -324,6 +324,14 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "8-12km"
+    },
+    {
+      "uid": "v0pjispmsypoq6l",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-19"
     }
   ],
   "library": [
