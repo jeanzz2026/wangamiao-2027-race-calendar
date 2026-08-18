@@ -324,22 +324,6 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "8-12km"
-    },
-    {
-      "uid": "d3qu65mmsyonkos",
-      "libId": "custom",
-      "name": "test",
-      "cat": "路跑",
-      "tone": "crimson",
-      "date": "2026-07-06"
-    },
-    {
-      "uid": "o6hg8zamsyonqk4",
-      "libId": "custom",
-      "name": "111",
-      "cat": "路跑",
-      "tone": "red",
-      "date": "2026-07-06"
     }
   ],
   "library": [
