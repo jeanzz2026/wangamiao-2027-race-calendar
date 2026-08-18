@@ -133,7 +133,9 @@
       "name": "主动恢复",
       "cat": "通用",
       "tone": "green",
-      "date": "2026-08-14"
+      "date": "2026-08-14",
+      "done": true,
+      "pct": 100
     },
     {
       "uid": "dzlitc9mswj9t73",
