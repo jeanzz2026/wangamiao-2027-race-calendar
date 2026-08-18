@@ -134,8 +134,8 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-14",
-      "done": true,
-      "pct": 100
+      "done": false,
+      "pct": 0
     },
     {
       "uid": "dzlitc9mswj9t73",
