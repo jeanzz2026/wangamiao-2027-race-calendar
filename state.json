@@ -434,77 +434,109 @@
   ],
   "defaultLibrary": [
     {
-      "id": "interval",
-      "name": "间歇",
-      "cat": "路跑",
-      "tone": "orange",
-      "duration": "8×400m",
-      "desc": "高强度重复跑，提升最大摄氧与速度能力"
+      "id": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
+      "custom": true
     },
     {
-      "id": "tempo",
-      "name": "节奏跑",
+      "id": "2fjm05wmsvfa7t6",
+      "name": "间歇跑",
       "cat": "路跑",
       "tone": "amber",
-      "duration": "40min",
-      "desc": "接近乳酸阈值的稳定配速，提升耐力门槛"
+      "custom": true
     },
     {
-      "id": "longrun",
-      "name": "长距离",
+      "id": "heiwhydmsvfb43r",
+      "name": "LSD",
       "cat": "路跑",
-      "tone": "acid",
-      "duration": "25km",
-      "desc": "稳定低强度长距离，夯实有氧基础"
-    },
-    {
-      "id": "easy",
-      "name": "轻松跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "45min",
-      "desc": "恢复性慢跑，促进血液循环与恢复"
-    },
-    {
-      "id": "hill",
-      "name": "爬坡",
-      "cat": "越野",
       "tone": "purple",
-      "duration": "10×坡",
-      "desc": "坡道重复训练，强化下肢力量与心肺"
+      "duration": "15km以上",
+      "custom": true
     },
     {
-      "id": "trail",
-      "name": "越野长距离",
-      "cat": "越野",
-      "tone": "purple",
-      "duration": "30km",
-      "desc": "山地技术地形长距离，模拟比赛场景"
-    },
-    {
-      "id": "strength",
-      "name": "力量",
+      "id": "81hw601msvfcy51",
+      "name": "GYM",
       "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
+      "custom": true
+    },
+    {
+      "id": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
+      "custom": true
+    },
+    {
+      "id": "y9g62ppmsvffufz",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "desc": "跑步机15坡度",
+      "custom": true
+    },
+    {
+      "id": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "desc": "真实进山户外",
+      "custom": true
+    },
+    {
+      "id": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "8-12km",
+      "custom": true
+    },
+    {
+      "id": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "custom": true
+    },
+    {
+      "id": "ur4z82cmswj5i2o",
+      "name": "游泳",
+      "cat": "游泳",
       "tone": "blue",
-      "duration": "40min",
-      "desc": "核心与下肢力量训练，预防伤病"
+      "duration": "45-60minute",
+      "custom": true
     },
     {
-      "id": "stretch",
-      "name": "拉伸",
-      "cat": "通用",
-      "tone": "green",
-      "duration": "15min",
-      "desc": "动态/静态拉伸，提升关节活动度"
+      "id": "tnwjfkxmswklp6n",
+      "name": "比赛-越野跑",
+      "cat": "越野",
+      "tone": "orange",
+      "desc": "真实参加国内外比赛",
+      "custom": true
     },
     {
-      "id": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "duration": "休息日",
-      "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
+      "id": "8kmkdowmswktven",
+      "name": "比赛-半马",
+      "cat": "路跑",
+      "tone": "orange",
+      "duration": "21km",
+      "custom": true
+    },
+    {
+      "id": "n8tgqsamswkug16",
+      "name": "比赛-全马",
+      "cat": "路跑",
+      "tone": "orange",
+      "duration": "42km",
+      "custom": true
     }
   ],
-  "theme": "misty"
+  "theme": "dark"
 }
