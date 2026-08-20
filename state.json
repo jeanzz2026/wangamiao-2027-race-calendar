@@ -328,15 +328,6 @@
       "duration": "8-12km"
     },
     {
-      "uid": "flugb57mt16fslc",
-      "libId": "heiwhydmsvfb43r",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "date": "2026-07-14",
-      "duration": "15km以上"
-    },
-    {
       "uid": "rxd5zq5mt16ftdq",
       "libId": "81hw601msvfcy51",
       "name": "GYM",
@@ -894,15 +885,6 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100
-    },
-    "flugb57mt16fslc": {
-      "uid": "flugb57mt16fslc",
-      "date": "2026-07-14",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "duration": "15km以上",
       "pct": 100
     },
     "rxd5zq5mt16ftdq": {
