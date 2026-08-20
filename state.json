@@ -233,14 +233,6 @@
       "date": "2026-08-30"
     },
     {
-      "uid": "tq1uaiwmswjdbmj",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-24"
-    },
-    {
       "uid": "7dmqyo9mswjdhqq",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
@@ -753,14 +745,6 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
-    },
-    "tq1uaiwmswjdbmj": {
-      "uid": "tq1uaiwmswjdbmj",
-      "date": "2026-08-24",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
       "pct": 0
     },
     "7dmqyo9mswjdhqq": {
