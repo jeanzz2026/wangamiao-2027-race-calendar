@@ -233,15 +233,6 @@
       "date": "2026-08-30"
     },
     {
-      "uid": "7dmqyo9mswjdhqq",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-25",
-      "duration": "8-12km"
-    },
-    {
       "uid": "arqy1hymswjdpk0",
       "libId": "81hw601msvfcy51",
       "name": "GYM",
@@ -745,15 +736,6 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
-    },
-    "7dmqyo9mswjdhqq": {
-      "uid": "7dmqyo9mswjdhqq",
-      "date": "2026-08-25",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "8-12km",
       "pct": 0
     },
     "arqy1hymswjdpk0": {
