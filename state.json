@@ -328,15 +328,6 @@
       "duration": "8-12km"
     },
     {
-      "uid": "rxd5zq5mt16ftdq",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-07-14",
-      "duration": "60分钟"
-    },
-    {
       "uid": "t34jp2rmt16g2iq",
       "libId": "iwzymilmswj35hd",
       "name": "全休",
@@ -885,16 +876,6 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100
-    },
-    "rxd5zq5mt16ftdq": {
-      "uid": "rxd5zq5mt16ftdq",
-      "date": "2026-07-14",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
       "pct": 100
     },
     "t34jp2rmt16g2iq": {
