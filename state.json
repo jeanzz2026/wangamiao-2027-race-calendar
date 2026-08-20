@@ -242,15 +242,6 @@
       "duration": "8-12km"
     },
     {
-      "uid": "yzr26hemswjdj05",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-08-25",
-      "duration": "60分钟"
-    },
-    {
       "uid": "arqy1hymswjdpk0",
       "libId": "81hw601msvfcy51",
       "name": "GYM",
@@ -754,16 +745,6 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 0
-    },
-    "yzr26hemswjdj05": {
-      "uid": "yzr26hemswjdj05",
-      "date": "2026-08-25",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
       "pct": 0
     },
     "arqy1hymswjdpk0": {
