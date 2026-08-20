@@ -352,6 +352,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-07-14"
+    },
+    {
+      "uid": "2v3n6aymt16g6o8",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-07-14"
     }
   ],
   "library": [
@@ -905,6 +913,15 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
+      "pct": 100
+    },
+    "2v3n6aymt16g6o8": {
+      "uid": "2v3n6aymt16g6o8",
+      "date": "2026-07-14",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
       "pct": 100
     }
   }
