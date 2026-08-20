@@ -326,14 +326,6 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "8-12km"
-    },
-    {
-      "uid": "bufxz8kmt0tnd1v",
-      "libId": "y9g62ppmsvffufz",
-      "name": "爬坡训练",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-07-07"
     }
   ],
   "library": [
@@ -859,15 +851,6 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100
-    },
-    "bufxz8kmt0tnd1v": {
-      "uid": "bufxz8kmt0tnd1v",
-      "date": "2026-07-07",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
       "pct": 100
     }
   }
