@@ -309,6 +309,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-23"
+    },
+    {
+      "uid": "r829kh2mt1mnkzg",
+      "libId": "custom",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-08-24"
     }
   ],
   "library": [
@@ -817,6 +825,14 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
+      "pct": 0
+    },
+    "r829kh2mt1mnkzg": {
+      "uid": "r829kh2mt1mnkzg",
+      "date": "2026-08-24",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
       "pct": 0
     }
   }
