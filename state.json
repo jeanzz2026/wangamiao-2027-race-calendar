@@ -650,6 +650,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6分以下配速",
+      "desc": "5km以上",
       "pct": 100
     },
     "hj0a0acmswj9gju": {
@@ -658,6 +659,7 @@
       "name": "主动恢复",
       "cat": "通用",
       "tone": "green",
+      "desc": "外部",
       "pct": 100
     },
     "dzlitc9mswj9t73": {
@@ -684,6 +686,7 @@
       "cat": "通用",
       "tone": "amber",
       "duration": "60分钟",
+      "desc": "综合",
       "pct": 100
     },
     "q1dlmjemswjaitl": {
@@ -701,6 +704,7 @@
       "cat": "通用",
       "tone": "amber",
       "duration": "60分钟",
+      "desc": "综合",
       "pct": 100
     },
     "xfe9to8mswjaqi0": {
@@ -718,6 +722,7 @@
       "name": "主动恢复",
       "cat": "通用",
       "tone": "green",
+      "desc": "外部",
       "pct": 100
     },
     "q27qsaimswjbe1q": {
@@ -745,6 +750,7 @@
       "cat": "通用",
       "tone": "amber",
       "duration": "60分钟",
+      "desc": "综合",
       "pct": 0
     },
     "r99dwafmswjc089": {
@@ -753,6 +759,7 @@
       "name": "进山训练",
       "cat": "越野",
       "tone": "purple",
+      "desc": "真实进山户外",
       "pct": 0
     },
     "8gebzj2mswjcg2a": {
@@ -761,6 +768,7 @@
       "name": "进山训练",
       "cat": "越野",
       "tone": "purple",
+      "desc": "真实进山户外",
       "pct": 0
     },
     "63p82qemswjcz7v": {
@@ -795,6 +803,7 @@
       "cat": "通用",
       "tone": "amber",
       "duration": "60分钟",
+      "desc": "综合",
       "pct": 0
     },
     "arqy1hymswjdpk0": {
@@ -804,6 +813,7 @@
       "cat": "通用",
       "tone": "amber",
       "duration": "60分钟",
+      "desc": "综合",
       "pct": 0
     },
     "fqg0gl2mswjecxo": {
@@ -821,6 +831,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6分以下配速",
+      "desc": "5km以上",
       "pct": 0
     },
     "3b3b8qvmswjfc6v": {
@@ -853,9 +864,10 @@
     "bufxz8kmt0tnd1v": {
       "uid": "bufxz8kmt0tnd1v",
       "date": "2026-07-07",
-      "name": "爬坡训练",
-      "cat": "通用",
-      "tone": "amber",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "8-12km",
       "pct": 100
     }
   }
