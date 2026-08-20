@@ -326,15 +326,6 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "8-12km"
-    },
-    {
-      "uid": "qxq1vq2mt11ab18",
-      "libId": "ur4z82cmswj5i2o",
-      "name": "游泳",
-      "cat": "游泳",
-      "tone": "blue",
-      "date": "2026-07-27",
-      "duration": "45-60minute"
     }
   ],
   "library": [
@@ -860,15 +851,6 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100
-    },
-    "qxq1vq2mt11ab18": {
-      "uid": "qxq1vq2mt11ab18",
-      "date": "2026-07-27",
-      "name": "游泳",
-      "cat": "游泳",
-      "tone": "blue",
-      "duration": "45-60minute",
       "pct": 100
     }
   }
