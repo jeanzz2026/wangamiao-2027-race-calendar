@@ -36,7 +36,7 @@
 ### 4. ITRA 数据面板
 - 展示跑者 **Performance Index**（当前 445）、等级（Intermediate 3）、World Top 排名等。
 - 完赛数、总距离、总用时、总爬升、最长距离、最佳排名（含赛事名与日期）等统计。
-- 含头像、ITRA 主页链接与数据更新时间；数据来自 `itra_data.json`，可定期更新。
+- 含头像、ITRA 主页链接与数据更新时间；数据由独立 **Cloudflare Worker（`itra-calendar-proxy`）每月 1 日云端自动抓取 itra.run 并更新**，前端优先从该 Worker 读取、不可达时回落随站点构建的本地 `itra_data.json`。
 
 ### 5. 配色主题
 - 提供两套主题：**狗狗黑**（默认，强调色柠檬黄）/ **喵喵粉**（强调色粉红）。
