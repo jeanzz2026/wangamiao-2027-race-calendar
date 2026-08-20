@@ -344,15 +344,6 @@
       "tone": "amber",
       "date": "2026-07-14",
       "duration": "60分钟"
-    },
-    {
-      "uid": "k8ytpnvmt16fu7o",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-07-14",
-      "duration": "6分以下配速"
     }
   ],
   "library": [
@@ -898,16 +889,6 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
-      "pct": 100
-    },
-    "k8ytpnvmt16fu7o": {
-      "uid": "k8ytpnvmt16fu7o",
-      "date": "2026-07-14",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
       "pct": 100
     }
   }
