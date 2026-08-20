@@ -309,6 +309,14 @@
       "tone": "amber",
       "date": "2026-08-24",
       "duration": "60min"
+    },
+    {
+      "uid": "uhryvc5mt1mpn27",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-25"
     }
   ],
   "library": [
@@ -816,6 +824,14 @@
       "name": "GYM",
       "cat": "通用",
       "tone": "amber",
+      "pct": 0
+    },
+    "uhryvc5mt1mpn27": {
+      "uid": "uhryvc5mt1mpn27",
+      "date": "2026-08-25",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 0
     }
   }
