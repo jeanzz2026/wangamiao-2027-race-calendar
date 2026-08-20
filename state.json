@@ -316,7 +316,8 @@
       "name": "GYM",
       "cat": "通用",
       "tone": "amber",
-      "date": "2026-08-24"
+      "date": "2026-08-24",
+      "duration": "60min"
     }
   ],
   "library": [
