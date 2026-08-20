@@ -864,10 +864,10 @@
     "bufxz8kmt0tnd1v": {
       "uid": "bufxz8kmt0tnd1v",
       "date": "2026-07-07",
-      "name": "爬坡训练",
+      "name": "主动恢复",
       "cat": "通用",
-      "tone": "amber",
-      "desc": "跑步机15坡度",
+      "tone": "green",
+      "desc": "外部",
       "pct": 100
     }
   }
