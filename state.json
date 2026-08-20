@@ -241,14 +241,6 @@
       "date": "2026-08-30"
     },
     {
-      "uid": "63p82qemswjcz7v",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-22"
-    },
-    {
       "uid": "tq1uaiwmswjdbmj",
       "libId": "iwzymilmswj35hd",
       "name": "全休",
@@ -761,14 +753,6 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
-    },
-    "63p82qemswjcz7v": {
-      "uid": "63p82qemswjcz7v",
-      "date": "2026-08-22",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
       "pct": 0
     },
     "tq1uaiwmswjdbmj": {
