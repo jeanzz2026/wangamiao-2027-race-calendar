@@ -540,7 +540,7 @@
       "custom": true
     }
   ],
-  "theme": "misty",
+  "theme": "dark",
   "takeaways": {
     "h7v1cf9msvf2od3": {
       "uid": "h7v1cf9msvf2od3",
@@ -733,8 +733,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 0,
-      "comments": "🥰🥰🥰🥰可以添加emoji表情啦"
+      "pct": 0
     },
     "oe9vkfimswjbo9f": {
       "uid": "oe9vkfimswjbo9f",
