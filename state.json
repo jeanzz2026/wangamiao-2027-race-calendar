@@ -344,6 +344,14 @@
       "tone": "amber",
       "date": "2026-07-14",
       "duration": "60分钟"
+    },
+    {
+      "uid": "t34jp2rmt16g2iq",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-07-14"
     }
   ],
   "library": [
@@ -889,6 +897,14 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
+      "pct": 100
+    },
+    "t34jp2rmt16g2iq": {
+      "uid": "t34jp2rmt16g2iq",
+      "date": "2026-07-14",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 100
     }
   }
