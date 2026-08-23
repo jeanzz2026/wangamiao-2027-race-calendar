@@ -715,8 +715,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100,
-      "comments": "🐶🐶🐶🐱🐱🐱"
+      "pct": 100
     },
     "6bg2m6qmswjbgj3": {
       "uid": "6bg2m6qmswjbgj3",
@@ -725,8 +724,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100,
-      "comments": "厦门码头10km，湿气大，完成😘😘😘"
+      "pct": 100
     },
     "oe9vkfimswjbo9f": {
       "uid": "oe9vkfimswjbo9f",
@@ -736,7 +734,7 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
-      "pct": 0
+      "pct": 100
     },
     "8gebzj2mswjcg2a": {
       "uid": "8gebzj2mswjcg2a",
@@ -818,7 +816,7 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
+      "pct": 100
     },
     "an3cswimt1mer2d": {
       "uid": "an3cswimt1mer2d",
