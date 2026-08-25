@@ -225,12 +225,36 @@
       "duration": "60分钟"
     },
     {
+      "uid": "r99dwafmswjc089",
+      "libId": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-08-23"
+    },
+    {
       "uid": "8gebzj2mswjcg2a",
       "libId": "7rx2ikqmsvfi1n4",
       "name": "进山训练",
       "cat": "越野",
       "tone": "purple",
       "date": "2026-08-30"
+    },
+    {
+      "uid": "63p82qemswjcz7v",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-22"
+    },
+    {
+      "uid": "tq1uaiwmswjdbmj",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-24"
     },
     {
       "uid": "7dmqyo9mswjdhqq",
@@ -240,6 +264,15 @@
       "tone": "acid",
       "date": "2026-08-25",
       "duration": "8-12km"
+    },
+    {
+      "uid": "yzr26hemswjdj05",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-08-25",
+      "duration": "60分钟"
     },
     {
       "uid": "arqy1hymswjdpk0",
@@ -293,30 +326,6 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "8-12km"
-    },
-    {
-      "uid": "dod5f4omt1meag6",
-      "libId": "7rx2ikqmsvfi1n4",
-      "name": "进山训练",
-      "cat": "越野",
-      "tone": "purple",
-      "date": "2026-08-22"
-    },
-    {
-      "uid": "an3cswimt1mer2d",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-23"
-    },
-    {
-      "uid": "r829kh2mt1mnkzg",
-      "libId": "custom",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-08-24"
     }
   ],
   "library": [
@@ -395,7 +404,7 @@
     {
       "id": "ur4z82cmswj5i2o",
       "name": "游泳",
-      "cat": "交叉训练",
+      "cat": "游泳",
       "tone": "blue",
       "duration": "45-60minute",
       "custom": true
@@ -531,7 +540,7 @@
       "custom": true
     }
   ],
-  "theme": "misty",
+  "theme": "dark",
   "takeaways": {
     "h7v1cf9msvf2od3": {
       "uid": "h7v1cf9msvf2od3",
@@ -736,6 +745,15 @@
       "desc": "综合",
       "pct": 100
     },
+    "r99dwafmswjc089": {
+      "uid": "r99dwafmswjc089",
+      "date": "2026-08-23",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "desc": "真实进山户外",
+      "pct": 100
+    },
     "8gebzj2mswjcg2a": {
       "uid": "8gebzj2mswjcg2a",
       "date": "2026-08-30",
@@ -745,6 +763,22 @@
       "desc": "真实进山户外",
       "pct": 0
     },
+    "63p82qemswjcz7v": {
+      "uid": "63p82qemswjcz7v",
+      "date": "2026-08-22",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "pct": 100
+    },
+    "tq1uaiwmswjdbmj": {
+      "uid": "tq1uaiwmswjdbmj",
+      "date": "2026-08-24",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "pct": 100
+    },
     "7dmqyo9mswjdhqq": {
       "uid": "7dmqyo9mswjdhqq",
       "date": "2026-08-25",
@@ -752,6 +786,16 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
+      "pct": 0
+    },
+    "yzr26hemswjdj05": {
+      "uid": "yzr26hemswjdj05",
+      "date": "2026-08-25",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
       "pct": 0
     },
     "arqy1hymswjdpk0": {
@@ -808,31 +852,6 @@
       "tone": "acid",
       "duration": "8-12km",
       "pct": 100
-    },
-    "dod5f4omt1meag6": {
-      "uid": "dod5f4omt1meag6",
-      "date": "2026-08-22",
-      "name": "进山训练",
-      "cat": "越野",
-      "tone": "purple",
-      "desc": "真实进山户外",
-      "pct": 100
-    },
-    "an3cswimt1mer2d": {
-      "uid": "an3cswimt1mer2d",
-      "date": "2026-08-23",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "r829kh2mt1mnkzg": {
-      "uid": "r829kh2mt1mnkzg",
-      "date": "2026-08-24",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "pct": 0
     }
   }
 }
