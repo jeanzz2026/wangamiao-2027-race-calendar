@@ -264,14 +264,6 @@
       "duration": "8-12km"
     },
     {
-      "uid": "fqg0gl2mswjecxo",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-29"
-    },
-    {
       "uid": "sgcrw7mmswjf5v4",
       "libId": "6l77ly4msvfebl6",
       "name": "节奏跑",
@@ -743,14 +735,6 @@
       "tone": "acid",
       "duration": "8-12km",
       "pct": 100
-    },
-    "fqg0gl2mswjecxo": {
-      "uid": "fqg0gl2mswjecxo",
-      "date": "2026-08-29",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
     },
     "sgcrw7mmswjf5v4": {
       "uid": "sgcrw7mmswjf5v4",
