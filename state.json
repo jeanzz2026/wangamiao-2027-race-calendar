@@ -315,6 +315,15 @@
       "tone": "acid",
       "date": "2026-08-11",
       "duration": "8-12km"
+    },
+    {
+      "uid": "j0hq0jmmt9gb8m5",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-08-26",
+      "duration": "60分钟"
     }
   ],
   "library": [
@@ -799,6 +808,16 @@
       "tone": "acid",
       "duration": "8-12km",
       "pct": 100
+    },
+    "j0hq0jmmt9gb8m5": {
+      "uid": "j0hq0jmmt9gb8m5",
+      "date": "2026-08-26",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
+      "pct": 0
     }
   }
 }
