@@ -307,6 +307,15 @@
       "tone": "acid",
       "date": "2026-08-25",
       "duration": "6-10km"
+    },
+    {
+      "uid": "g6o017jmt9ggj5d",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-24",
+      "duration": "6-10km"
     }
   ],
   "library": [
@@ -778,6 +787,15 @@
     "b6laotemt9gg9ey": {
       "uid": "b6laotemt9gg9ey",
       "date": "2026-08-25",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6-10km",
+      "pct": 100
+    },
+    "g6o017jmt9ggj5d": {
+      "uid": "g6o017jmt9ggj5d",
+      "date": "2026-08-24",
       "name": "Easy Run",
       "cat": "路跑",
       "tone": "acid",
