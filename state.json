@@ -231,14 +231,6 @@
       "date": "2026-08-23"
     },
     {
-      "uid": "8gebzj2mswjcg2a",
-      "libId": "7rx2ikqmsvfi1n4",
-      "name": "进山训练",
-      "cat": "越野",
-      "tone": "purple",
-      "date": "2026-08-30"
-    },
-    {
       "uid": "63p82qemswjcz7v",
       "libId": "iwzymilmswj35hd",
       "name": "全休",
@@ -701,15 +693,6 @@
       "tone": "purple",
       "desc": "真实进山户外",
       "pct": 100
-    },
-    "8gebzj2mswjcg2a": {
-      "uid": "8gebzj2mswjcg2a",
-      "date": "2026-08-30",
-      "name": "进山训练",
-      "cat": "越野",
-      "tone": "purple",
-      "desc": "真实进山户外",
-      "pct": 0
     },
     "63p82qemswjcz7v": {
       "uid": "63p82qemswjcz7v",
