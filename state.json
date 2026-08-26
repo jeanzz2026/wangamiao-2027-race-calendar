@@ -248,15 +248,6 @@
       "duration": "6分以下配速"
     },
     {
-      "uid": "00a5p94mswjg6uu",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-27",
-      "duration": "8-12km"
-    },
-    {
       "uid": "nzct9c8mswl546o",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
@@ -728,15 +719,6 @@
       "tone": "acid",
       "duration": "6分以下配速",
       "desc": "5km以上",
-      "pct": 0
-    },
-    "00a5p94mswjg6uu": {
-      "uid": "00a5p94mswjg6uu",
-      "date": "2026-08-27",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "8-12km",
       "pct": 0
     },
     "nzct9c8mswl546o": {
