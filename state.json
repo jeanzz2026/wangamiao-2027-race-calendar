@@ -239,15 +239,6 @@
       "date": "2026-08-22"
     },
     {
-      "uid": "7dmqyo9mswjdhqq",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-25",
-      "duration": "8-12km"
-    },
-    {
       "uid": "sgcrw7mmswjf5v4",
       "libId": "6l77ly4msvfebl6",
       "name": "节奏跑",
@@ -727,15 +718,6 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
-      "pct": 100
-    },
-    "7dmqyo9mswjdhqq": {
-      "uid": "7dmqyo9mswjdhqq",
-      "date": "2026-08-25",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "8-12km",
       "pct": 100
     },
     "sgcrw7mmswjf5v4": {
