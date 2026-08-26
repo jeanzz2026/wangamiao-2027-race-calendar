@@ -299,6 +299,15 @@
       "tone": "purple",
       "date": "2026-08-29",
       "duration": "15km以上"
+    },
+    {
+      "uid": "7tqtbhsmt9gd2j9",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-24",
+      "duration": "8-12km"
     }
   ],
   "library": [
@@ -766,6 +775,15 @@
       "tone": "purple",
       "duration": "15km以上",
       "pct": 0
+    },
+    "7tqtbhsmt9gd2j9": {
+      "uid": "7tqtbhsmt9gd2j9",
+      "date": "2026-08-24",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "8-12km",
+      "pct": 100
     }
   }
 }
