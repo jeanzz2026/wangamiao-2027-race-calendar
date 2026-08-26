@@ -292,15 +292,6 @@
       "duration": "15km以上"
     },
     {
-      "uid": "7tqtbhsmt9gd2j9",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-24",
-      "duration": "8-12km"
-    },
-    {
       "uid": "75nes5umt9gdqf3",
       "libId": "4llkglimsvf8avn",
       "name": "主动恢复",
@@ -774,16 +765,6 @@
       "tone": "purple",
       "duration": "15km以上",
       "pct": 0
-    },
-    "7tqtbhsmt9gd2j9": {
-      "uid": "7tqtbhsmt9gd2j9",
-      "date": "2026-08-24",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "8-12km",
-      "pct": 20,
-      "comments": "中午太热了"
     },
     "75nes5umt9gdqf3": {
       "uid": "75nes5umt9gdqf3",
