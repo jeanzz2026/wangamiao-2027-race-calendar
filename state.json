@@ -783,7 +783,8 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "8-12km",
-      "pct": 100
+      "pct": 20,
+      "comments": "中午太热了"
     }
   }
 }
