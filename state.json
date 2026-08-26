@@ -239,14 +239,6 @@
       "date": "2026-08-22"
     },
     {
-      "uid": "tq1uaiwmswjdbmj",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-08-24"
-    },
-    {
       "uid": "7dmqyo9mswjdhqq",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
@@ -706,14 +698,6 @@
     "63p82qemswjcz7v": {
       "uid": "63p82qemswjcz7v",
       "date": "2026-08-22",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 100
-    },
-    "tq1uaiwmswjdbmj": {
-      "uid": "tq1uaiwmswjdbmj",
-      "date": "2026-08-24",
       "name": "全休",
       "cat": "通用",
       "tone": "green",
