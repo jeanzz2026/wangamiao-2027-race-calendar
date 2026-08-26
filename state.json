@@ -309,15 +309,6 @@
       "date": "2026-08-24"
     },
     {
-      "uid": "nlx7p1cmt9gfarv",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-08-24",
-      "duration": "8-12km"
-    },
-    {
       "uid": "b6laotemt9gg9ey",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
@@ -801,15 +792,6 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
-      "pct": 100
-    },
-    "nlx7p1cmt9gfarv": {
-      "uid": "nlx7p1cmt9gfarv",
-      "date": "2026-08-24",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "8-12km",
       "pct": 100
     },
     "b6laotemt9gg9ey": {
