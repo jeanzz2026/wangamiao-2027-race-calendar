@@ -264,15 +264,6 @@
       "duration": "8-12km"
     },
     {
-      "uid": "arqy1hymswjdpk0",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-08-28",
-      "duration": "60分钟"
-    },
-    {
       "uid": "fqg0gl2mswjecxo",
       "libId": "iwzymilmswj35hd",
       "name": "全休",
@@ -744,16 +735,6 @@
       "tone": "acid",
       "duration": "8-12km",
       "pct": 100
-    },
-    "arqy1hymswjdpk0": {
-      "uid": "arqy1hymswjdpk0",
-      "date": "2026-08-28",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
     },
     "fqg0gl2mswjecxo": {
       "uid": "fqg0gl2mswjecxo",
