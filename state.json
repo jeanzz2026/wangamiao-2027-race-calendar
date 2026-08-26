@@ -308,6 +308,14 @@
       "tone": "acid",
       "date": "2026-08-24",
       "duration": "8-12km"
+    },
+    {
+      "uid": "75nes5umt9gdqf3",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-24"
     }
   ],
   "library": [
@@ -785,6 +793,15 @@
       "duration": "8-12km",
       "pct": 20,
       "comments": "中午太热了"
+    },
+    "75nes5umt9gdqf3": {
+      "uid": "75nes5umt9gdqf3",
+      "date": "2026-08-24",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
+      "pct": 100
     }
   }
 }
