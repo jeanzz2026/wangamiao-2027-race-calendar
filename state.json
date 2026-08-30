@@ -350,15 +350,6 @@
       "tone": "amber",
       "date": "2026-08-31",
       "duration": "60分钟"
-    },
-    {
-      "uid": "4dn2m1nmtf43bkk",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-02",
-      "duration": "6-10km"
     }
   ],
   "library": [
@@ -884,15 +875,6 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
-      "pct": 0
-    },
-    "4dn2m1nmtf43bkk": {
-      "uid": "4dn2m1nmtf43bkk",
-      "date": "2026-09-02",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
       "pct": 0
     }
   }
