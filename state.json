@@ -401,14 +401,6 @@
       "cat": "越野",
       "tone": "purple",
       "date": "2026-09-06"
-    },
-    {
-      "uid": "fs1aknimtfyclp4",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-21"
     }
   ],
   "library": [
@@ -989,14 +981,6 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
-    },
-    "fs1aknimtfyclp4": {
-      "uid": "fs1aknimtfyclp4",
-      "date": "2026-09-21",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
       "pct": 0
     }
   }
