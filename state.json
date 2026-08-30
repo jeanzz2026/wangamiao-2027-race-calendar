@@ -358,6 +358,15 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-09-02"
+    },
+    {
+      "uid": "cvmsgzhmtf44fpi",
+      "libId": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-09-01",
+      "duration": "6分以下配速"
     }
   ],
   "library": [
@@ -891,6 +900,16 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
+      "pct": 0
+    },
+    "cvmsgzhmtf44fpi": {
+      "uid": "cvmsgzhmtf44fpi",
+      "date": "2026-09-01",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
       "pct": 0
     }
   }
