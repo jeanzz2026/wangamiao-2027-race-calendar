@@ -316,6 +316,14 @@
       "tone": "acid",
       "date": "2026-08-27",
       "duration": "6-10km"
+    },
+    {
+      "uid": "czjbprhmtf41v44",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-08-30"
     }
   ],
   "library": [
@@ -805,6 +813,14 @@
       "duration": "6-10km",
       "pct": 100,
       "comments": "状态好，早上5公里到医院，抽血后3公里run+1公里riding回家；\n下午B超虚惊一场，朋友们陪伴我"
+    },
+    "czjbprhmtf41v44": {
+      "uid": "czjbprhmtf41v44",
+      "date": "2026-08-30",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "pct": 0
     }
   }
 }
