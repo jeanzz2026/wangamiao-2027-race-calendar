@@ -350,6 +350,14 @@
       "tone": "amber",
       "date": "2026-08-31",
       "duration": "60分钟"
+    },
+    {
+      "uid": "3hlam98mtf436zk",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-09-01"
     }
   ],
   "library": [
@@ -875,6 +883,14 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
+      "pct": 0
+    },
+    "3hlam98mtf436zk": {
+      "uid": "3hlam98mtf436zk",
+      "date": "2026-09-01",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 0
     }
   }
