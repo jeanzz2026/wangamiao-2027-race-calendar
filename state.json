@@ -341,6 +341,15 @@
       "tone": "acid",
       "date": "2026-08-31",
       "duration": "6-10km"
+    },
+    {
+      "uid": "jiaaorsmtf433nd",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-08-31",
+      "duration": "60分钟"
     }
   ],
   "library": [
@@ -856,6 +865,16 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
+      "pct": 0
+    },
+    "jiaaorsmtf433nd": {
+      "uid": "jiaaorsmtf433nd",
+      "date": "2026-08-31",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
       "pct": 0
     }
   }
