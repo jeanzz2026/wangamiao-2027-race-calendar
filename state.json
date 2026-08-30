@@ -401,14 +401,6 @@
       "cat": "越野",
       "tone": "purple",
       "date": "2026-09-06"
-    },
-    {
-      "uid": "ja1075xmtfyelud",
-      "libId": "tnwjfkxmswklp6n",
-      "name": "比赛-越野跑",
-      "cat": "路跑",
-      "tone": "orange",
-      "date": "2026-08-30"
     }
   ],
   "library": [
@@ -984,15 +976,6 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
-    },
-    "ja1075xmtfyelud": {
-      "uid": "ja1075xmtfyelud",
-      "date": "2026-08-30",
-      "name": "比赛-越野跑",
-      "cat": "路跑",
-      "tone": "orange",
-      "desc": "真实参加国内外比赛",
       "pct": 0
     }
   }
