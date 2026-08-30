@@ -393,6 +393,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-09-04"
+    },
+    {
+      "uid": "bnqp2fhmtf45v0r",
+      "libId": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-09-06"
     }
   ],
   "library": [
@@ -964,6 +972,15 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
+      "pct": 0
+    },
+    "bnqp2fhmtf45v0r": {
+      "uid": "bnqp2fhmtf45v0r",
+      "date": "2026-09-06",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "desc": "真实进山户外",
       "pct": 0
     }
   }
