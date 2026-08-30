@@ -837,7 +837,8 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
-      "pct": 0
+      "pct": 100,
+      "comments": "运动恢复"
     }
   }
 }
