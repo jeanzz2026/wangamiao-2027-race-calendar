@@ -332,6 +332,15 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-08-28"
+    },
+    {
+      "uid": "r8x7056mtf43240",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-08-31",
+      "duration": "6-10km"
     }
   ],
   "library": [
@@ -839,6 +848,15 @@
       "desc": "外部",
       "pct": 100,
       "comments": "运动恢复"
+    },
+    "r8x7056mtf43240": {
+      "uid": "r8x7056mtf43240",
+      "date": "2026-08-31",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6-10km",
+      "pct": 0
     }
   }
 }
