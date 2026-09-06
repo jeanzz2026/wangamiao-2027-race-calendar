@@ -583,7 +583,7 @@
       "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
     }
   ],
-  "theme": "misty",
+  "theme": "dark",
   "takeaways": {
     "h7v1cf9msvf2od3": {
       "uid": "h7v1cf9msvf2od3",
@@ -893,7 +893,7 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
-      "pct": 0
+      "pct": 100
     },
     "n79bmwjmtf41zjp": {
       "uid": "n79bmwjmtf41zjp",
@@ -911,7 +911,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
-      "pct": 0
+      "pct": 100
     },
     "jiaaorsmtf433nd": {
       "uid": "jiaaorsmtf433nd",
@@ -921,7 +921,7 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
-      "pct": 0
+      "pct": 100
     },
     "35xv8hbmtf447lf": {
       "uid": "35xv8hbmtf447lf",
@@ -929,7 +929,7 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
-      "pct": 0
+      "pct": 100
     },
     "cvmsgzhmtf44fpi": {
       "uid": "cvmsgzhmtf44fpi",
@@ -939,7 +939,7 @@
       "tone": "acid",
       "duration": "6分以下配速",
       "desc": "5km以上",
-      "pct": 0
+      "pct": 100
     },
     "mhkkau4mtf44id4": {
       "uid": "mhkkau4mtf44id4",
@@ -948,7 +948,7 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
-      "pct": 0
+      "pct": 100
     },
     "foqmjxxmtf44ntt": {
       "uid": "foqmjxxmtf44ntt",
@@ -958,7 +958,7 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
-      "pct": 0
+      "pct": 100
     },
     "67rs8stmtf45qii": {
       "uid": "67rs8stmtf45qii",
@@ -967,7 +967,7 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
-      "pct": 0
+      "pct": 100
     },
     "bnqp2fhmtf45v0r": {
       "uid": "bnqp2fhmtf45v0r",
@@ -976,7 +976,7 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
-      "pct": 0
+      "pct": 100
     }
   }
 }
