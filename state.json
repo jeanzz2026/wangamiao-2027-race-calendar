@@ -793,6 +793,14 @@
       "tone": "amber",
       "date": "2026-10-15",
       "duration": "60分钟"
+    },
+    {
+      "uid": "qw9f6w3mukl6pqe",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-10-16"
     }
   ],
   "library": [
@@ -1841,6 +1849,14 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
+      "pct": 0
+    },
+    "qw9f6w3mukl6pqe": {
+      "uid": "qw9f6w3mukl6pqe",
+      "date": "2026-10-16",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 0
     }
   }
