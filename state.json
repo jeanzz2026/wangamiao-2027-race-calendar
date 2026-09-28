@@ -749,6 +749,14 @@
       "tone": "purple",
       "date": "2026-10-12",
       "duration": "15km以上"
+    },
+    {
+      "uid": "j4ixm33mukl5hn4",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-10-13"
     }
   ],
   "library": [
@@ -1749,6 +1757,15 @@
       "cat": "路跑",
       "tone": "purple",
       "duration": "15km以上",
+      "pct": 0
+    },
+    "j4ixm33mukl5hn4": {
+      "uid": "j4ixm33mukl5hn4",
+      "date": "2026-10-13",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
       "pct": 0
     }
   }
