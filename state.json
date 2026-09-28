@@ -429,6 +429,15 @@
       "tone": "acid",
       "date": "2026-09-10",
       "duration": "6分以下配速"
+    },
+    {
+      "uid": "bo2jqt0mukjvxho",
+      "libId": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-09-08",
+      "duration": "6分以下配速"
     }
   ],
   "library": [
@@ -1029,6 +1038,16 @@
     "30dyev0mukjvuhc": {
       "uid": "30dyev0mukjvuhc",
       "date": "2026-09-10",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
+      "pct": 100
+    },
+    "bo2jqt0mukjvxho": {
+      "uid": "bo2jqt0mukjvxho",
+      "date": "2026-09-08",
       "name": "节奏跑",
       "cat": "路跑",
       "tone": "acid",
