@@ -839,15 +839,6 @@
       "duration": "6-10km"
     },
     {
-      "uid": "ah8r8h0mukl8ans",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-21",
-      "duration": "6分以下配速"
-    },
-    {
       "uid": "6sf0fu3mukl8gux",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
@@ -1982,16 +1973,6 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
-      "pct": 0
-    },
-    "ah8r8h0mukl8ans": {
-      "uid": "ah8r8h0mukl8ans",
-      "date": "2026-10-21",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
       "pct": 0
     },
     "6sf0fu3mukl8gux": {
