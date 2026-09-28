@@ -602,6 +602,15 @@
       "tone": "purple",
       "date": "2026-09-27",
       "duration": "15km以上"
+    },
+    {
+      "uid": "465dsxumukk0ok1",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-09-28",
+      "duration": "60分钟"
     }
   ],
   "library": [
@@ -1386,6 +1395,16 @@
       "tone": "purple",
       "duration": "15km以上",
       "pct": 100
+    },
+    "465dsxumukk0ok1": {
+      "uid": "465dsxumukk0ok1",
+      "date": "2026-09-28",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
+      "pct": 0
     }
   }
 }
