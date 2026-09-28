@@ -533,6 +533,14 @@
       "tone": "amber",
       "date": "2026-09-22",
       "duration": "60分钟"
+    },
+    {
+      "uid": "s8qr68lmukjze4d",
+      "libId": "y9g62ppmsvffufz",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-09-25"
     }
   ],
   "library": [
@@ -1244,6 +1252,15 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
+      "pct": 100
+    },
+    "s8qr68lmukjze4d": {
+      "uid": "s8qr68lmukjze4d",
+      "date": "2026-09-25",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "desc": "跑步机15坡度",
       "pct": 100
     }
   }
