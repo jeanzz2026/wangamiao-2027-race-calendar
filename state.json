@@ -810,14 +810,6 @@
       "tone": "purple",
       "date": "2026-10-17",
       "duration": "15km以上"
-    },
-    {
-      "uid": "0xnz5yimukl6ve8",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-18"
     }
   ],
   "library": [
@@ -1883,14 +1875,6 @@
       "cat": "路跑",
       "tone": "purple",
       "duration": "15km以上",
-      "pct": 0
-    },
-    "0xnz5yimukl6ve8": {
-      "uid": "0xnz5yimukl6ve8",
-      "date": "2026-10-18",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
       "pct": 0
     }
   }
