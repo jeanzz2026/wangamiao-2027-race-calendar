@@ -507,6 +507,15 @@
       "date": "2026-09-18",
       "duration": "6-10km",
       "note": "上海北外滩"
+    },
+    {
+      "uid": "zclhdgtmukjyf0o",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-09-19",
+      "duration": "6-10km"
     }
   ],
   "library": [
@@ -1187,6 +1196,15 @@
     "209nqn2mukjy2p2": {
       "uid": "209nqn2mukjy2p2",
       "date": "2026-09-18",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6-10km",
+      "pct": 100
+    },
+    "zclhdgtmukjyf0o": {
+      "uid": "zclhdgtmukjyf0o",
+      "date": "2026-09-19",
       "name": "Easy Run",
       "cat": "路跑",
       "tone": "acid",
