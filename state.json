@@ -541,6 +541,15 @@
       "cat": "通用",
       "tone": "amber",
       "date": "2026-09-25"
+    },
+    {
+      "uid": "u0vx9sqmukjzgnf",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-09-25",
+      "duration": "6-10km"
     }
   ],
   "library": [
@@ -1261,6 +1270,15 @@
       "cat": "通用",
       "tone": "amber",
       "desc": "跑步机15坡度",
+      "pct": 100
+    },
+    "u0vx9sqmukjzgnf": {
+      "uid": "u0vx9sqmukjzgnf",
+      "date": "2026-09-25",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6-10km",
       "pct": 100
     }
   }
