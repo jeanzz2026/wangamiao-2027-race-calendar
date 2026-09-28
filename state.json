@@ -422,15 +422,6 @@
       "duration": "60分钟"
     },
     {
-      "uid": "30dyev0mukjvuhc",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-10",
-      "duration": "6分以下配速"
-    },
-    {
       "uid": "bo2jqt0mukjvxho",
       "libId": "6l77ly4msvfebl6",
       "name": "节奏跑",
@@ -1033,16 +1024,6 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
-      "pct": 100
-    },
-    "30dyev0mukjvuhc": {
-      "uid": "30dyev0mukjvuhc",
-      "date": "2026-09-10",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
       "pct": 100
     },
     "bo2jqt0mukjvxho": {
