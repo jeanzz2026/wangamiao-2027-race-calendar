@@ -559,6 +559,14 @@
       "tone": "acid",
       "date": "2026-09-22",
       "duration": "6-10km"
+    },
+    {
+      "uid": "jb2ikxomukjzwcm",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-09-23"
     }
   ],
   "library": [
@@ -1297,6 +1305,15 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
+      "pct": 100
+    },
+    "jb2ikxomukjzwcm": {
+      "uid": "jb2ikxomukjzwcm",
+      "date": "2026-09-23",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
       "pct": 100
     }
   }
