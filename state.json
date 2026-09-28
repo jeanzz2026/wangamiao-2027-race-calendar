@@ -455,6 +455,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-09-09"
+    },
+    {
+      "uid": "mi3v06zmukjwkki",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-09-13"
     }
   ],
   "library": [
@@ -1088,6 +1096,14 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
+      "pct": 100
+    },
+    "mi3v06zmukjwkki": {
+      "uid": "mi3v06zmukjwkki",
+      "date": "2026-09-13",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 100
     }
   }
