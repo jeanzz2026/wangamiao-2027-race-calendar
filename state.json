@@ -888,6 +888,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-10-25"
+    },
+    {
+      "uid": "u52r4wwmukl9xye",
+      "libId": "y9g62ppmsvffufz",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-10-18"
     }
   ],
   "library": [
@@ -2034,6 +2042,15 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
+      "pct": 0
+    },
+    "u52r4wwmukl9xye": {
+      "uid": "u52r4wwmukl9xye",
+      "date": "2026-10-18",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "desc": "跑步机15坡度",
       "pct": 0
     }
   }
