@@ -812,15 +812,6 @@
       "duration": "15km以上"
     },
     {
-      "uid": "7k9omf5mukl83yy",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-19",
-      "duration": "6-10km"
-    },
-    {
       "uid": "foexymsmukl84lk",
       "libId": "81hw601msvfcy51",
       "name": "GYM",
@@ -1961,15 +1952,6 @@
       "cat": "路跑",
       "tone": "purple",
       "duration": "15km以上",
-      "pct": 0
-    },
-    "7k9omf5mukl83yy": {
-      "uid": "7k9omf5mukl83yy",
-      "date": "2026-10-19",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
       "pct": 0
     },
     "foexymsmukl84lk": {
