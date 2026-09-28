@@ -801,6 +801,15 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-10-16"
+    },
+    {
+      "uid": "xfkvsmbmukl6rns",
+      "libId": "heiwhydmsvfb43r",
+      "name": "LSD",
+      "cat": "路跑",
+      "tone": "purple",
+      "date": "2026-10-17",
+      "duration": "15km以上"
     }
   ],
   "library": [
@@ -1857,6 +1866,15 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
+      "pct": 0
+    },
+    "xfkvsmbmukl6rns": {
+      "uid": "xfkvsmbmukl6rns",
+      "date": "2026-10-17",
+      "name": "LSD",
+      "cat": "路跑",
+      "tone": "purple",
+      "duration": "15km以上",
       "pct": 0
     }
   }
