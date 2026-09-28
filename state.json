@@ -784,6 +784,15 @@
       "tone": "acid",
       "date": "2026-10-15",
       "duration": "6-10km"
+    },
+    {
+      "uid": "obpxlcmmukl6jx1",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-10-15",
+      "duration": "60分钟"
     }
   ],
   "library": [
@@ -1822,6 +1831,16 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
+      "pct": 0
+    },
+    "obpxlcmmukl6jx1": {
+      "uid": "obpxlcmmukl6jx1",
+      "date": "2026-10-15",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
       "pct": 0
     }
   }
