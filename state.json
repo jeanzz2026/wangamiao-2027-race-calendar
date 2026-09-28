@@ -956,6 +956,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-10-31"
+    },
+    {
+      "uid": "zbmy9nkmukleuqk",
+      "libId": "tnwjfkxmswklp6n",
+      "name": "比赛-越野跑",
+      "cat": "路跑",
+      "tone": "orange",
+      "date": "2026-11-01"
     }
   ],
   "library": [
@@ -2173,6 +2181,15 @@
       "name": "全休",
       "cat": "通用",
       "tone": "green",
+      "pct": 0
+    },
+    "zbmy9nkmukleuqk": {
+      "uid": "zbmy9nkmukleuqk",
+      "date": "2026-11-01",
+      "name": "比赛-越野跑",
+      "cat": "路跑",
+      "tone": "orange",
+      "desc": "真实参加国内外比赛",
       "pct": 0
     }
   }
