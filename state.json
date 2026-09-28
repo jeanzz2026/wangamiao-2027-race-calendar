@@ -707,6 +707,14 @@
       "tone": "acid",
       "date": "2026-10-07",
       "duration": "6-10km"
+    },
+    {
+      "uid": "7ve0hxymukl35ue",
+      "libId": "y9g62ppmsvffufz",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-10-08"
     }
   ],
   "library": [
@@ -1664,6 +1672,15 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
+      "pct": 0
+    },
+    "7ve0hxymukl35ue": {
+      "uid": "7ve0hxymukl35ue",
+      "date": "2026-10-08",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "desc": "跑步机15坡度",
       "pct": 0
     }
   }
