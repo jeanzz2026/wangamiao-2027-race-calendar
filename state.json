@@ -748,24 +748,6 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-10-13"
-    },
-    {
-      "uid": "isqooj0mukl5pgs",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-14",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "452shaemukl5r18",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-14",
-      "duration": "6-10km"
     }
   ],
   "library": [
@@ -1766,25 +1748,6 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
-      "pct": 0
-    },
-    "isqooj0mukl5pgs": {
-      "uid": "isqooj0mukl5pgs",
-      "date": "2026-10-14",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "452shaemukl5r18": {
-      "uid": "452shaemukl5r18",
-      "date": "2026-10-14",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
       "pct": 0
     }
   }
