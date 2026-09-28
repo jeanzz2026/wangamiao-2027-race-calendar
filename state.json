@@ -1444,6 +1444,17 @@
       "duration": "60分钟",
       "desc": "综合",
       "pct": 100
+    },
+    "jrhf0hgmukk3eij": {
+      "uid": "jrhf0hgmukk3eij",
+      "date": "2026-09-18",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "上海北外滩跑 10km",
+      "locked": false,
+      "independent": true
     }
   }
 }
