@@ -887,15 +887,6 @@
       "tone": "acid",
       "date": "2026-10-20",
       "duration": "6分以下配速"
-    },
-    {
-      "uid": "5n13a5emuklb1qw",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-26",
-      "duration": "6分以下配速"
     }
   ],
   "library": [
@@ -2037,16 +2028,6 @@
     "40yfntumuklaowe": {
       "uid": "40yfntumuklaowe",
       "date": "2026-10-20",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
-      "pct": 0
-    },
-    "5n13a5emuklb1qw": {
-      "uid": "5n13a5emuklb1qw",
-      "date": "2026-10-26",
       "name": "节奏跑",
       "cat": "路跑",
       "tone": "acid",
