@@ -864,6 +864,14 @@
       "tone": "amber",
       "date": "2026-10-22",
       "duration": "60分钟"
+    },
+    {
+      "uid": "yk2lfzzmukl8k0o",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-10-23"
     }
   ],
   "library": [
@@ -1986,6 +1994,15 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
+      "pct": 0
+    },
+    "yk2lfzzmukl8k0o": {
+      "uid": "yk2lfzzmukl8k0o",
+      "date": "2026-10-23",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
       "pct": 0
     }
   }
