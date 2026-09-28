@@ -481,6 +481,14 @@
       "tone": "acid",
       "date": "2026-09-15",
       "duration": "6-10km"
+    },
+    {
+      "uid": "0zhddtumukjx4gk",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-09-16"
     }
   ],
   "library": [
@@ -1140,6 +1148,14 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
+      "pct": 100
+    },
+    "0zhddtumukjx4gk": {
+      "uid": "0zhddtumukjx4gk",
+      "date": "2026-09-16",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 100
     }
   }
