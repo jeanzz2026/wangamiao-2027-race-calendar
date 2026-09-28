@@ -630,6 +630,15 @@
       "tone": "amber",
       "date": "2026-09-25",
       "duration": "60分钟"
+    },
+    {
+      "uid": "qmwpjo0mukl13un",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-10-01",
+      "duration": "6-10km"
     }
   ],
   "library": [
@@ -814,6 +823,72 @@
   ],
   "theme": "misty",
   "takeaways": {
+    "jrhf0hgmukk3eij": {
+      "uid": "jrhf0hgmukk3eij",
+      "date": "2026-09-18",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "上海北外滩跑 10km",
+      "locked": false,
+      "independent": true
+    },
+    "yoo095rmukk402z": {
+      "uid": "yoo095rmukk402z",
+      "date": "2026-09-19",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "上海北外滩8KM",
+      "locked": false,
+      "independent": true
+    },
+    "ci5mpdbmukk4g6d": {
+      "uid": "ci5mpdbmukk4g6d",
+      "date": "2026-09-25",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "早4km - 力量 - 回4km",
+      "locked": false,
+      "independent": true
+    },
+    "6ahvf9cmukk5976": {
+      "uid": "6ahvf9cmukk5976",
+      "date": "2026-09-26",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "晚上嘴馋 - 撞墙 :(",
+      "locked": false,
+      "independent": true
+    },
+    "8ya2x1vmukk81qn": {
+      "uid": "8ya2x1vmukk81qn",
+      "date": "2026-09-27",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "起跑状态不好，而且很困，但完成度很好配速6:03",
+      "locked": false,
+      "independent": true
+    },
+    "ucicqbmmukk8em0": {
+      "uid": "ucicqbmmukk8em0",
+      "date": "2026-09-24",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "回来跑就是爽",
+      "locked": false,
+      "independent": true
+    },
     "h7v1cf9msvf2od3": {
       "uid": "h7v1cf9msvf2od3",
       "date": "2026-08-11",
@@ -1445,71 +1520,14 @@
       "desc": "综合",
       "pct": 100
     },
-    "jrhf0hgmukk3eij": {
-      "uid": "jrhf0hgmukk3eij",
-      "date": "2026-09-18",
-      "name": "",
+    "qmwpjo0mukl13un": {
+      "uid": "qmwpjo0mukl13un",
+      "date": "2026-10-01",
+      "name": "Easy Run",
       "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "上海北外滩跑 10km",
-      "locked": false,
-      "independent": true
-    },
-    "yoo095rmukk402z": {
-      "uid": "yoo095rmukk402z",
-      "date": "2026-09-19",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "上海北外滩8KM",
-      "locked": false,
-      "independent": true
-    },
-    "ci5mpdbmukk4g6d": {
-      "uid": "ci5mpdbmukk4g6d",
-      "date": "2026-09-25",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "早4km - 力量 - 回4km",
-      "locked": false,
-      "independent": true
-    },
-    "6ahvf9cmukk5976": {
-      "uid": "6ahvf9cmukk5976",
-      "date": "2026-09-26",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "晚上嘴馋 - 撞墙 :(",
-      "locked": false,
-      "independent": true
-    },
-    "8ya2x1vmukk81qn": {
-      "uid": "8ya2x1vmukk81qn",
-      "date": "2026-09-27",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "起跑状态不好，而且很困，但完成度很好配速6:03",
-      "locked": false,
-      "independent": true
-    },
-    "ucicqbmmukk8em0": {
-      "uid": "ucicqbmmukk8em0",
-      "date": "2026-09-24",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "回来跑就是爽",
-      "locked": false,
-      "independent": true
+      "tone": "acid",
+      "duration": "6-10km",
+      "pct": 0
     }
   }
 }
