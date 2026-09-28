@@ -621,6 +621,15 @@
       "tone": "acid",
       "date": "2026-09-30",
       "duration": "6分以下配速"
+    },
+    {
+      "uid": "sabn94mmukk2ttq",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-09-25",
+      "duration": "60分钟"
     }
   ],
   "library": [
@@ -1425,6 +1434,16 @@
       "duration": "6分以下配速",
       "desc": "5km以上",
       "pct": 0
+    },
+    "sabn94mmukk2ttq": {
+      "uid": "sabn94mmukk2ttq",
+      "date": "2026-09-25",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
+      "pct": 100
     }
   }
 }
