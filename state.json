@@ -401,6 +401,16 @@
       "cat": "越野",
       "tone": "purple",
       "date": "2026-09-06"
+    },
+    {
+      "uid": "ittbywpmukjuy4k",
+      "libId": "tnwjfkxmswklp6n",
+      "name": "比赛-越野跑",
+      "cat": "路跑",
+      "tone": "orange",
+      "date": "2026-09-12",
+      "duration": "25 km 澜跑北京",
+      "note": "真实参加国内外比赛"
     }
   ],
   "library": [
@@ -487,7 +497,7 @@
     {
       "id": "tnwjfkxmswklp6n",
       "name": "比赛-越野跑",
-      "cat": "比赛",
+      "cat": "路跑",
       "tone": "orange",
       "desc": "真实参加国内外比赛",
       "custom": true
@@ -495,7 +505,7 @@
     {
       "id": "8kmkdowmswktven",
       "name": "比赛-半马",
-      "cat": "比赛",
+      "cat": "路跑",
       "tone": "orange",
       "duration": "21km",
       "custom": true
@@ -503,7 +513,7 @@
     {
       "id": "n8tgqsamswkug16",
       "name": "比赛-全马",
-      "cat": "比赛",
+      "cat": "路跑",
       "tone": "orange",
       "duration": "42km",
       "custom": true
@@ -976,6 +986,16 @@
       "cat": "越野",
       "tone": "purple",
       "desc": "真实进山户外",
+      "pct": 100
+    },
+    "ittbywpmukjuy4k": {
+      "uid": "ittbywpmukjuy4k",
+      "date": "2026-09-12",
+      "name": "比赛-越野跑",
+      "cat": "路跑",
+      "tone": "orange",
+      "duration": "25 km 澜跑北京",
+      "desc": "真实参加国内外比赛",
       "pct": 100
     }
   }
