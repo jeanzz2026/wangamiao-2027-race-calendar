@@ -878,6 +878,14 @@
       "cat": "通用",
       "tone": "amber",
       "date": "2026-10-18"
+    },
+    {
+      "uid": "elbobw7muklad5v",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-10-19"
     }
   ],
   "library": [
@@ -2014,6 +2022,14 @@
       "cat": "通用",
       "tone": "amber",
       "desc": "跑步机15坡度",
+      "pct": 0
+    },
+    "elbobw7muklad5v": {
+      "uid": "elbobw7muklad5v",
+      "date": "2026-10-19",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
       "pct": 0
     }
   }
