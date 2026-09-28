@@ -887,6 +887,15 @@
       "tone": "acid",
       "date": "2026-10-20",
       "duration": "6分以下配速"
+    },
+    {
+      "uid": "x52fv2fmuklb560",
+      "libId": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-10-26",
+      "duration": "6-10km"
     }
   ],
   "library": [
@@ -2033,6 +2042,15 @@
       "tone": "acid",
       "duration": "6分以下配速",
       "desc": "5km以上",
+      "pct": 0
+    },
+    "x52fv2fmuklb560": {
+      "uid": "x52fv2fmuklb560",
+      "date": "2026-10-26",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6-10km",
       "pct": 0
     }
   }
