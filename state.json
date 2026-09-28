@@ -620,6 +620,15 @@
       "tone": "acid",
       "date": "2026-09-29",
       "duration": "6-10km"
+    },
+    {
+      "uid": "8thhgl6mukk0va5",
+      "libId": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-09-30",
+      "duration": "6分以下配速"
     }
   ],
   "library": [
@@ -1422,6 +1431,16 @@
       "cat": "路跑",
       "tone": "acid",
       "duration": "6-10km",
+      "pct": 0
+    },
+    "8thhgl6mukk0va5": {
+      "uid": "8thhgl6mukk0va5",
+      "date": "2026-09-30",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
       "pct": 0
     }
   }
