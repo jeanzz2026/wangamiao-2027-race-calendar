@@ -673,6 +673,14 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-10-03"
+    },
+    {
+      "uid": "760ywmvmukl2r3k",
+      "libId": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-10-04"
     }
   ],
   "library": [
@@ -1593,6 +1601,14 @@
     "oks53t4mukl2dva": {
       "uid": "oks53t4mukl2dva",
       "date": "2026-10-03",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "pct": 0
+    },
+    "760ywmvmukl2r3k": {
+      "uid": "760ywmvmukl2r3k",
+      "date": "2026-10-04",
       "name": "全休",
       "cat": "通用",
       "tone": "green",
