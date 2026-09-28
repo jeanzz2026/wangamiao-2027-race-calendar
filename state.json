@@ -411,6 +411,15 @@
       "date": "2026-09-12",
       "duration": "25 km 澜跑北京",
       "note": "真实参加国内外比赛"
+    },
+    {
+      "uid": "o18dahrmukjvp4u",
+      "libId": "81hw601msvfcy51",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "date": "2026-09-11",
+      "duration": "60分钟"
     }
   ],
   "library": [
@@ -996,6 +1005,16 @@
       "tone": "orange",
       "duration": "25 km 澜跑北京",
       "desc": "真实参加国内外比赛",
+      "pct": 100
+    },
+    "o18dahrmukjvp4u": {
+      "uid": "o18dahrmukjvp4u",
+      "date": "2026-09-11",
+      "name": "GYM",
+      "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
       "pct": 100
     }
   }
