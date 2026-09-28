@@ -872,6 +872,15 @@
       "cat": "通用",
       "tone": "green",
       "date": "2026-10-23"
+    },
+    {
+      "uid": "mp8p222mukl8lz3",
+      "libId": "heiwhydmsvfb43r",
+      "name": "LSD",
+      "cat": "路跑",
+      "tone": "purple",
+      "date": "2026-10-24",
+      "duration": "15km以上"
     }
   ],
   "library": [
@@ -2003,6 +2012,15 @@
       "cat": "通用",
       "tone": "green",
       "desc": "外部",
+      "pct": 0
+    },
+    "mp8p222mukl8lz3": {
+      "uid": "mp8p222mukl8lz3",
+      "date": "2026-10-24",
+      "name": "LSD",
+      "cat": "路跑",
+      "tone": "purple",
+      "duration": "15km以上",
       "pct": 0
     }
   }
