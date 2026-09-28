@@ -1466,6 +1466,17 @@
       "comments": "上海北外滩8KM",
       "locked": false,
       "independent": true
+    },
+    "ci5mpdbmukk4g6d": {
+      "uid": "ci5mpdbmukk4g6d",
+      "date": "2026-09-25",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "早4km - 力量 - 回4km",
+      "locked": false,
+      "independent": true
     }
   }
 }
