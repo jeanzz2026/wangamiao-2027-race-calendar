@@ -1477,6 +1477,17 @@
       "comments": "早4km - 力量 - 回4km",
       "locked": false,
       "independent": true
+    },
+    "6ahvf9cmukk5976": {
+      "uid": "6ahvf9cmukk5976",
+      "date": "2026-09-26",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "晚上嘴馋 - 撞墙 :(",
+      "locked": false,
+      "independent": true
     }
   }
 }
