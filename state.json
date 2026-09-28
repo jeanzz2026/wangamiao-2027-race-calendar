@@ -447,6 +447,14 @@
       "tone": "amber",
       "date": "2026-09-07",
       "duration": "60分钟"
+    },
+    {
+      "uid": "uxyezbzmukjwez2",
+      "libId": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "date": "2026-09-09"
     }
   ],
   "library": [
@@ -1071,6 +1079,15 @@
       "tone": "amber",
       "duration": "60分钟",
       "desc": "综合",
+      "pct": 100
+    },
+    "uxyezbzmukjwez2": {
+      "uid": "uxyezbzmukjwez2",
+      "date": "2026-09-09",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
       "pct": 100
     }
   }
