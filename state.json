@@ -810,15 +810,6 @@
       "tone": "purple",
       "date": "2026-10-17",
       "duration": "15km以上"
-    },
-    {
-      "uid": "alpngxtmukl7p2i",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-20",
-      "duration": "60分钟"
     }
   ],
   "library": [
@@ -1884,16 +1875,6 @@
       "cat": "路跑",
       "tone": "purple",
       "duration": "15km以上",
-      "pct": 0
-    },
-    "alpngxtmukl7p2i": {
-      "uid": "alpngxtmukl7p2i",
-      "date": "2026-10-20",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
       "pct": 0
     }
   }
