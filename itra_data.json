@@ -6,13 +6,13 @@
   "ageGroup": "F 40-44",
   "performanceIndex": 445,
   "level": "Intermediate 3",
-  "worldTop": "15.81%",
+  "worldTop": "15.66%",
   "generalStats": {
-    "finishedRaces": 6,
-    "totalDistance": "196.7 km",
-    "totalRaceTime": "42:47:23",
+    "finishedRaces": 7,
+    "totalDistance": "221.1 km",
+    "totalRaceTime": "48:39:14",
     "longestRaceDistance": "53.67 km",
-    "totalElevation": "&#x2B;7,455 m"
+    "totalElevation": "+8,722 m"
   },
   "ranking": {
     "bestRaceRanking": 1,
@@ -20,5 +20,5 @@
     "bestRaceRankingTitle": "XINJIANG BUERJIN KANAS ULTRA - KANAS STATION - 21KM"
   },
   "profileUrl": "https://itra.run/RunnerSpace/yaye.wang.3995441",
-  "updatedAt": "2026-09-01T01:00:47Z"
+  "updatedAt": "2026-09-29T13:34:08Z"
 }
