@@ -105,10 +105,8 @@
 .race-editor-modal .race-date-range input { min-width: 0; }
 .race-editor-modal footer { display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; margin-top: 14px; }
 .race-editor-modal footer button,
-.race-editor-modal footer button.save { min-height: 42px; padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; background: transparent !important; background-image: none !important; box-shadow: none !important; color: var(--ink); font-weight: 800; transition: background .15s ease, color .15s ease, border-color .15s ease; }
-.race-editor-modal footer button:hover { border-color: var(--acid); background: var(--acid) !important; color: var(--ink); }
-.race-editor-modal footer .save { border-color: var(--acid); color: var(--ink); }
-.race-editor-modal footer .save:hover { background: var(--acid) !important; color: var(--ink); }
+.race-editor-modal footer button.save { min-height: 42px; padding: 9px 16px; border: 1px solid var(--ink) !important; border-radius: 999px; background: transparent !important; background-color: transparent !important; background-image: none !important; box-shadow: none !important; color: var(--ink) !important; font-weight: 800; transition: background .15s ease, color .15s ease, border-color .15s ease; }
+.race-editor-modal footer button:hover { border-color: var(--ink) !important; background: rgba(24, 32, 25, .08) !important; color: var(--ink) !important; }
 .race-editor-modal footer button:disabled { opacity: .55; cursor: wait; }
 .race-editor-status { min-height: 18px; margin: 10px 0 0; color: var(--muted); font-size: 12px; }
 
