@@ -282,6 +282,7 @@
     const status = document.createElement("p");
     status.className = "race-editor-status";
     const actions = document.createElement("footer");
+    actions.className = "race-editor-actions";
     const cancel = document.createElement("button");
     cancel.type = "button";
     cancel.textContent = "取消";
