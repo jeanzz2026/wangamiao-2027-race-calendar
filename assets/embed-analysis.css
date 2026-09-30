@@ -55,6 +55,56 @@
   min-height: 32px;
 }
 
+.race-edit-btn {
+  margin-top: 18px;
+  padding: 9px 14px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.race-edit-btn:hover { background: var(--ink); color: var(--paper); }
+.race-edit-btn[hidden] { display: none; }
+
+.race-editor-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(15, 20, 16, .62);
+}
+
+.race-editor-modal {
+  width: min(560px, 100%);
+  max-height: min(90vh, 820px);
+  overflow: auto;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: var(--shadow-pop);
+}
+
+.race-editor-modal header,
+.race-editor-modal footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.race-editor-modal header { margin-bottom: 14px; }
+.race-editor-modal header h3 { margin: 0; font-size: 20px; }
+.race-editor-modal header button { border: 0; background: none; color: var(--ink); font-size: 26px; }
+.race-editor-modal label { display: block; margin: 12px 0; font-size: 12px; font-weight: 800; }
+.race-editor-modal input { display: block; width: 100%; margin-top: 6px; padding: 11px 12px; border: 1px solid var(--line); border-radius: 9px; background: var(--white); color: var(--ink); font-size: 14px; }
+.race-editor-modal input:focus { outline: 2px solid var(--acid); outline-offset: 1px; }
+.race-editor-modal footer { justify-content: flex-end; margin-top: 14px; }
+.race-editor-modal footer button { padding: 9px 16px; border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--ink); font-weight: 800; }
+.race-editor-modal footer .save { border-color: var(--acid); background: var(--acid); }
+.race-editor-modal footer button:disabled { opacity: .55; cursor: wait; }
+.race-editor-status { min-height: 18px; margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+
 @media (max-width: 700px) {
   .analysis-page .analysis-embed-head {
     align-items: flex-start;
