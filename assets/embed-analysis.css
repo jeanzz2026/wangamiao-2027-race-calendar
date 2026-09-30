@@ -49,6 +49,12 @@
   max-width: none;
 }
 
+/* Let the add action consume the remaining space below existing month cards. */
+.week-board.month .day-add-bar {
+  flex: 1 1 auto;
+  min-height: 32px;
+}
+
 @media (max-width: 700px) {
   .analysis-page .analysis-embed-head {
     align-items: flex-start;
