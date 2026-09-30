@@ -1,5 +1,4 @@
 (() => {
-  const API = "https://api.github.com/repos/jeanzz2026/wangamiao-2027-race-calendar/contents/race-details.json";
   const TOKEN_KEY = "wamiao_gh_token";
   const EDITS_KEY = "wamiao_race_edits_v1";
   const raceIds = {
@@ -21,26 +20,21 @@
     ["url", "报名官网链接"],
   ];
   let edits = {};
-  let sha = "";
   let ready = Promise.resolve();
 
-  const decode = (value) => decodeURIComponent(escape(atob(value.replace(/\s/g, ""))));
-  const encode = (value) => btoa(unescape(encodeURIComponent(value)));
-  const headers = (token) => ({ Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" });
-  ready = Promise.all([
-    fetch("./race-details.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : null).catch(() => null),
-    fetch("./state.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : {}).catch(() => ({})),
-  ]).then(([published, legacy]) => {
-      const source = published?.raceEdits ? published : legacy;
-      edits = source.raceEdits && typeof source.raceEdits === "object" ? source.raceEdits : {};
+  ready = fetch("./state.json", { cache: "no-store" })
+    .then((response) => response.ok ? response.json() : {})
+    .then((state) => {
+      edits = state.raceEdits && typeof state.raceEdits === "object" ? state.raceEdits : {};
       try {
+        const appState = JSON.parse(localStorage.getItem("wamiao_state_v2") || "{}");
+        if (appState.raceEdits && typeof appState.raceEdits === "object") edits = { ...edits, ...appState.raceEdits };
         const cached = JSON.parse(localStorage.getItem(EDITS_KEY) || "{}");
         edits = { ...cached, ...edits };
       } catch {}
       localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
     })
     .catch(() => {});
-  const nativeFetch = window.fetch.bind(window);
 
   function valueFor(race, key, fallback = "") {
     const value = edits[race]?.[key];
@@ -131,68 +125,43 @@
         button.className = "race-edit-btn";
         button.type = "button";
         button.textContent = "编辑赛事详情";
-        button.hidden = !localStorage.getItem(TOKEN_KEY);
+        button.hidden = !localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady;
         button.addEventListener("click", () => openEditor(panel.dataset.raceId));
         sticky.append(button);
       }
       const button = panel.querySelector(".race-edit-btn");
       if (button) {
-        const hidden = !localStorage.getItem(TOKEN_KEY);
+        const hidden = !localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady;
         if (button.hidden !== hidden) button.hidden = hidden;
       }
     }
   }
 
-  async function getCloud(token) {
-    const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 12000);
-    let response;
-    try {
-      response = await nativeFetch(`${API}?ref=main`, { headers: headers(token), cache: "no-store", signal: controller.signal });
-    } catch (error) {
-      if (error.name === "AbortError") throw new Error("在线读取超时，请检查网络后重试。");
-      throw new Error("无法连接 GitHub，请检查网络后重试。");
-    } finally {
-      window.clearTimeout(timeout);
-    }
-    if (response.status === 404) { sha = ""; return { raceEdits: {} }; }
-    if (!response.ok) throw new Error(`在线读取失败（HTTP ${response.status}）`);
-    const file = await response.json();
-    sha = file.sha;
-    return JSON.parse(decode(file.content));
-  }
-
-  async function saveCloud(token) {
+  async function saveViaApp(nextEdits) {
     await ready;
-    for (let attempt = 0; attempt < 3; attempt += 1) {
-      let state = await getCloud(token);
-      state.raceEdits = { ...(state.raceEdits || {}), ...edits };
-      const controller = new AbortController();
-      const timeout = window.setTimeout(() => controller.abort(), 12000);
-      let response;
-      try {
-        const payload = { message: "Edit race details online", content: encode(JSON.stringify(state, null, 2)), branch: "main" };
-        if (sha) payload.sha = sha;
-        response = await nativeFetch(API, {
-          method: "PUT",
-          headers: { ...headers(token), "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-          signal: controller.signal,
-        });
-      } catch (error) {
-        if (error.name === "AbortError") throw new Error("在线保存超时（12 秒），请检查网络后重试。");
-        throw new Error("无法连接 GitHub，请检查网络后重试。");
-      } finally {
-        window.clearTimeout(timeout);
-      }
-      if (response.status === 409) continue;
-      if (!response.ok) throw new Error(`在线保存失败（HTTP ${response.status}）。请检查 GitHub Token 是否有仓库写入权限。`);
-      const saved = await response.json();
-      sha = saved.content?.sha || sha;
-      edits = state.raceEdits;
-      return;
+    if (typeof window.__wamiaoSetRaceEdits !== "function" || !window.__wamiaoRaceStateReady) {
+      throw new Error("参赛计划保存模块尚未就绪，请刷新页面后重试。");
     }
-    throw new Error("在线保存遇到并发冲突，请再点一次保存。");
+    const started = Date.now();
+    const before = document.querySelector(".save-status")?.textContent || "";
+    window.__wamiaoSetRaceEdits(nextEdits);
+    return new Promise((resolve, reject) => {
+      let sawSaving = false;
+      const poll = window.setInterval(() => {
+        const message = document.querySelector(".save-status")?.textContent?.trim() || "";
+        if (message.includes("同步到云端")) sawSaving = true;
+        if (sawSaving && (message.includes("已保存并同步到云端") || message.includes("已同步云端"))) {
+          window.clearInterval(poll);
+          resolve();
+        } else if (sawSaving && message.includes("云端同步失败")) {
+          window.clearInterval(poll);
+          reject(new Error(message));
+        } else if (Date.now() - started > 25000) {
+          window.clearInterval(poll);
+          reject(new Error(message && message !== before ? `保存没有完成：${message}` : "保存等待超时，请检查页面顶部的云端保存状态后重试。"));
+        }
+      }, 250);
+    });
   }
 
   function parseDateRange(value) {
@@ -211,7 +180,7 @@
   }
 
   function openEditor(raceId) {
-    if (!localStorage.getItem(TOKEN_KEY)) return;
+    if (!localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady) return;
     const existing = edits[raceId] || {};
     const card = document.querySelector(`.race-card[data-race-id="${CSS.escape(raceId)}"]`);
     const panel = document.querySelector(`.detail-panel[data-race-id="${CSS.escape(raceId)}"]`);
@@ -319,7 +288,7 @@
     const save = document.createElement("button");
     save.type = "submit";
     save.className = "save";
-    save.textContent = "在线保存";
+    save.textContent = "保存";
     actions.append(cancel, save);
     form.append(status, actions);
     overlay.append(form);
@@ -350,13 +319,13 @@
       fields.forEach(([key]) => { next[key] = inputs[key].value.trim(); });
       if (!next.name) { status.textContent = "赛事名称不能为空。"; return; }
       save.disabled = true;
-      status.textContent = "正在直接保存到赛事日历…";
+      status.textContent = "正在保存…";
       edits = { ...edits, [raceId]: next };
       try {
-        await saveCloud(token);
+        await saveViaApp(edits);
         localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
         refresh();
-        status.textContent = "在线保存成功 ✓";
+        status.textContent = "已保存并同步到云端 ✓";
         window.setTimeout(dismiss, 700);
       } catch (error) {
         status.textContent = error.message || "保存失败，请重试。";
