@@ -1,5 +1,5 @@
 (() => {
-  const API = "https://api.github.com/repos/jeanzz2026/wangamiao-2027-race-calendar/contents/state.json";
+  const API = "https://api.github.com/repos/jeanzz2026/wangamiao-2027-race-calendar/contents/race-details.json";
   const TOKEN_KEY = "wamiao_gh_token";
   const EDITS_KEY = "wamiao_race_edits_v1";
   const raceIds = {
@@ -23,21 +23,16 @@
   let edits = {};
   let sha = "";
   let ready = Promise.resolve();
-  let writeQueue = Promise.resolve();
 
   const decode = (value) => decodeURIComponent(escape(atob(value.replace(/\s/g, ""))));
   const encode = (value) => btoa(unescape(encodeURIComponent(value)));
   const headers = (token) => ({ Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" });
-  const serializeWrite = (write) => {
-    const current = writeQueue.then(write, write);
-    writeQueue = current.catch(() => {});
-    return current;
-  };
-
-  ready = fetch("./state.json", { cache: "no-store" })
-    .then((response) => response.ok ? response.json() : {})
-    .then((state) => {
-      edits = state.raceEdits && typeof state.raceEdits === "object" ? state.raceEdits : {};
+  ready = Promise.all([
+    fetch("./race-details.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : null).catch(() => null),
+    fetch("./state.json", { cache: "no-store" }).then((response) => response.ok ? response.json() : {}).catch(() => ({})),
+  ]).then(([published, legacy]) => {
+      const source = published?.raceEdits ? published : legacy;
+      edits = source.raceEdits && typeof source.raceEdits === "object" ? source.raceEdits : {};
       try {
         const cached = JSON.parse(localStorage.getItem(EDITS_KEY) || "{}");
         edits = { ...cached, ...edits };
@@ -45,34 +40,7 @@
       localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
     })
     .catch(() => {});
-
-  // Keep race edits when the calendar's normal autosave writes placements/training data.
   const nativeFetch = window.fetch.bind(window);
-  window.fetch = async (input, init) => {
-    const url = typeof input === "string" ? input : input instanceof Request ? input.url : "";
-    const method = (init?.method || (input instanceof Request ? input.method : "GET")).toUpperCase();
-    if (method === "PUT" && url.includes("/contents/state.json") && init?.body) {
-      await ready;
-      try {
-        const payload = JSON.parse(init.body);
-        const state = JSON.parse(decode(payload.content));
-        payload.content = encode(JSON.stringify({ ...state, raceEdits: edits }, null, 2));
-        init = { ...init, body: JSON.stringify(payload) };
-      } catch {}
-    }
-    if (method === "PUT" && url.includes("/contents/state.json")) {
-      return serializeWrite(async () => {
-        const controller = new AbortController();
-        const timeout = window.setTimeout(() => controller.abort(), 20000);
-        try {
-          return await nativeFetch(input, { ...init, signal: controller.signal });
-        } finally {
-          window.clearTimeout(timeout);
-        }
-      });
-    }
-    return nativeFetch(input, init);
-  };
 
   function valueFor(race, key, fallback = "") {
     const value = edits[race]?.[key];
@@ -177,7 +145,7 @@
 
   async function getCloud(token) {
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 30000);
+    const timeout = window.setTimeout(() => controller.abort(), 12000);
     let response;
     try {
       response = await nativeFetch(`${API}?ref=main`, { headers: headers(token), cache: "no-store", signal: controller.signal });
@@ -187,41 +155,44 @@
     } finally {
       window.clearTimeout(timeout);
     }
-    if (!response.ok) throw new Error(`读取云端失败（HTTP ${response.status}）`);
+    if (response.status === 404) { sha = ""; return { raceEdits: {} }; }
+    if (!response.ok) throw new Error(`在线读取失败（HTTP ${response.status}）`);
     const file = await response.json();
     sha = file.sha;
     return JSON.parse(decode(file.content));
   }
 
   async function saveCloud(token) {
-    return serializeWrite(async () => {
+    await ready;
+    for (let attempt = 0; attempt < 3; attempt += 1) {
       let state = await getCloud(token);
-      state.raceEdits = edits;
-      const put = async () => {
-        const controller = new AbortController();
-        const timeout = window.setTimeout(() => controller.abort(), 30000);
-        try {
-          return await nativeFetch(API, {
-            method: "PUT",
-            headers: { ...headers(token), "Content-Type": "application/json" },
-            body: JSON.stringify({ message: "Edit race details online", content: encode(JSON.stringify(state, null, 2)), branch: "main", sha }),
-            signal: controller.signal,
-          });
-        } catch (error) {
-          if (error.name === "AbortError") throw new Error("在线保存超时，请检查网络后重试。");
-          throw new Error("无法连接 GitHub，请检查网络后重试。");
-        } finally {
-          window.clearTimeout(timeout);
-        }
-      };
-      let response = await put();
-      if (response.status === 409) {
-        state = await getCloud(token);
-        state.raceEdits = edits;
-        response = await put();
+      state.raceEdits = { ...(state.raceEdits || {}), ...edits };
+      const controller = new AbortController();
+      const timeout = window.setTimeout(() => controller.abort(), 12000);
+      let response;
+      try {
+        const payload = { message: "Edit race details online", content: encode(JSON.stringify(state, null, 2)), branch: "main" };
+        if (sha) payload.sha = sha;
+        response = await nativeFetch(API, {
+          method: "PUT",
+          headers: { ...headers(token), "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          signal: controller.signal,
+        });
+      } catch (error) {
+        if (error.name === "AbortError") throw new Error("在线保存超时（12 秒），请检查网络后重试。");
+        throw new Error("无法连接 GitHub，请检查网络后重试。");
+      } finally {
+        window.clearTimeout(timeout);
       }
+      if (response.status === 409) continue;
       if (!response.ok) throw new Error(`在线保存失败（HTTP ${response.status}）。请检查 GitHub Token 是否有仓库写入权限。`);
-    });
+      const saved = await response.json();
+      sha = saved.content?.sha || sha;
+      edits = state.raceEdits;
+      return;
+    }
+    throw new Error("在线保存遇到并发冲突，请再点一次保存。");
   }
 
   function parseDateRange(value) {
