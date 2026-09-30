@@ -1,0 +1,49 @@
+.analysis-page .analysis-embed-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.analysis-page .analysis-embed-copy h3 {
+  margin: 12px 0 6px;
+  font-size: clamp(20px, 2.6vw, 28px);
+  letter-spacing: -0.02em;
+}
+
+.analysis-page .analysis-embed-copy .al-desc {
+  margin: 0;
+}
+
+.analysis-page .analysis-frame-wrap {
+  overflow: hidden;
+  min-height: 760px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-soft);
+}
+
+.analysis-page .analysis-frame {
+  display: block;
+  width: 100%;
+  height: max(760px, calc(100vh - 230px));
+  border: 0;
+  background: var(--white);
+}
+
+@media (max-width: 700px) {
+  .analysis-page .analysis-embed-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .analysis-page .analysis-frame-wrap,
+  .analysis-page .analysis-frame {
+    min-height: 720px;
+    height: 720px;
+    border-radius: 12px;
+  }
+}
