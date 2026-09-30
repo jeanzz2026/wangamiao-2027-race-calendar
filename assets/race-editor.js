@@ -14,9 +14,6 @@
   };
   const fields = [
     ["name", "赛事名称"],
-    ["role", "计划角色"],
-    ["type", "赛事类型"],
-    ["date", "比赛日期"],
     ["category", "组别 / 距离"],
     ["location", "地点"],
     ["signup", "预计报名时间"],
@@ -26,10 +23,16 @@
   let edits = {};
   let sha = "";
   let ready = Promise.resolve();
+  let writeQueue = Promise.resolve();
 
   const decode = (value) => decodeURIComponent(escape(atob(value.replace(/\s/g, ""))));
   const encode = (value) => btoa(unescape(encodeURIComponent(value)));
   const headers = (token) => ({ Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" });
+  const serializeWrite = (write) => {
+    const current = writeQueue.then(write, write);
+    writeQueue = current.catch(() => {});
+    return current;
+  };
 
   ready = fetch("./state.json", { cache: "no-store" })
     .then((response) => response.ok ? response.json() : {})
@@ -56,6 +59,9 @@
         payload.content = encode(JSON.stringify({ ...state, raceEdits: edits }, null, 2));
         init = { ...init, body: JSON.stringify(payload) };
       } catch {}
+    }
+    if (method === "PUT" && url.includes("/contents/state.json")) {
+      return serializeWrite(() => nativeFetch(input, init));
     }
     return nativeFetch(input, init);
   };
@@ -162,7 +168,17 @@
   }
 
   async function getCloud(token) {
-    const response = await nativeFetch(`${API}?ref=main`, { headers: headers(token), cache: "no-store" });
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 30000);
+    let response;
+    try {
+      response = await nativeFetch(`${API}?ref=main`, { headers: headers(token), cache: "no-store", signal: controller.signal });
+    } catch (error) {
+      if (error.name === "AbortError") throw new Error("在线读取超时，请检查网络后重试。");
+      throw new Error("无法连接 GitHub，请检查网络后重试。");
+    } finally {
+      window.clearTimeout(timeout);
+    }
     if (!response.ok) throw new Error(`读取云端失败（HTTP ${response.status}）`);
     const file = await response.json();
     sha = file.sha;
@@ -170,20 +186,49 @@
   }
 
   async function saveCloud(token) {
-    let state = await getCloud(token);
-    state.raceEdits = edits;
-    const put = () => nativeFetch(API, {
-      method: "PUT",
-      headers: { ...headers(token), "Content-Type": "application/json" },
-      body: JSON.stringify({ message: "Update race details", content: encode(JSON.stringify(state, null, 2)), branch: "main", sha }),
-    });
-    let response = await put();
-    if (response.status === 409) {
-      state = await getCloud(token);
+    return serializeWrite(async () => {
+      let state = await getCloud(token);
       state.raceEdits = edits;
-      response = await put();
-    }
-    if (!response.ok) throw new Error(`云端保存失败（HTTP ${response.status}）`);
+      const put = async () => {
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 30000);
+        try {
+          return await nativeFetch(API, {
+            method: "PUT",
+            headers: { ...headers(token), "Content-Type": "application/json" },
+            body: JSON.stringify({ message: "Edit race details online", content: encode(JSON.stringify(state, null, 2)), branch: "main", sha }),
+            signal: controller.signal,
+          });
+        } catch (error) {
+          if (error.name === "AbortError") throw new Error("在线保存超时，请检查网络后重试。");
+          throw new Error("无法连接 GitHub，请检查网络后重试。");
+        } finally {
+          window.clearTimeout(timeout);
+        }
+      };
+      let response = await put();
+      if (response.status === 409) {
+        state = await getCloud(token);
+        state.raceEdits = edits;
+        response = await put();
+      }
+      if (!response.ok) throw new Error(`在线保存失败（HTTP ${response.status}）。请检查 GitHub Token 是否有仓库写入权限。`);
+    });
+  }
+
+  function parseDateRange(value) {
+    const iso = [...String(value || "").matchAll(/(\d{4})-(\d{2})-(\d{2})/g)];
+    if (iso.length) return { start: iso[0][0], end: iso[1]?.[0] || iso[0][0] };
+    const first = String(value || "").match(/(\d{1,2})月\s*(\d{1,2})日?/);
+    if (!first) return { start: "", end: "" };
+    const year = "2027";
+    const date = (month, day) => `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    const tail = String(value).slice(first.index + first[0].length);
+    const explicit = tail.match(/(\d{1,2})月\s*(\d{1,2})日?/);
+    const short = tail.match(/[–—~至/／]\s*(\d{1,2})日?/);
+    const month = explicit ? Number(explicit[1]) : Number(first[1]);
+    const lastDay = explicit ? Number(explicit[2]) : short ? Number(short[1]) : Number(first[2]);
+    return { start: date(Number(first[1]), Number(first[2])), end: date(month, lastDay) };
   }
 
   function openEditor(raceId) {
@@ -216,11 +261,70 @@
     header.append(title, close);
     form.append(header);
     const inputs = {};
+    const roleLabel = document.createElement("label");
+    roleLabel.textContent = "计划角色";
+    const roleSelect = document.createElement("select");
+    ["首选", "备选1", "备选2", "备选3"].forEach((choice) => {
+      const option = document.createElement("option");
+      option.value = choice;
+      option.textContent = choice;
+      roleSelect.append(option);
+    });
+    const roleValue = valueFor(raceId, "role", base.role);
+    if (![...roleSelect.options].some((option) => option.value === roleValue)) {
+      const current = document.createElement("option");
+      current.value = roleValue;
+      current.textContent = `${roleValue}（当前值）`;
+      roleSelect.append(current);
+    }
+    roleSelect.value = roleValue;
+    inputs.role = roleSelect;
+    roleLabel.append(roleSelect);
+    form.append(roleLabel);
+    const typeLabel = document.createElement("label");
+    typeLabel.textContent = "赛事类型";
+    const typeSelect = document.createElement("select");
+    ["越野", "全马", "半马", "铁三", "其他"].forEach((choice) => {
+      const option = document.createElement("option");
+      option.value = choice;
+      option.textContent = choice;
+      typeSelect.append(option);
+    });
+    const typeValue = valueFor(raceId, "type", base.type === "UTMB" ? "越野" : base.type);
+    if (![...typeSelect.options].some((option) => option.value === typeValue)) {
+      const current = document.createElement("option");
+      current.value = typeValue;
+      current.textContent = `${typeValue}（当前值）`;
+      typeSelect.append(current);
+    }
+    typeSelect.value = typeValue;
+    inputs.type = typeSelect;
+    typeLabel.append(typeSelect);
+    form.append(typeLabel);
+    const dateLabel = document.createElement("label");
+    dateLabel.textContent = "比赛日期范围（留空保留原日期）";
+    const dateRange = parseDateRange(valueFor(raceId, "date", base.date));
+    const dateInputs = document.createElement("div");
+    dateInputs.className = "race-date-range";
+    const dateFrom = document.createElement("input");
+    dateFrom.type = "date";
+    dateFrom.setAttribute("aria-label", "比赛开始日期");
+    dateFrom.value = dateRange.start;
+    const dateTo = document.createElement("input");
+    dateTo.type = "date";
+    dateTo.setAttribute("aria-label", "比赛结束日期");
+    dateTo.value = dateRange.end;
+    dateInputs.append(dateFrom, dateTo);
+    dateLabel.append(dateInputs);
+    form.append(dateLabel);
+    inputs.dateFrom = dateFrom;
+    inputs.dateTo = dateTo;
     fields.forEach(([key, labelText]) => {
       const label = document.createElement("label");
       label.textContent = labelText;
       const input = document.createElement("input");
-      input.type = "text";
+      input.type = key === "url" ? "url" : "text";
+      input.placeholder = key === "url" ? "https://example.com" : "";
       input.value = valueFor(raceId, key, existing[key] ?? base[key] ?? "");
       input.autocomplete = "off";
       inputs[key] = input;
@@ -236,7 +340,7 @@
     const save = document.createElement("button");
     save.type = "submit";
     save.className = "save";
-    save.textContent = "保存并同步";
+    save.textContent = "在线保存";
     actions.append(cancel, save);
     form.append(status, actions);
     overlay.append(form);
@@ -250,16 +354,30 @@
       const token = localStorage.getItem(TOKEN_KEY);
       if (!token) { status.textContent = "请先连接 GitHub 登录。"; return; }
       const next = {};
+      next.role = inputs.role.value;
+      next.type = inputs.type.value;
+      if (inputs.dateFrom.value && inputs.dateTo.value) {
+        if (inputs.dateTo.value < inputs.dateFrom.value) {
+          status.textContent = "结束日期不能早于开始日期。";
+          return;
+        }
+        next.date = `${inputs.dateFrom.value} – ${inputs.dateTo.value}`;
+      } else if (inputs.dateFrom.value || inputs.dateTo.value) {
+        status.textContent = "请同时选择开始和结束日期。";
+        return;
+      } else {
+        next.date = valueFor(raceId, "date", base.date);
+      }
       fields.forEach(([key]) => { next[key] = inputs[key].value.trim(); });
       if (!next.name) { status.textContent = "赛事名称不能为空。"; return; }
       save.disabled = true;
-      status.textContent = "正在保存到 GitHub…";
+      status.textContent = "正在直接保存到赛事日历…";
       edits = { ...edits, [raceId]: next };
       try {
         await saveCloud(token);
         localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
         refresh();
-        status.textContent = "已保存并同步 ✓";
+        status.textContent = "在线保存成功 ✓";
         window.setTimeout(dismiss, 700);
       } catch (error) {
         status.textContent = error.message || "保存失败，请重试。";
