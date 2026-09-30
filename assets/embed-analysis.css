@@ -103,7 +103,7 @@
 .race-editor-modal select:focus { outline: 2px solid var(--acid); outline-offset: 1px; }
 .race-editor-modal .race-date-range { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .race-editor-modal .race-date-range input { min-width: 0; }
-.race-editor-modal footer { display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; margin-top: 14px; }
+.race-editor-modal footer.race-editor-actions { display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; gap: 10px; margin: 14px 0 0; padding: 0; background: transparent !important; color: var(--ink); font: inherit; letter-spacing: normal; }
 .race-editor-modal footer button,
 .race-editor-modal footer button.save { min-height: 42px; padding: 9px 16px; border: 1px solid var(--ink) !important; border-radius: 999px; background: transparent !important; background-color: transparent !important; background-image: none !important; box-shadow: none !important; color: var(--ink) !important; font-weight: 800; transition: background .15s ease, color .15s ease, border-color .15s ease; }
 .race-editor-modal footer button:hover { border-color: var(--ink) !important; background: rgba(24, 32, 25, .08) !important; color: var(--ink) !important; }
