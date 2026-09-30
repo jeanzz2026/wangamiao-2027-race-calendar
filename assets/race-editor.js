@@ -61,7 +61,15 @@
       } catch {}
     }
     if (method === "PUT" && url.includes("/contents/state.json")) {
-      return serializeWrite(() => nativeFetch(input, init));
+      return serializeWrite(async () => {
+        const controller = new AbortController();
+        const timeout = window.setTimeout(() => controller.abort(), 20000);
+        try {
+          return await nativeFetch(input, { ...init, signal: controller.signal });
+        } finally {
+          window.clearTimeout(timeout);
+        }
+      });
     }
     return nativeFetch(input, init);
   };
