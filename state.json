@@ -674,14 +674,6 @@
       "date": "2026-10-04"
     },
     {
-      "uid": "ib93qgemukl2u4p",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-05"
-    },
-    {
       "uid": "ln39ykwmukl2xvx",
       "libId": "82qlailmswj0qlk",
       "name": "Easy Run",
@@ -1211,6 +1203,28 @@
       "tone": "amber",
       "pct": 100,
       "comments": "回来跑就是爽",
+      "locked": false,
+      "independent": true
+    },
+    "7b9zxk3mup64g94": {
+      "uid": "7b9zxk3mup64g94",
+      "date": "2026-10-01",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "10km节奏跑，56分钟完成，今天十月一日国庆节，风大",
+      "locked": false,
+      "independent": true
+    },
+    "7cz68zbmup656i2": {
+      "uid": "7cz68zbmup656i2",
+      "date": "2026-10-03",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "出发马来西亚，休息二天",
       "locked": false,
       "independent": true
     },
@@ -1888,14 +1902,6 @@
       "tone": "green",
       "pct": 0
     },
-    "ib93qgemukl2u4p": {
-      "uid": "ib93qgemukl2u4p",
-      "date": "2026-10-05",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
     "ln39ykwmukl2xvx": {
       "uid": "ln39ykwmukl2xvx",
       "date": "2026-10-06",
@@ -2192,28 +2198,6 @@
       "duration": "6分以下配速",
       "desc": "5km以上",
       "pct": 0
-    },
-    "7b9zxk3mup64g94": {
-      "uid": "7b9zxk3mup64g94",
-      "date": "2026-10-01",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "10km节奏跑，56分钟完成，今天十月一日国庆节，风大",
-      "locked": false,
-      "independent": true
-    },
-    "7cz68zbmup656i2": {
-      "uid": "7cz68zbmup656i2",
-      "date": "2026-10-03",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "出发马来西亚，休息二天",
-      "locked": false,
-      "independent": true
     }
   }
 }
