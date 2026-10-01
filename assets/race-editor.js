@@ -45,6 +45,10 @@
     if (element && element.textContent !== String(text ?? "")) element.textContent = text ?? "";
   }
 
+  function selectedRaceId() {
+    return document.querySelector(".race-card.selected[data-race-id]")?.dataset.raceId || "";
+  }
+
   function paintRace(raceId) {
     if (!raceId) return;
     const edit = edits[raceId];
@@ -126,7 +130,7 @@
         button.type = "button";
         button.textContent = "编辑赛事详情";
         button.hidden = !localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady;
-        button.addEventListener("click", () => openEditor(panel.dataset.raceId));
+        button.addEventListener("click", () => openEditor(selectedRaceId() || panel.dataset.raceId));
         sticky.append(button);
       }
       const button = panel.querySelector(".race-edit-btn");
@@ -315,23 +319,34 @@
   const scheduleRefresh = () => {
     if (refreshScheduled) return;
     refreshScheduled = true;
-    window.requestAnimationFrame(() => {
-      refreshScheduled = false;
-      refresh();
+    window.setTimeout(() => {
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          refreshScheduled = false;
+          refresh();
+        });
+      });
     });
   };
   const containsRaceStructure = (node) => node.nodeType === Node.ELEMENT_NODE && (
     node.matches(".race-card, .detail-panel") || node.querySelector(".race-card, .detail-panel")
   );
   const observer = new MutationObserver((records) => {
-    const raceStructureChanged = records.some((record) =>
-      [...record.addedNodes, ...record.removedNodes].some(containsRaceStructure)
-    );
-    if (raceStructureChanged) scheduleRefresh();
+    const raceUiChanged = records.some((record) => {
+      if (record.type === "attributes") {
+        return record.target.matches(".race-card");
+      }
+      return record.target instanceof Element &&
+        record.target.closest(".race-card, .detail-panel") ||
+        [...record.addedNodes, ...record.removedNodes].some(containsRaceStructure);
+    });
+    if (raceUiChanged) scheduleRefresh();
   });
   observer.observe(document.querySelector("#root") || document.documentElement, {
     childList: true,
     subtree: true,
+    attributes: true,
+    attributeFilter: ["class"],
   });
   document.addEventListener("click", (event) => {
     if (event.target instanceof Element && event.target.closest(".race-card")) {
