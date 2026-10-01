@@ -311,8 +311,32 @@
     });
   }
 
-  const observer = new MutationObserver(refresh);
-  observer.observe(document.documentElement, { childList: true, subtree: true });
-  ready.then(refresh);
-  window.setInterval(refresh, 1200);
+  let refreshScheduled = false;
+  const scheduleRefresh = () => {
+    if (refreshScheduled) return;
+    refreshScheduled = true;
+    window.requestAnimationFrame(() => {
+      refreshScheduled = false;
+      refresh();
+    });
+  };
+  const containsRaceStructure = (node) => node.nodeType === Node.ELEMENT_NODE && (
+    node.matches(".race-card, .detail-panel") || node.querySelector(".race-card, .detail-panel")
+  );
+  const observer = new MutationObserver((records) => {
+    const raceStructureChanged = records.some((record) =>
+      [...record.addedNodes, ...record.removedNodes].some(containsRaceStructure)
+    );
+    if (raceStructureChanged) scheduleRefresh();
+  });
+  observer.observe(document.querySelector("#root") || document.documentElement, {
+    childList: true,
+    subtree: true,
+  });
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Element && event.target.closest(".race-card")) {
+      scheduleRefresh();
+    }
+  }, true);
+  ready.then(scheduleRefresh);
 })();
