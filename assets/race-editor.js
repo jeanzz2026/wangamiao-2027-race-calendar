@@ -53,7 +53,7 @@
     if (!raceId) return;
     const edit = edits[raceId];
     if (!edit) return;
-    document.querySelectorAll(`[data-race-id="${CSS.escape(raceId)}"]`).forEach((card) => {
+    document.querySelectorAll(`.race-card[data-race-id="${CSS.escape(raceId)}"]`).forEach((card) => {
       const heading = card.querySelector("h3");
       const top = card.querySelector(".card-top");
       const line = card.querySelector("p");
@@ -66,7 +66,13 @@
       card.classList.toggle("is-primary", String(edit.role || "").startsWith("首选"));
       card.classList.toggle("is-utmb", edit.type === "UTMB");
     });
-    const panel = document.querySelector(`.detail-panel[data-race-id="${CSS.escape(raceId)}"]`);
+  }
+
+  function paintPanel(raceId) {
+    if (!raceId) return;
+    const edit = edits[raceId];
+    if (!edit) return;
+    const panel = document.querySelector(".detail-panel");
     if (!panel) return;
     const role = panel.querySelector(".detail-role span");
     const type = panel.querySelector(".detail-role b");
@@ -121,7 +127,7 @@
     const panel = document.querySelector(".detail-panel");
     const selected = document.querySelector(".race-card.selected[data-race-id]");
     if (panel && selected && panel.dataset.raceId !== selected.dataset.raceId) panel.dataset.raceId = selected.dataset.raceId;
-    if (panel?.dataset.raceId) paintRace(panel.dataset.raceId);
+    if (panel?.dataset.raceId) paintPanel(panel.dataset.raceId);
     if (panel) {
       const sticky = panel.querySelector(".detail-sticky");
       if (sticky && !sticky.querySelector(".race-edit-btn")) {
