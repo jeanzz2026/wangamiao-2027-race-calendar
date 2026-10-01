@@ -137,33 +137,6 @@
     }
   }
 
-  async function saveViaApp(nextEdits) {
-    await ready;
-    if (typeof window.__wamiaoSetRaceEdits !== "function" || !window.__wamiaoRaceStateReady) {
-      throw new Error("参赛计划保存模块尚未就绪，请刷新页面后重试。");
-    }
-    const started = Date.now();
-    const before = document.querySelector(".save-status")?.textContent || "";
-    window.__wamiaoSetRaceEdits(nextEdits);
-    return new Promise((resolve, reject) => {
-      let sawSaving = false;
-      const poll = window.setInterval(() => {
-        const message = document.querySelector(".save-status")?.textContent?.trim() || "";
-        if (message.includes("同步到云端")) sawSaving = true;
-        if (sawSaving && (message.includes("已保存并同步到云端") || message.includes("已同步云端"))) {
-          window.clearInterval(poll);
-          resolve();
-        } else if (sawSaving && message.includes("云端同步失败")) {
-          window.clearInterval(poll);
-          reject(new Error(message));
-        } else if (Date.now() - started > 25000) {
-          window.clearInterval(poll);
-          reject(new Error(message && message !== before ? `保存没有完成：${message}` : "保存等待超时，请检查页面顶部的云端保存状态后重试。"));
-        }
-      }, 250);
-    });
-  }
-
   function parseDateRange(value) {
     const iso = [...String(value || "").matchAll(/(\d{4})-(\d{2})-(\d{2})/g)];
     if (iso.length) return { start: iso[0][0], end: iso[1]?.[0] || iso[0][0] };
@@ -320,13 +293,16 @@
       fields.forEach(([key]) => { next[key] = inputs[key].value.trim(); });
       if (!next.name) { status.textContent = "赛事名称不能为空。"; return; }
       save.disabled = true;
-      status.textContent = "正在保存…";
+      status.textContent = "正在保存到本机…";
       edits = { ...edits, [raceId]: next };
       try {
-        await saveViaApp(edits);
+        if (typeof window.__wamiaoSetRaceEdits !== "function" || !window.__wamiaoRaceStateReady) {
+          throw new Error("参赛计划保存模块尚未就绪，请刷新页面后重试。");
+        }
         localStorage.setItem(EDITS_KEY, JSON.stringify(edits));
+        window.__wamiaoSetRaceEdits(edits);
         refresh();
-        status.textContent = "已保存并同步到云端 ✓";
+        status.textContent = "已保存到本机，正在后台同步…";
         window.setTimeout(dismiss, 700);
       } catch (error) {
         status.textContent = error.message || "保存失败，请重试。";
