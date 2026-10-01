@@ -2203,6 +2203,17 @@
       "comments": "10km节奏跑，56分钟完成，今天十月一日国庆节，风大",
       "locked": false,
       "independent": true
+    },
+    "7cz68zbmup656i2": {
+      "uid": "7cz68zbmup656i2",
+      "date": "2026-10-03",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "出发马来西亚，休息二天",
+      "locked": false,
+      "independent": true
     }
   }
 }
