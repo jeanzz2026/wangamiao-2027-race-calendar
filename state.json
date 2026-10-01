@@ -955,6 +955,15 @@
       "cat": "路跑",
       "tone": "orange",
       "date": "2026-11-01"
+    },
+    {
+      "uid": "jl6tpubmup63ckf",
+      "libId": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "date": "2026-10-01",
+      "duration": "6分以下配速"
     }
   ],
   "library": [
@@ -2173,6 +2182,27 @@
       "tone": "orange",
       "desc": "真实参加国内外比赛",
       "pct": 0
+    },
+    "jl6tpubmup63ckf": {
+      "uid": "jl6tpubmup63ckf",
+      "date": "2026-10-01",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
+      "pct": 0
+    },
+    "7b9zxk3mup64g94": {
+      "uid": "7b9zxk3mup64g94",
+      "date": "2026-10-01",
+      "name": "",
+      "cat": "路跑",
+      "tone": "amber",
+      "pct": 100,
+      "comments": "10km节奏跑，56分钟完成，今天十月一日国庆节，风大",
+      "locked": false,
+      "independent": true
     }
   }
 }
