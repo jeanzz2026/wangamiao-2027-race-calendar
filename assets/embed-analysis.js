@@ -31,15 +31,27 @@
 
     const frame = document.createElement("iframe");
     frame.className = "analysis-frame";
-    frame.src = streamlitUrl;
     frame.title = "Trail Race Lab 越野赛事数据实验室";
-    frame.loading = "eager";
+    frame.loading = "lazy";
     frame.allow = "clipboard-read; clipboard-write";
     frame.referrerPolicy = "strict-origin-when-cross-origin";
 
     head.append(copy, externalLink);
     frameWrap.append(frame);
     page.append(head, frameWrap);
+
+    // The analysis tab is hidden on the initial race-plan screen. Do not start
+    // the Streamlit app until the iframe is actually visible to the user.
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        if (!entries.some((entry) => entry.isIntersecting)) return;
+        frame.src = streamlitUrl;
+        observer.disconnect();
+      });
+      observer.observe(frameWrap);
+    } else {
+      frame.src = streamlitUrl;
+    }
   }
 
   const observer = new MutationObserver(mountEmbeddedAnalysis);
