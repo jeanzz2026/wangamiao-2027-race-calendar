@@ -956,6 +956,14 @@
       "tone": "acid",
       "date": "2026-10-01",
       "duration": "6分以下配速"
+    },
+    {
+      "uid": "x0im7d3mup65n35",
+      "libId": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "date": "2026-10-05"
     }
   ],
   "library": [
@@ -2197,6 +2205,15 @@
       "tone": "acid",
       "duration": "6分以下配速",
       "desc": "5km以上",
+      "pct": 0
+    },
+    "x0im7d3mup65n35": {
+      "uid": "x0im7d3mup65n35",
+      "date": "2026-10-05",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "desc": "真实进山户外",
       "pct": 0
     }
   }
