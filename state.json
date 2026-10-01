@@ -401,569 +401,6 @@
       "cat": "越野",
       "tone": "purple",
       "date": "2026-09-06"
-    },
-    {
-      "uid": "ittbywpmukjuy4k",
-      "libId": "tnwjfkxmswklp6n",
-      "name": "比赛-越野跑",
-      "cat": "路跑",
-      "tone": "orange",
-      "date": "2026-09-12",
-      "duration": "25 km 澜跑北京",
-      "note": "真实参加国内外比赛"
-    },
-    {
-      "uid": "o18dahrmukjvp4u",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-09-11",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "bo2jqt0mukjvxho",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-08",
-      "duration": "6分以下配速"
-    },
-    {
-      "uid": "9jc6af0mukjw75e",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-10",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "9li5mkkmukjwbtp",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-09-07",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "uxyezbzmukjwez2",
-      "libId": "4llkglimsvf8avn",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-09"
-    },
-    {
-      "uid": "mi3v06zmukjwkki",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-13"
-    },
-    {
-      "uid": "qhff55hmukjwwyd",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-15",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "rswbazbmukjxanx",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-17"
-    },
-    {
-      "uid": "lcs15ynmukjxht6",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-16",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "8yxmdslmukjxljr",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-14"
-    },
-    {
-      "uid": "209nqn2mukjy2p2",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-18",
-      "duration": "6-10km",
-      "note": "上海北外滩"
-    },
-    {
-      "uid": "zclhdgtmukjyf0o",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-19",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "fv2ds3fmukjyl2c",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-20"
-    },
-    {
-      "uid": "jhjhrrvmukjz6xt",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-09-22",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "u0vx9sqmukjzgnf",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-25",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "x1bx4gimukjzkyt",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-22",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "jb2ikxomukjzwcm",
-      "libId": "4llkglimsvf8avn",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-23"
-    },
-    {
-      "uid": "h5nr0jumukk02er",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-24",
-      "duration": "6分以下配速"
-    },
-    {
-      "uid": "1ruf932mukk0896",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-21",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "efzlf6gmukk0exd",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-09-26"
-    },
-    {
-      "uid": "plif8d0mukk0h56",
-      "libId": "heiwhydmsvfb43r",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "date": "2026-09-27",
-      "duration": "15km以上"
-    },
-    {
-      "uid": "465dsxumukk0ok1",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-09-28",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "zqalwo9mukk0skv",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-29",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "sabn94mmukk2ttq",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-09-25",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "0fvi9ejmukl1t1c",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-09-30",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "uz7zcodmukl1uak",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-09-30",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "4mq975zmukl28fn",
-      "libId": "4llkglimsvf8avn",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-02"
-    },
-    {
-      "uid": "98xgliomukl2aei",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-02",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "oks53t4mukl2dva",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-03"
-    },
-    {
-      "uid": "760ywmvmukl2r3k",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-04"
-    },
-    {
-      "uid": "ln39ykwmukl2xvx",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-06",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "hniefbpmukl306u",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-07",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "7ve0hxymukl35ue",
-      "libId": "y9g62ppmsvffufz",
-      "name": "爬坡训练",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-08"
-    },
-    {
-      "uid": "4vf2vaqmukl3arh",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-09"
-    },
-    {
-      "uid": "cdvfoljmukl3ewo",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-10",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "zwrl6p1mukl53z0",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-11"
-    },
-    {
-      "uid": "j4ixm33mukl5hn4",
-      "libId": "4llkglimsvf8avn",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-13"
-    },
-    {
-      "uid": "zzk01c9mukl64yp",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-12",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "1cwuz51mukl66sj",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-12",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "lrtdj7vmukl6av8",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-14",
-      "duration": "6分以下配速"
-    },
-    {
-      "uid": "6hmc8mdmukl6fbo",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-15",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "obpxlcmmukl6jx1",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-15",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "qw9f6w3mukl6pqe",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-16"
-    },
-    {
-      "uid": "xfkvsmbmukl6rns",
-      "libId": "heiwhydmsvfb43r",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "date": "2026-10-17",
-      "duration": "15km以上"
-    },
-    {
-      "uid": "6sf0fu3mukl8gux",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-22",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "zc3p00omukl8i3h",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-22",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "yk2lfzzmukl8k0o",
-      "libId": "4llkglimsvf8avn",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-23"
-    },
-    {
-      "uid": "mp8p222mukl8lz3",
-      "libId": "heiwhydmsvfb43r",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "date": "2026-10-24",
-      "duration": "15km以上"
-    },
-    {
-      "uid": "9ji2f8lmukl965c",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-25"
-    },
-    {
-      "uid": "u52r4wwmukl9xye",
-      "libId": "y9g62ppmsvffufz",
-      "name": "爬坡训练",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-18"
-    },
-    {
-      "uid": "elbobw7muklad5v",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-19"
-    },
-    {
-      "uid": "ngx1lsdmuklajpr",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-21",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "40yfntumuklaowe",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-20",
-      "duration": "6分以下配速"
-    },
-    {
-      "uid": "x52fv2fmuklb560",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-26",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "uwh2rk4muklbi26",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-27",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "5d4ymq7muklbir6",
-      "libId": "81hw601msvfcy51",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "date": "2026-10-27",
-      "duration": "60分钟"
-    },
-    {
-      "uid": "difadgvmuklbl7i",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-28"
-    },
-    {
-      "uid": "w75n43emuklbnqk",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-29",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "g41cqaxmuklbqgj",
-      "libId": "82qlailmswj0qlk",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-30",
-      "duration": "6-10km"
-    },
-    {
-      "uid": "bcz9uu2muklbx7d",
-      "libId": "4llkglimsvf8avn",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-29"
-    },
-    {
-      "uid": "i9qnmgkmukle1pk",
-      "libId": "iwzymilmswj35hd",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "date": "2026-10-31"
-    },
-    {
-      "uid": "zbmy9nkmukleuqk",
-      "libId": "tnwjfkxmswklp6n",
-      "name": "比赛-越野跑",
-      "cat": "路跑",
-      "tone": "orange",
-      "date": "2026-11-01"
-    },
-    {
-      "uid": "jl6tpubmup63ckf",
-      "libId": "6l77ly4msvfebl6",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "date": "2026-10-01",
-      "duration": "6分以下配速"
-    },
-    {
-      "uid": "x0im7d3mup65n35",
-      "libId": "7rx2ikqmsvfi1n4",
-      "name": "进山训练",
-      "cat": "越野",
-      "tone": "purple",
-      "date": "2026-10-05"
     }
   ],
   "library": [
@@ -1042,7 +479,7 @@
     {
       "id": "ur4z82cmswj5i2o",
       "name": "游泳",
-      "cat": "路跑",
+      "cat": "交叉训练",
       "tone": "blue",
       "duration": "45-60minute",
       "custom": true
@@ -1050,7 +487,7 @@
     {
       "id": "tnwjfkxmswklp6n",
       "name": "比赛-越野跑",
-      "cat": "路跑",
+      "cat": "比赛",
       "tone": "orange",
       "desc": "真实参加国内外比赛",
       "custom": true
@@ -1058,7 +495,7 @@
     {
       "id": "8kmkdowmswktven",
       "name": "比赛-半马",
-      "cat": "路跑",
+      "cat": "比赛",
       "tone": "orange",
       "duration": "21km",
       "custom": true
@@ -1066,7 +503,7 @@
     {
       "id": "n8tgqsamswkug16",
       "name": "比赛-全马",
-      "cat": "路跑",
+      "cat": "比赛",
       "tone": "orange",
       "duration": "42km",
       "custom": true
@@ -1074,168 +511,112 @@
   ],
   "defaultLibrary": [
     {
-      "id": "interval",
-      "name": "间歇",
-      "cat": "路跑",
-      "tone": "orange",
-      "duration": "8×400m",
-      "desc": "高强度重复跑，提升最大摄氧与速度能力"
+      "id": "4llkglimsvf8avn",
+      "name": "主动恢复",
+      "cat": "通用",
+      "tone": "green",
+      "desc": "外部",
+      "custom": true
     },
     {
-      "id": "tempo",
-      "name": "节奏跑",
+      "id": "2fjm05wmsvfa7t6",
+      "name": "间歇跑",
       "cat": "路跑",
       "tone": "amber",
-      "duration": "40min",
-      "desc": "接近乳酸阈值的稳定配速，提升耐力门槛"
+      "custom": true
     },
     {
-      "id": "longrun",
-      "name": "长距离",
+      "id": "heiwhydmsvfb43r",
+      "name": "LSD",
       "cat": "路跑",
-      "tone": "acid",
-      "duration": "25km",
-      "desc": "稳定低强度长距离，夯实有氧基础"
-    },
-    {
-      "id": "easy",
-      "name": "轻松跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "45min",
-      "desc": "恢复性慢跑，促进血液循环与恢复"
-    },
-    {
-      "id": "hill",
-      "name": "爬坡",
-      "cat": "越野",
       "tone": "purple",
-      "duration": "10×坡",
-      "desc": "坡道重复训练，强化下肢力量与心肺"
+      "duration": "15km以上",
+      "custom": true
     },
     {
-      "id": "trail",
-      "name": "越野长距离",
-      "cat": "越野",
-      "tone": "purple",
-      "duration": "30km",
-      "desc": "山地技术地形长距离，模拟比赛场景"
-    },
-    {
-      "id": "strength",
-      "name": "力量",
+      "id": "81hw601msvfcy51",
+      "name": "GYM",
       "cat": "通用",
+      "tone": "amber",
+      "duration": "60分钟",
+      "desc": "综合",
+      "custom": true
+    },
+    {
+      "id": "6l77ly4msvfebl6",
+      "name": "节奏跑",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6分以下配速",
+      "desc": "5km以上",
+      "custom": true
+    },
+    {
+      "id": "y9g62ppmsvffufz",
+      "name": "爬坡训练",
+      "cat": "通用",
+      "tone": "amber",
+      "desc": "跑步机15坡度",
+      "custom": true
+    },
+    {
+      "id": "7rx2ikqmsvfi1n4",
+      "name": "进山训练",
+      "cat": "越野",
+      "tone": "purple",
+      "desc": "真实进山户外",
+      "custom": true
+    },
+    {
+      "id": "82qlailmswj0qlk",
+      "name": "Easy Run",
+      "cat": "路跑",
+      "tone": "acid",
+      "duration": "6-10km",
+      "custom": true
+    },
+    {
+      "id": "iwzymilmswj35hd",
+      "name": "全休",
+      "cat": "通用",
+      "tone": "green",
+      "custom": true
+    },
+    {
+      "id": "ur4z82cmswj5i2o",
+      "name": "游泳",
+      "cat": "交叉训练",
       "tone": "blue",
-      "duration": "40min",
-      "desc": "核心与下肢力量训练，预防伤病"
+      "duration": "45-60minute",
+      "custom": true
     },
     {
-      "id": "stretch",
-      "name": "拉伸",
-      "cat": "通用",
-      "tone": "green",
-      "duration": "15min",
-      "desc": "动态/静态拉伸，提升关节活动度"
+      "id": "tnwjfkxmswklp6n",
+      "name": "比赛-越野跑",
+      "cat": "比赛",
+      "tone": "orange",
+      "desc": "真实参加国内外比赛",
+      "custom": true
     },
     {
-      "id": "recovery",
-      "name": "恢复",
-      "cat": "通用",
-      "tone": "green",
-      "duration": "休息日",
-      "desc": "休息 / 瑜伽 / 泡沫轴，主动恢复"
+      "id": "8kmkdowmswktven",
+      "name": "比赛-半马",
+      "cat": "比赛",
+      "tone": "orange",
+      "duration": "21km",
+      "custom": true
+    },
+    {
+      "id": "n8tgqsamswkug16",
+      "name": "比赛-全马",
+      "cat": "比赛",
+      "tone": "orange",
+      "duration": "42km",
+      "custom": true
     }
   ],
   "theme": "misty",
   "takeaways": {
-    "jrhf0hgmukk3eij": {
-      "uid": "jrhf0hgmukk3eij",
-      "date": "2026-09-18",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "上海北外滩跑 10km",
-      "locked": false,
-      "independent": true
-    },
-    "yoo095rmukk402z": {
-      "uid": "yoo095rmukk402z",
-      "date": "2026-09-19",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "上海北外滩8KM",
-      "locked": false,
-      "independent": true
-    },
-    "ci5mpdbmukk4g6d": {
-      "uid": "ci5mpdbmukk4g6d",
-      "date": "2026-09-25",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "早4km - 力量 - 回4km",
-      "locked": false,
-      "independent": true
-    },
-    "6ahvf9cmukk5976": {
-      "uid": "6ahvf9cmukk5976",
-      "date": "2026-09-26",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "晚上嘴馋 - 撞墙 :(",
-      "locked": false,
-      "independent": true
-    },
-    "8ya2x1vmukk81qn": {
-      "uid": "8ya2x1vmukk81qn",
-      "date": "2026-09-27",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "起跑状态不好，而且很困，但完成度很好配速6:03",
-      "locked": false,
-      "independent": true
-    },
-    "ucicqbmmukk8em0": {
-      "uid": "ucicqbmmukk8em0",
-      "date": "2026-09-24",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "回来跑就是爽",
-      "locked": false,
-      "independent": true
-    },
-    "7b9zxk3mup64g94": {
-      "uid": "7b9zxk3mup64g94",
-      "date": "2026-10-01",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "10km节奏跑，56分钟完成，今天十月一日国庆节，风大",
-      "locked": false,
-      "independent": true
-    },
-    "7cz68zbmup656i2": {
-      "uid": "7cz68zbmup656i2",
-      "date": "2026-10-03",
-      "name": "",
-      "cat": "路跑",
-      "tone": "amber",
-      "pct": 100,
-      "comments": "出发马来西亚，休息二天",
-      "locked": false,
-      "independent": true
-    },
     "h7v1cf9msvf2od3": {
       "uid": "h7v1cf9msvf2od3",
       "date": "2026-08-11",
@@ -1628,593 +1009,7 @@
       "tone": "purple",
       "desc": "真实进山户外",
       "pct": 100
-    },
-    "ittbywpmukjuy4k": {
-      "uid": "ittbywpmukjuy4k",
-      "date": "2026-09-12",
-      "name": "比赛-越野跑",
-      "cat": "路跑",
-      "tone": "orange",
-      "duration": "25 km 澜跑北京",
-      "desc": "真实参加国内外比赛",
-      "pct": 100
-    },
-    "o18dahrmukjvp4u": {
-      "uid": "o18dahrmukjvp4u",
-      "date": "2026-09-11",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 100
-    },
-    "bo2jqt0mukjvxho": {
-      "uid": "bo2jqt0mukjvxho",
-      "date": "2026-09-08",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
-      "pct": 100
-    },
-    "9jc6af0mukjw75e": {
-      "uid": "9jc6af0mukjw75e",
-      "date": "2026-09-10",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "9li5mkkmukjwbtp": {
-      "uid": "9li5mkkmukjwbtp",
-      "date": "2026-09-07",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 100
-    },
-    "uxyezbzmukjwez2": {
-      "uid": "uxyezbzmukjwez2",
-      "date": "2026-09-09",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
-      "pct": 100
-    },
-    "mi3v06zmukjwkki": {
-      "uid": "mi3v06zmukjwkki",
-      "date": "2026-09-13",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 100
-    },
-    "qhff55hmukjwwyd": {
-      "uid": "qhff55hmukjwwyd",
-      "date": "2026-09-15",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "rswbazbmukjxanx": {
-      "uid": "rswbazbmukjxanx",
-      "date": "2026-09-17",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 100
-    },
-    "lcs15ynmukjxht6": {
-      "uid": "lcs15ynmukjxht6",
-      "date": "2026-09-16",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "8yxmdslmukjxljr": {
-      "uid": "8yxmdslmukjxljr",
-      "date": "2026-09-14",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 100
-    },
-    "209nqn2mukjy2p2": {
-      "uid": "209nqn2mukjy2p2",
-      "date": "2026-09-18",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "zclhdgtmukjyf0o": {
-      "uid": "zclhdgtmukjyf0o",
-      "date": "2026-09-19",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "fv2ds3fmukjyl2c": {
-      "uid": "fv2ds3fmukjyl2c",
-      "date": "2026-09-20",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 100
-    },
-    "jhjhrrvmukjz6xt": {
-      "uid": "jhjhrrvmukjz6xt",
-      "date": "2026-09-22",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 100
-    },
-    "u0vx9sqmukjzgnf": {
-      "uid": "u0vx9sqmukjzgnf",
-      "date": "2026-09-25",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "x1bx4gimukjzkyt": {
-      "uid": "x1bx4gimukjzkyt",
-      "date": "2026-09-22",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "jb2ikxomukjzwcm": {
-      "uid": "jb2ikxomukjzwcm",
-      "date": "2026-09-23",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
-      "pct": 100
-    },
-    "h5nr0jumukk02er": {
-      "uid": "h5nr0jumukk02er",
-      "date": "2026-09-24",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
-      "pct": 100
-    },
-    "1ruf932mukk0896": {
-      "uid": "1ruf932mukk0896",
-      "date": "2026-09-21",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 100
-    },
-    "efzlf6gmukk0exd": {
-      "uid": "efzlf6gmukk0exd",
-      "date": "2026-09-26",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 100
-    },
-    "plif8d0mukk0h56": {
-      "uid": "plif8d0mukk0h56",
-      "date": "2026-09-27",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "duration": "15km以上",
-      "pct": 100
-    },
-    "465dsxumukk0ok1": {
-      "uid": "465dsxumukk0ok1",
-      "date": "2026-09-28",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "zqalwo9mukk0skv": {
-      "uid": "zqalwo9mukk0skv",
-      "date": "2026-09-29",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "sabn94mmukk2ttq": {
-      "uid": "sabn94mmukk2ttq",
-      "date": "2026-09-25",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 100
-    },
-    "0fvi9ejmukl1t1c": {
-      "uid": "0fvi9ejmukl1t1c",
-      "date": "2026-09-30",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "uz7zcodmukl1uak": {
-      "uid": "uz7zcodmukl1uak",
-      "date": "2026-09-30",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "4mq975zmukl28fn": {
-      "uid": "4mq975zmukl28fn",
-      "date": "2026-10-02",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
-      "pct": 0
-    },
-    "98xgliomukl2aei": {
-      "uid": "98xgliomukl2aei",
-      "date": "2026-10-02",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "oks53t4mukl2dva": {
-      "uid": "oks53t4mukl2dva",
-      "date": "2026-10-03",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "760ywmvmukl2r3k": {
-      "uid": "760ywmvmukl2r3k",
-      "date": "2026-10-04",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "ln39ykwmukl2xvx": {
-      "uid": "ln39ykwmukl2xvx",
-      "date": "2026-10-06",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "hniefbpmukl306u": {
-      "uid": "hniefbpmukl306u",
-      "date": "2026-10-07",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "7ve0hxymukl35ue": {
-      "uid": "7ve0hxymukl35ue",
-      "date": "2026-10-08",
-      "name": "爬坡训练",
-      "cat": "通用",
-      "tone": "amber",
-      "desc": "跑步机15坡度",
-      "pct": 0
-    },
-    "4vf2vaqmukl3arh": {
-      "uid": "4vf2vaqmukl3arh",
-      "date": "2026-10-09",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "cdvfoljmukl3ewo": {
-      "uid": "cdvfoljmukl3ewo",
-      "date": "2026-10-10",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "zwrl6p1mukl53z0": {
-      "uid": "zwrl6p1mukl53z0",
-      "date": "2026-10-11",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "j4ixm33mukl5hn4": {
-      "uid": "j4ixm33mukl5hn4",
-      "date": "2026-10-13",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
-      "pct": 0
-    },
-    "zzk01c9mukl64yp": {
-      "uid": "zzk01c9mukl64yp",
-      "date": "2026-10-12",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "1cwuz51mukl66sj": {
-      "uid": "1cwuz51mukl66sj",
-      "date": "2026-10-12",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "lrtdj7vmukl6av8": {
-      "uid": "lrtdj7vmukl6av8",
-      "date": "2026-10-14",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
-      "pct": 0
-    },
-    "6hmc8mdmukl6fbo": {
-      "uid": "6hmc8mdmukl6fbo",
-      "date": "2026-10-15",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "obpxlcmmukl6jx1": {
-      "uid": "obpxlcmmukl6jx1",
-      "date": "2026-10-15",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "qw9f6w3mukl6pqe": {
-      "uid": "qw9f6w3mukl6pqe",
-      "date": "2026-10-16",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "xfkvsmbmukl6rns": {
-      "uid": "xfkvsmbmukl6rns",
-      "date": "2026-10-17",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "duration": "15km以上",
-      "pct": 0
-    },
-    "6sf0fu3mukl8gux": {
-      "uid": "6sf0fu3mukl8gux",
-      "date": "2026-10-22",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "zc3p00omukl8i3h": {
-      "uid": "zc3p00omukl8i3h",
-      "date": "2026-10-22",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "yk2lfzzmukl8k0o": {
-      "uid": "yk2lfzzmukl8k0o",
-      "date": "2026-10-23",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
-      "pct": 0
-    },
-    "mp8p222mukl8lz3": {
-      "uid": "mp8p222mukl8lz3",
-      "date": "2026-10-24",
-      "name": "LSD",
-      "cat": "路跑",
-      "tone": "purple",
-      "duration": "15km以上",
-      "pct": 0
-    },
-    "9ji2f8lmukl965c": {
-      "uid": "9ji2f8lmukl965c",
-      "date": "2026-10-25",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "u52r4wwmukl9xye": {
-      "uid": "u52r4wwmukl9xye",
-      "date": "2026-10-18",
-      "name": "爬坡训练",
-      "cat": "通用",
-      "tone": "amber",
-      "desc": "跑步机15坡度",
-      "pct": 0
-    },
-    "elbobw7muklad5v": {
-      "uid": "elbobw7muklad5v",
-      "date": "2026-10-19",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "ngx1lsdmuklajpr": {
-      "uid": "ngx1lsdmuklajpr",
-      "date": "2026-10-21",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "40yfntumuklaowe": {
-      "uid": "40yfntumuklaowe",
-      "date": "2026-10-20",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
-      "pct": 0
-    },
-    "x52fv2fmuklb560": {
-      "uid": "x52fv2fmuklb560",
-      "date": "2026-10-26",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "uwh2rk4muklbi26": {
-      "uid": "uwh2rk4muklbi26",
-      "date": "2026-10-27",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "5d4ymq7muklbir6": {
-      "uid": "5d4ymq7muklbir6",
-      "date": "2026-10-27",
-      "name": "GYM",
-      "cat": "通用",
-      "tone": "amber",
-      "duration": "60分钟",
-      "desc": "综合",
-      "pct": 0
-    },
-    "difadgvmuklbl7i": {
-      "uid": "difadgvmuklbl7i",
-      "date": "2026-10-28",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "w75n43emuklbnqk": {
-      "uid": "w75n43emuklbnqk",
-      "date": "2026-10-29",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "g41cqaxmuklbqgj": {
-      "uid": "g41cqaxmuklbqgj",
-      "date": "2026-10-30",
-      "name": "Easy Run",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6-10km",
-      "pct": 0
-    },
-    "bcz9uu2muklbx7d": {
-      "uid": "bcz9uu2muklbx7d",
-      "date": "2026-10-29",
-      "name": "主动恢复",
-      "cat": "通用",
-      "tone": "green",
-      "desc": "外部",
-      "pct": 0
-    },
-    "i9qnmgkmukle1pk": {
-      "uid": "i9qnmgkmukle1pk",
-      "date": "2026-10-31",
-      "name": "全休",
-      "cat": "通用",
-      "tone": "green",
-      "pct": 0
-    },
-    "zbmy9nkmukleuqk": {
-      "uid": "zbmy9nkmukleuqk",
-      "date": "2026-11-01",
-      "name": "比赛-越野跑",
-      "cat": "路跑",
-      "tone": "orange",
-      "desc": "真实参加国内外比赛",
-      "pct": 0
-    },
-    "jl6tpubmup63ckf": {
-      "uid": "jl6tpubmup63ckf",
-      "date": "2026-10-01",
-      "name": "节奏跑",
-      "cat": "路跑",
-      "tone": "acid",
-      "duration": "6分以下配速",
-      "desc": "5km以上",
-      "pct": 0
-    },
-    "x0im7d3mup65n35": {
-      "uid": "x0im7d3mup65n35",
-      "date": "2026-10-05",
-      "name": "进山训练",
-      "cat": "越野",
-      "tone": "purple",
-      "desc": "真实进山户外",
-      "pct": 0
     }
-  }
+  },
+  "raceEdits": {}
 }
