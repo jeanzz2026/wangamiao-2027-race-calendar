@@ -69,6 +69,18 @@
 .race-edit-btn:hover { background: var(--ink); color: var(--paper); }
 .race-edit-btn[hidden] { display: none; }
 
+.race-card.race-not-selected {
+  filter: grayscale(1);
+  opacity: .52;
+}
+
+.race-card.race-confirmed,
+.race-card.race-confirmed:hover,
+.race-card.race-confirmed.selected {
+  border: 2px solid var(--orange);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--orange) 26%, transparent), var(--shadow-soft);
+}
+
 .race-editor-overlay {
   position: fixed;
   inset: 0;

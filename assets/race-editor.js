@@ -65,6 +65,8 @@
       setText(category, edit.category);
       card.classList.toggle("is-primary", String(edit.role || "").startsWith("首选"));
       card.classList.toggle("is-utmb", edit.type === "UTMB");
+      card.classList.toggle("race-not-selected", edit.result === "未中签");
+      card.classList.toggle("race-confirmed", edit.result === "已中签");
     });
   }
 
@@ -232,6 +234,23 @@
     inputs.type = typeSelect;
     typeLabel.append(typeSelect);
     form.append(typeLabel);
+    const resultLabel = document.createElement("label");
+    resultLabel.textContent = "报名结果";
+    const resultSelect = document.createElement("select");
+    const resultPlaceholder = document.createElement("option");
+    resultPlaceholder.value = "";
+    resultPlaceholder.textContent = "请选择报名结果";
+    resultSelect.append(resultPlaceholder);
+    ["已报名", "未中签", "已中签"].forEach((choice) => {
+      const option = document.createElement("option");
+      option.value = choice;
+      option.textContent = choice;
+      resultSelect.append(option);
+    });
+    resultSelect.value = valueFor(raceId, "result", "");
+    inputs.result = resultSelect;
+    resultLabel.append(resultSelect);
+    form.append(resultLabel);
     const dateLabel = document.createElement("label");
     dateLabel.textContent = "比赛日期范围（留空保留原日期）";
     const dateRange = parseDateRange(valueFor(raceId, "date", base.date));
@@ -288,6 +307,7 @@
       const next = {};
       next.role = inputs.role.value;
       next.type = inputs.type.value;
+      next.result = inputs.result.value;
       if (inputs.dateFrom.value && inputs.dateTo.value) {
         if (inputs.dateTo.value < inputs.dateFrom.value) {
           status.textContent = "结束日期不能早于开始日期。";
