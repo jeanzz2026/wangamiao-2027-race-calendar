@@ -991,6 +991,18 @@
       "signup": "2026年12月",
       "official": "hk100ultra.com",
       "url": "https://hk100ultra.com/"
+    },
+    "xiamen": {
+      "role": "备选2",
+      "type": "全马",
+      "result": "已报名",
+      "date": "1月初",
+      "name": "厦门马拉松",
+      "category": "全程马拉松",
+      "location": "厦门",
+      "signup": "2026年9–10月",
+      "official": "xmim.org",
+      "url": "https://www.xmim.org/"
     }
   }
 }
