@@ -1,6 +1,7 @@
 (() => {
   const TOKEN_KEY = "wamiao_gh_token";
   const EDITS_KEY = "wamiao_race_edits_v1";
+  const CUSTOM_RACE_PREFIX = "custom-race-";
   const raceIds = {
     "Vibram香港100": "hk100", "广州100越野赛": "gz100", "深圳100越野赛": "sz100",
     "高黎贡超级山径赛 by UTMB": "glg", "兰州马拉松": "lanzhou", "青岛马拉松": "qingdao",
@@ -49,6 +50,19 @@
     return document.querySelector(".race-card.selected[data-race-id]")?.dataset.raceId || "";
   }
 
+  function isSignedIn() {
+    return Boolean(localStorage.getItem(TOKEN_KEY) && window.__wamiaoRaceStateReady);
+  }
+
+  function createStatusBadge(card, result) {
+    const existing = card.querySelector(".race-result-badge");
+    if (!result) { existing?.remove(); return; }
+    const badge = existing || document.createElement("span");
+    badge.className = "race-result-badge";
+    badge.textContent = result;
+    if (!existing) card.append(badge);
+  }
+
   function paintRace(raceId) {
     if (!raceId) return;
     const edit = edits[raceId];
@@ -67,6 +81,60 @@
       card.classList.toggle("is-utmb", edit.type === "UTMB");
       card.classList.toggle("race-not-selected", edit.result === "未中签");
       card.classList.toggle("race-confirmed", edit.result === "已中签");
+      createStatusBadge(card, edit.result);
+    });
+  }
+
+  function renderCustomRaces() {
+    document.querySelectorAll(".race-card.race-custom").forEach((card) => card.remove());
+    Object.entries(edits).filter(([, edit]) => edit?.custom).forEach(([id, edit]) => {
+      const month = Math.max(1, Math.min(12, Number(edit.month) || 1));
+      const body = document.querySelectorAll(".month-cell .month-body")[month - 1];
+      if (!body) return;
+      const card = document.createElement("article");
+      card.className = "race-card race-custom";
+      card.dataset.raceId = id;
+      card.tabIndex = 0;
+      card.innerHTML = '<div class="card-top"><span></span><b></b></div><h3></h3><p></p><small></small>';
+      const before = body.querySelector(".race-add-btn");
+      body.insertBefore(card, before || null);
+      paintRace(id);
+    });
+  }
+
+  function ensureCardControls() {
+    document.querySelectorAll(".race-card").forEach((card) => {
+      if (!card.querySelector(".race-card-edit")) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "race-card-edit";
+        button.setAttribute("aria-label", "编辑赛事");
+        button.title = "编辑赛事";
+        button.textContent = "✎";
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          openEditor(card.dataset.raceId);
+        });
+        card.append(button);
+      }
+      const button = card.querySelector(".race-card-edit");
+      if (button) button.hidden = !isSignedIn();
+    });
+    document.querySelectorAll(".month-cell .month-body").forEach((body, index) => {
+      let button = body.querySelector(".race-add-btn");
+      if (!button) {
+        button = document.createElement("button");
+        button.type = "button";
+        button.className = "race-add-btn";
+        button.innerHTML = '<span aria-hidden="true">+</span> 添加赛事';
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          openEditor(`${CUSTOM_RACE_PREFIX}${Date.now()}-${index + 1}`, { month: index + 1, isNew: true });
+        });
+        body.append(button);
+      }
+      button.hidden = !isSignedIn();
     });
   }
 
@@ -120,6 +188,7 @@
   }
 
   function refresh() {
+    renderCustomRaces();
     document.querySelectorAll(".race-card").forEach((card) => {
       const heading = card.querySelector("h3");
       const id = card.dataset.raceId || raceIds[heading?.textContent?.trim()];
@@ -130,23 +199,8 @@
     const selected = document.querySelector(".race-card.selected[data-race-id]");
     if (panel && selected && panel.dataset.raceId !== selected.dataset.raceId) panel.dataset.raceId = selected.dataset.raceId;
     if (panel?.dataset.raceId) paintPanel(panel.dataset.raceId);
-    if (panel) {
-      const sticky = panel.querySelector(".detail-sticky");
-      if (sticky && !sticky.querySelector(".race-edit-btn")) {
-        const button = document.createElement("button");
-        button.className = "race-edit-btn";
-        button.type = "button";
-        button.textContent = "编辑赛事详情";
-        button.hidden = !localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady;
-        button.addEventListener("click", () => openEditor(selectedRaceId() || panel.dataset.raceId));
-        sticky.append(button);
-      }
-      const button = panel.querySelector(".race-edit-btn");
-      if (button) {
-        const hidden = !localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady;
-        if (button.hidden !== hidden) button.hidden = hidden;
-      }
-    }
+    panel?.querySelector(".race-edit-btn")?.remove();
+    ensureCardControls();
   }
 
   function parseDateRange(value) {
@@ -164,16 +218,16 @@
     return { start: date(Number(first[1]), Number(first[2])), end: date(month, lastDay) };
   }
 
-  function openEditor(raceId) {
-    if (!localStorage.getItem(TOKEN_KEY) || !window.__wamiaoRaceStateReady) return;
+  function openEditor(raceId, options = {}) {
+    if (!isSignedIn()) return;
     const existing = edits[raceId] || {};
     const card = document.querySelector(`.race-card[data-race-id="${CSS.escape(raceId)}"]`);
     const panel = document.querySelector(`.detail-panel[data-race-id="${CSS.escape(raceId)}"]`);
     const base = {
-      name: card?.querySelector("h3")?.textContent || panel?.querySelector("h2")?.textContent || "",
+      name: existing.name || card?.querySelector("h3")?.textContent || panel?.querySelector("h2")?.textContent || "",
       role: card?.querySelector(".card-top span")?.textContent || panel?.querySelector(".detail-role span")?.textContent || "",
       type: card?.querySelector(".card-top b")?.textContent || panel?.querySelector(".detail-role b")?.textContent || "",
-      date: panel?.querySelectorAll("dl dd")[0]?.textContent || "",
+      date: existing.date || panel?.querySelectorAll("dl dd")[0]?.textContent || `2027-${String(options.month || 1).padStart(2, "0")}-01`,
       category: panel?.querySelectorAll("dl dd")[1]?.textContent || card?.querySelector("small")?.textContent || "",
       location: panel?.querySelectorAll("dl dd")[2]?.textContent || "",
       signup: panel?.querySelectorAll("dl dd")[3]?.textContent || "",
@@ -322,6 +376,10 @@
       }
       fields.forEach(([key]) => { next[key] = inputs[key].value.trim(); });
       if (!next.name) { status.textContent = "赛事名称不能为空。"; return; }
+      if (options.isNew || existing.custom) {
+        next.custom = true;
+        next.month = Number(options.month || existing.month || 1);
+      }
       save.disabled = true;
       status.textContent = "正在保存到本机…";
       edits = { ...edits, [raceId]: next };
@@ -375,7 +433,15 @@
     attributeFilter: ["class"],
   });
   document.addEventListener("click", (event) => {
-    if (event.target instanceof Element && event.target.closest(".race-card")) {
+    const card = event.target instanceof Element && event.target.closest(".race-card");
+    if (card) {
+      if (card.classList.contains("race-custom")) {
+        document.querySelectorAll(".race-card.selected").forEach((item) => item.classList.remove("selected"));
+        card.classList.add("selected");
+        const panel = document.querySelector(".detail-panel");
+        if (panel) panel.dataset.raceId = card.dataset.raceId;
+        paintPanel(card.dataset.raceId);
+      }
       scheduleRefresh();
     }
   }, true);

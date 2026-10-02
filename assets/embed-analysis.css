@@ -55,19 +55,64 @@
   min-height: 32px;
 }
 
-.race-edit-btn {
-  margin-top: 18px;
-  padding: 9px 14px;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  background: transparent;
+/* Place the selected race detail beside the calendar's first column. */
+.workspace { grid-template-columns: 330px minmax(0, 1fr); }
+.detail-panel { order: -1; }
+
+.race-card-edit {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--white) 86%, transparent);
   color: var(--ink);
-  font-size: 12px;
-  font-weight: 800;
+  font: 900 17px/1 Arial, sans-serif;
+  opacity: 0;
+  transition: opacity .15s ease, background .15s ease;
 }
 
-.race-edit-btn:hover { background: var(--ink); color: var(--paper); }
-.race-edit-btn[hidden] { display: none; }
+.race-card:hover .race-card-edit,
+.race-card.selected .race-card-edit,
+.race-card-edit:focus-visible { opacity: 1; }
+.race-card-edit:hover { background: var(--ink); color: var(--paper); }
+.race-card-edit[hidden] { display: none; }
+
+.race-result-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--ink) 10%, transparent);
+  color: var(--ink);
+  font: 900 10px/1 Arial, sans-serif;
+  letter-spacing: .04em;
+}
+.race-card.race-confirmed .race-result-badge { background: var(--orange); color: var(--white); }
+.race-card.race-not-selected .race-result-badge { background: var(--muted); color: var(--white); }
+
+.race-add-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 36px;
+  margin-top: 8px;
+  border: 1px dashed var(--line);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+.race-add-btn span { margin-right: 4px; font-size: 16px; line-height: 1; }
+.race-add-btn:hover { border-color: var(--ink); color: var(--ink); background: color-mix(in srgb, var(--acid) 18%, transparent); }
+.race-add-btn[hidden] { display: none; }
 
 .race-card.race-not-selected {
   filter: grayscale(1);
@@ -79,6 +124,11 @@
 .race-card.race-confirmed.selected {
   border: 2px solid var(--orange);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--orange) 26%, transparent), var(--shadow-soft);
+}
+
+@media (max-width: 1100px) {
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .detail-panel { order: 0; }
 }
 
 .race-editor-overlay {
