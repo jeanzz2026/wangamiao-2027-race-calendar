@@ -1,20 +1,25 @@
 .analysis-page .analysis-embed-head {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .analysis-page .analysis-embed-copy h3 {
-  margin: 12px 0 6px;
-  font-size: clamp(20px, 2.6vw, 28px);
-  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 900;
+  letter-spacing: .04em;
 }
 
 .analysis-page .analysis-embed-copy .al-desc {
   margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
 }
+
+.analysis-page { padding-top: 18px; }
 
 .analysis-page .analysis-frame-wrap {
   overflow: hidden;
@@ -168,12 +173,17 @@
 .race-editor-modal select:focus { outline: 2px solid var(--acid); outline-offset: 1px; }
 .race-editor-modal .race-date-range { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .race-editor-modal .race-date-range input { min-width: 0; }
+.race-editor-modal label.race-utmb-check { display: flex; align-items: center; gap: 8px; margin: 8px 0 12px; font-size: 13px; }
+.race-editor-modal .race-utmb-check input { display: inline-block; width: auto; margin: 0; accent-color: var(--acid); }
 .race-editor-modal footer.race-editor-actions { display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; gap: 10px; margin: 14px 0 0; padding: 0; background: transparent !important; color: var(--ink); font: inherit; letter-spacing: normal; }
 .race-editor-modal footer button,
 .race-editor-modal footer button.save { min-height: 42px; padding: 9px 16px; border: 1px solid var(--ink) !important; border-radius: 999px; background: transparent !important; background-color: transparent !important; background-image: none !important; box-shadow: none !important; color: var(--ink) !important; font-weight: 800; transition: background .15s ease, color .15s ease, border-color .15s ease; }
 .race-editor-modal footer button:hover { border-color: var(--ink) !important; background: rgba(24, 32, 25, .08) !important; color: var(--ink) !important; }
 .race-editor-modal footer button:disabled { opacity: .55; cursor: wait; }
 .race-editor-status { min-height: 18px; margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+
+.reset { font-size: 12px; font-weight: 800; }
+.reset:hover { color: var(--ink); border-color: var(--ink); }
 
 @media (max-width: 700px) {
   .analysis-page .analysis-embed-head {

@@ -1,5 +1,6 @@
 (() => {
   const streamlitUrl = "https://trail-race-lab.streamlit.app/?embed=true";
+  const externalUrl = "https://trail-race-lab.streamlit.app";
 
   function mountEmbeddedAnalysis() {
     const page = document.querySelector("section.analysis-page");
@@ -14,14 +15,13 @@
     const copy = document.createElement("div");
     copy.className = "analysis-embed-copy";
     copy.innerHTML = `
-      <span class="al-badge">TRAIL RACE LAB</span>
-      <h3>越野赛事数据实验室</h3>
-      <p class="al-desc">赛事数据与技术分析由 Trail Race Lab 提供，可直接在当前页面内操作。</p>
+      <h3>TRAIL RACE LAB</h3>
+      <p class="al-desc">赛事数据与技术分析由 Trail Race Lab 提供，可直接在当前页面内操作。首次打开 Streamlit 约需 30 秒至 1 分钟，请耐心等待。</p>
     `;
 
     const externalLink = document.createElement("a");
     externalLink.className = "al-open";
-    externalLink.href = streamlitUrl;
+    externalLink.href = externalUrl;
     externalLink.target = "_blank";
     externalLink.rel = "noopener noreferrer";
     externalLink.innerHTML = '独立打开 <span aria-hidden="true">↗</span>';

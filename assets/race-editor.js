@@ -22,6 +22,7 @@
   ];
   let edits = {};
   let ready = Promise.resolve();
+  let activeFilter = "全部";
 
   ready = fetch("./state.json", { cache: "no-store" })
     .then((response) => response.ok ? response.json() : {})
@@ -74,14 +75,29 @@
       const category = card.querySelector("small");
       setText(heading, edit.name);
       setText(top?.children[0], edit.role);
-      setText(top?.children[1], edit.type);
+      const isUtmb = edit.isUtmb === true || (edit.isUtmb == null && edit.type === "UTMB");
+      setText(top?.children[1], isUtmb ? "UTMB" : edit.type);
       setText(line, `${edit.date} · ${edit.location}`);
       setText(category, edit.category);
       card.classList.toggle("is-primary", String(edit.role || "").startsWith("首选"));
-      card.classList.toggle("is-utmb", edit.type === "UTMB");
+      card.classList.toggle("is-utmb", isUtmb);
       card.classList.toggle("race-not-selected", edit.result === "未中签");
       card.classList.toggle("race-confirmed", edit.result === "已中签");
       createStatusBadge(card, edit.result);
+    });
+  }
+
+  function applyRaceFilter() {
+    document.querySelectorAll(".race-card").forEach((card) => {
+      const id = card.dataset.raceId;
+      const edit = edits[id] || {};
+      const role = edit.role || card.querySelector(".card-top span")?.textContent || "";
+      const type = edit.isUtmb === true ? "UTMB" : (edit.type || card.querySelector(".card-top b")?.textContent || "");
+      const visible = activeFilter === "全部" ||
+        (activeFilter === "首选" && role.startsWith("首选")) ||
+        (activeFilter === "UTMB" && type === "UTMB") ||
+        (activeFilter === "全马" && type === "全马");
+      card.hidden = !visible;
     });
   }
 
@@ -201,6 +217,7 @@
     if (panel?.dataset.raceId) paintPanel(panel.dataset.raceId);
     panel?.querySelector(".race-edit-btn")?.remove();
     ensureCardControls();
+    applyRaceFilter();
   }
 
   function parseDateRange(value) {
@@ -288,6 +305,19 @@
     inputs.type = typeSelect;
     typeLabel.append(typeSelect);
     form.append(typeLabel);
+    const utmbLabel = document.createElement("label");
+    utmbLabel.className = "race-utmb-check";
+    const utmbCheck = document.createElement("input");
+    utmbCheck.type = "checkbox";
+    utmbCheck.checked = existing.isUtmb === true || (existing.isUtmb == null && base.type === "UTMB");
+    const utmbText = document.createElement("span");
+    utmbText.textContent = "UTMB 赛事";
+    utmbLabel.append(utmbCheck, utmbText);
+    const syncUtmbCheck = () => { utmbLabel.hidden = typeSelect.value !== "越野"; };
+    typeSelect.addEventListener("change", syncUtmbCheck);
+    syncUtmbCheck();
+    inputs.isUtmb = utmbCheck;
+    form.append(utmbLabel);
     const resultLabel = document.createElement("label");
     resultLabel.textContent = "报名结果";
     const resultSelect = document.createElement("select");
@@ -361,6 +391,7 @@
       const next = {};
       next.role = inputs.role.value;
       next.type = inputs.type.value;
+      next.isUtmb = inputs.type.value === "越野" && inputs.isUtmb.checked;
       next.result = inputs.result.value;
       if (inputs.dateFrom.value && inputs.dateTo.value) {
         if (inputs.dateTo.value < inputs.dateFrom.value) {
@@ -433,6 +464,17 @@
     attributeFilter: ["class"],
   });
   document.addEventListener("click", (event) => {
+    const filterButton = event.target instanceof Element && event.target.closest(".filters button");
+    if (filterButton && ["全部", "首选", "UTMB", "全马"].includes(filterButton.textContent.trim())) {
+      event.preventDefault();
+      event.stopPropagation();
+      activeFilter = filterButton.textContent.trim();
+      document.querySelectorAll(".filters button").forEach((button) => {
+        button.classList.toggle("active", button === filterButton);
+      });
+      applyRaceFilter();
+      return;
+    }
     const card = event.target instanceof Element && event.target.closest(".race-card");
     if (card) {
       if (card.classList.contains("race-custom")) {
