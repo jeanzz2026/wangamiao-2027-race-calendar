@@ -60,6 +60,15 @@ export async function backupLocalState(state) {
 export async function readLocalBackup() {
   return access("readonly", undefined, "before-cloud-download");
 }
+export async function writeEditorDraft(draft) {
+  await access("readwrite", draft, "takeaway-image-draft");
+}
+export async function readEditorDraft() {
+  return access("readonly", undefined, "takeaway-image-draft");
+}
+export async function clearEditorDraft() {
+  await access("readwrite", null, "takeaway-image-draft");
+}
 function stable(value) {
   if (Array.isArray(value)) return value.map(stable);
   if (value && typeof value === "object")

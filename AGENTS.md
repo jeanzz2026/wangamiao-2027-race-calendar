@@ -16,6 +16,7 @@
 - 源码、版本说明、锁文件和发布资源须在同一次提交中提交。
 - `state.json` 与 `itra_data.json` 是在线数据。代码发布不可用旧 public 快照覆盖它们；release 工具只发布 index、构建 assets 和版本清单。
 - Token、密钥、用户浏览器数据不可提交。不要将环境变量输出到日志。
+- 新图片独立存于 `uploads/takeaway/`，这是用户数据，代码发布不得清理或覆盖。运行 `npm test` 验证同步和图片链路；图片实现见 `docs/IMAGE_UPLOADS.md`。
 
 ## 合并与发布
 

@@ -1,4 +1,5 @@
 import { readCloudState, writeCloudState } from "./cloud-sync.js";
+import { prepareStateImages, clearPublishedDraft } from "./image-uploads.js";
 import { readLocalState, writeLocalState, markSynced } from "./local-state.js";
 // Recovered configuration, defaults and helpers. See docs/SOURCE_RECOVERY.md.
 export const Jy = "./paw.png",
@@ -78,12 +79,26 @@ export async function validateGitHubToken(y) {
   }
 }
 export async function saveCloudState(state, token, expected) {
-  const result = await writeCloudState(state, token, () => expected ?? Dc);
+  let prepared;
+  try {
+    prepared = await prepareStateImages(state, token);
+  } catch (error) {
+    return {
+      ok: false,
+      reason: error.message || "图片上传失败，草稿已保留在本机",
+    };
+  }
+  const result = await writeCloudState(
+    prepared.state,
+    token,
+    () => expected ?? Dc,
+  );
   if (result.ok) {
     if (result.sha) Dc = result.sha;
-    await markSynced(state);
+    await markSynced(prepared.state);
+    await clearPublishedDraft(prepared.state, prepared.uploads);
   }
-  return result;
+  return { ...result, uploads: result.ok ? prepared.uploads : {} };
 }
 export const Xm = "wamiao_state_v2",
   wf = "wamiao_gh_token";

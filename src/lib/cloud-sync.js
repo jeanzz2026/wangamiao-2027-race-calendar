@@ -1,6 +1,11 @@
 const endpoint =
   "https://api.github.com/repos/jeanzz2026/wangamiao-2027-race-calendar";
 let queue = Promise.resolve();
+export function enqueueCloudWrite(work) {
+  const task = queue.then(work);
+  queue = task.catch(() => {});
+  return task;
+}
 export async function request(url, token, options = {}) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 60000);
@@ -62,7 +67,7 @@ function base64(text) {
   return btoa(pieces.join(""));
 }
 export function writeCloudState(state, token, getExpectedSha) {
-  const task = queue.then(async () => {
+  return enqueueCloudWrite(async () => {
     try {
       const expected = getExpectedSha();
       const metadata = await request(
@@ -113,6 +118,4 @@ export function writeCloudState(state, token, getExpectedSha) {
       };
     }
   });
-  queue = task.catch(() => {});
-  return task;
 }

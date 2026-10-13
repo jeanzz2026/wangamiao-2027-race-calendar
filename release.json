@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.0",
   "date": "2026-10-13",
-  "description": "修复 Takeaway 纯图片保存、大文件 SHA 同步与跨设备缓存更新"
+  "description": "Takeaway 图片自动压缩并独立上传，评论保存链接，失败保留本机草稿"
 }

@@ -8,6 +8,13 @@ import {
   backupLocalState,
 } from "./lib/local-state.js";
 import { hasCommentContent } from "./lib/comments.js";
+import {
+  compressImage,
+  imageId,
+  imageDataUrl,
+  resolveUploadedImages,
+} from "./lib/image-uploads.js";
+import { writeEditorDraft, readEditorDraft } from "./lib/local-state.js";
 import * as jsxRuntime from "react/jsx-runtime";
 import {
   Jy,
@@ -297,6 +304,18 @@ export default function App() {
     raceEdits,
   };
   const [initialized, setInitialized] = React.useState(false);
+  const [imageBusy, setImageBusy] = React.useState(false);
+  const [imageMessage, setImageMessage] = React.useState("");
+  const imageOperation = React.useRef(false);
+  const editorDraftRef = React.useRef(Yt);
+  editorDraftRef.current = Yt;
+  const applyImageResults = async (result) => {
+    if (!result.ok || !Object.keys(result.uploads || {}).length) return;
+    const current = snapshotRef.current;
+    const resolved = resolveUploadedImages(current.takeaways, result.uploads);
+    $l((previous) => resolveUploadedImages(previous, result.uploads));
+    await saveLocalState({ ...current, takeaways: resolved });
+  };
   const applySnapshot = (state) => {
     lt({ ...defaultPlacements, ...state.placements });
     Ot(Array.isArray(state.trainings) ? state.trainings : []);
@@ -446,6 +465,7 @@ export default function App() {
           if (te.current) {
             gl("同步到云端…");
             const C = await saveCloudState(s, te.current);
+            await applyImageResults(C);
             if (C.conflict) syncBlocked.current = true;
             gl(
               C.ok
@@ -675,6 +695,7 @@ export default function App() {
         te.current,
       );
       if (v.ok) syncBlocked.current = false;
+      await applyImageResults(v);
       if (v.conflict) syncBlocked.current = true;
       (Pe(!1),
         gl(v.ok ? "已上传到云端 ✓" : `上传失败：${v.reason ?? "请重试"}`));
@@ -1031,22 +1052,79 @@ export default function App() {
           comments: _e(v.innerHTML),
         })));
     },
-    vn = (s) => {
+    vn = async (s) => {
       const v = s.target.files && s.target.files[0];
       if (((s.target.value = ""), !v)) return;
-      const C = new FileReader();
-      ((C.onload = () => {
-        const z = se.current;
-        z &&
-          (z.focus(),
-          document.execCommand("insertImage", !1, C.result),
-          Tt((O) => ({
-            ...O,
-            comments: _e(z.innerHTML),
-          })));
-      }),
-        C.readAsDataURL(v));
+      if (imageOperation.current) return;
+      const editor = se.current;
+      if (!editor) return;
+      imageOperation.current = true;
+      setImageBusy(true);
+      setImageMessage("正在压缩图片…");
+      try {
+        const compressed = await compressImage(v);
+        const id = await imageId(compressed.blob);
+        const preview = await imageDataUrl(compressed.blob);
+        if (se.current !== editor || !editor.isConnected) return;
+        editor.focus();
+        document.execCommand(
+          "insertHTML",
+          false,
+          `<img src="${preview}" data-attachment-id="${id}" alt="训练记录图片">`,
+        );
+        const draft = {
+          ...editorDraftRef.current,
+          comments: _e(editor.innerHTML),
+        };
+        Tt(draft);
+        await writeEditorDraft(draft);
+        setImageMessage(
+          `图片已压缩为 ${Math.ceil(compressed.blob.size / 1024)} KB；保存后独立上传，评论只存链接。公开仓库图片可被他人访问。`,
+        );
+      } catch (error) {
+        setImageMessage(error.message || "图片处理失败，请重试");
+      } finally {
+        imageOperation.current = false;
+        setImageBusy(false);
+      }
     };
+  React.useEffect(() => {
+    if (!za) {
+      setImageMessage("");
+      return;
+    }
+    let canceled = false;
+    (async () => {
+      try {
+        const draft = await readEditorDraft();
+        if (
+          canceled ||
+          !draft ||
+          draft.uid !== Yt.uid ||
+          draft.date !== Yt.date ||
+          draft.comments === Yt.comments
+        )
+          return;
+        if (window.confirm("发现这条记录未完成的图片草稿，是否恢复？")) {
+          Tt(draft);
+          if (se.current) se.current.innerHTML = hv(draft.comments || "");
+          setImageMessage("已恢复本机图片草稿，请保存后同步");
+        }
+      } catch {}
+    })();
+    return () => {
+      canceled = true;
+    };
+  }, [za]);
+  React.useEffect(() => {
+    if (!za || !Yt.comments?.includes("data-attachment-id")) return;
+    const timer = setTimeout(() => {
+      writeEditorDraft(Yt).catch(() =>
+        setImageMessage("图片草稿备份失败，请勿关闭页面"),
+      );
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [za, Yt]);
   (React.useEffect(() => {
     za && se.current && (se.current.innerHTML = hv(Yt.comments || ""));
   }, [za]),
@@ -1095,11 +1173,17 @@ export default function App() {
         }));
     },
     hi = () => {
+      if (imageOperation.current) return;
       var O;
       const s = Yt.uid || Ec(),
         v = !Yt.uid,
         C = (O = yt.find((at) => at.uid === s)) == null ? void 0 : O.date,
         z = Math.max(0, Math.min(100, Number(Yt.pct) || 0));
+      if (!Yt.uid && Yt.comments.includes("data-attachment-id")) {
+        writeEditorDraft({ ...Yt, uid: s }).catch(() =>
+          gl("新记录图片草稿备份失败，请勿关闭页面"),
+        );
+      }
       ($l((at) => {
         const mt = at[s];
         return {
@@ -3677,10 +3761,20 @@ export default function App() {
                               <input
                                 ref={ni}
                                 type={"file"}
-                                accept={"image/*"}
+                                accept={
+                                  "image/jpeg,image/png,image/webp,image/gif"
+                                }
                                 hidden={!0}
                                 onChange={vn}
                               />,
+                              imageMessage && (
+                                <span
+                                  role="status"
+                                  className="image-upload-status"
+                                >
+                                  {imageMessage}
+                                </span>
+                              ),
                               <span className={"rt-sep"} />,
                               <button
                                 type={"button"}
@@ -3698,6 +3792,28 @@ export default function App() {
                           </div>,
                           <div
                             className={"comments-rt"}
+                            onPaste={(event) => {
+                              const file = Array.from(
+                                event.clipboardData.files,
+                              ).find((file) => file.type.startsWith("image/"));
+                              if (file) {
+                                event.preventDefault();
+                                void vn({
+                                  target: { files: [file], value: "" },
+                                });
+                              }
+                            }}
+                            onDrop={(event) => {
+                              const file = Array.from(
+                                event.dataTransfer.files,
+                              ).find((file) => file.type.startsWith("image/"));
+                              if (file) {
+                                event.preventDefault();
+                                void vn({
+                                  target: { files: [file], value: "" },
+                                });
+                              }
+                            }}
                             ref={se}
                             contentEditable={!0}
                             suppressContentEditableWarning={!0}
@@ -3774,8 +3890,12 @@ export default function App() {
                   <div className={"actions"}>
                     {[
                       <button onClick={() => Ze(!1)}>{"取消"}</button>,
-                      <button className={"save"} onClick={hi}>
-                        {"保存"}
+                      <button
+                        className={"save"}
+                        onClick={hi}
+                        disabled={imageBusy}
+                      >
+                        {imageBusy ? "图片处理中…" : "保存"}
                       </button>,
                     ]}
                   </div>,
