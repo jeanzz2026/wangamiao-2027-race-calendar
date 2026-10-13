@@ -355,3 +355,11 @@
 .race-utmb-check[hidden] {
   display: none !important;
 }
+.image-upload-status {
+  flex-basis: 100%;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 6px 0;
+  color: var(--text-muted, #666);
+}
