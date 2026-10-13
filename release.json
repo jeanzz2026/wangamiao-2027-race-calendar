@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "date": "2026-10-13",
-  "description": "恢复可维护源码，建立源码与发布资源一致性检查及协作流程"
+  "description": "修复 Takeaway 纯图片保存、大文件 SHA 同步与跨设备缓存更新"
 }
