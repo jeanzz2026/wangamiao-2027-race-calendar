@@ -1,3 +1,5 @@
+import { readCloudState, writeCloudState } from "./cloud-sync.js";
+import { readLocalState, writeLocalState, markSynced } from "./local-state.js";
 // Recovered configuration, defaults and helpers. See docs/SOURCE_RECOVERY.md.
 export const Jy = "./paw.png",
   Xf = import.meta.env,
@@ -56,34 +58,10 @@ export async function Py(y, H = 8e3, M = {}) {
     clearTimeout(Q);
   }
 }
-export async function loadCloudState(y) {
-  const H = y
-    ? {
-        Authorization: `Bearer ${y}`,
-      }
-    : {};
-  for (const M of $y())
-    try {
-      const m = await Py(M, 8e3, M.includes("api.github.com") ? H : {});
-      if (!m.ok) continue;
-      const Q = await m.text();
-      let w = Q,
-        k;
-      if (M.includes("api.github.com")) {
-        const q = JSON.parse(Q);
-        if (!q.content) continue;
-        ((w = decodeUtf8Base64(q.content)), (k = q.sha));
-      }
-      const W = JSON.parse(w);
-      return (
-        (Dc = k ?? Dc),
-        {
-          state: W,
-          sha: k,
-        }
-      );
-    } catch {}
-  return null;
+export async function loadCloudState(token, knownSha) {
+  const result = await readCloudState(token, knownSha);
+  if (result?.sha) Dc = result.sha;
+  return result;
 }
 export async function validateGitHubToken(y) {
   const H = `https://api.github.com/repos/${ti}/${li}/contents/${ei}?ref=${kn}`;
@@ -99,82 +77,21 @@ export async function validateGitHubToken(y) {
     return !1;
   }
 }
-export async function saveCloudState(y, H, M = Dc) {
-  const m = encodeUtf8Base64(JSON.stringify(y, null, 2)),
-    Q = `https://api.github.com/repos/${ti}/${li}/contents/${ei}`,
-    w = (k) => {
-      const W = {
-        message: "Update race plan state (via app)",
-        content: m,
-        branch: kn,
-      };
-      return (
-        k && (W.sha = k),
-        fetch(Q, {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${H}`,
-            "Content-Type": "application/json",
-            Accept: "application/vnd.github+json",
-          },
-          body: JSON.stringify(W),
-        })
-      );
-    };
-  try {
-    let k = await w(M);
-    if (k.status === 409 && M) {
-      const q = await fetch(`${Q}?ref=${kn}`, {
-        headers: {
-          Authorization: `Bearer ${H}`,
-          Accept: "application/vnd.github+json",
-        },
-      });
-      if (q.ok) {
-        const T = await q.json();
-        T.sha && (k = await w(T.sha));
-      }
-    }
-    if (!k.ok)
-      return {
-        ok: !1,
-        reason:
-          k.status === 403
-            ? "无写入权限（请确认 PAT 对该仓库 Contents 有 Read and write 权限）"
-            : k.status === 401
-              ? "token 已失效，请重新连接"
-              : `HTTP ${k.status}`,
-      };
-    const W = await k.json();
-    return (
-      W.content && W.content.sha && (Dc = W.content.sha),
-      {
-        ok: !0,
-      }
-    );
-  } catch {
-    return {
-      ok: !1,
-      reason: "网络错误",
-    };
+export async function saveCloudState(state, token, expected) {
+  const result = await writeCloudState(state, token, () => expected ?? Dc);
+  if (result.ok) {
+    if (result.sha) Dc = result.sha;
+    await markSynced(state);
   }
+  return result;
 }
 export const Xm = "wamiao_state_v2",
   wf = "wamiao_gh_token";
-export function loadLocalState() {
-  try {
-    const y = localStorage.getItem(Xm);
-    return y ? JSON.parse(y) : null;
-  } catch {
-    return null;
-  }
+export async function loadLocalState() {
+  return readLocalState();
 }
-export function saveLocalState(y) {
-  try {
-    return (localStorage.setItem(Xm, JSON.stringify(y)), !0);
-  } catch {
-    return !1;
-  }
+export async function saveLocalState(state) {
+  return writeLocalState(state);
 }
 export function Vf(y) {
   if (typeof y == "string") {

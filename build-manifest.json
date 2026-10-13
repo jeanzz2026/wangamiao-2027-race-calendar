@@ -1,11 +1,11 @@
 {
-  "version": "1.1.0",
+  "version": "1.1.1",
   "date": "2026-10-13",
-  "description": "恢复可维护源码，建立源码与发布资源一致性检查及协作流程",
+  "description": "修复 Takeaway 纯图片保存、大文件 SHA 同步与跨设备缓存更新",
   "files": {
-    "index.html": "f53fa70951602255f5954c1b169887413bceefe86032338a120d6ed74921599c",
+    "index.html": "69a364d91c7492a6e218babcb7de3771d0f2ab5404c7e538ce2151561fa5f3b8",
     "assets/dog-float-Bzjz66p3.png": "7c352dd14bb927468ca79bfa2fb52519e9a74e38239ff55f1d64cccb8eefdade",
     "assets/index-BUNUBqx2.css": "95e61fed6d0677211300a9b056b12ca45954826c2a28018ef2064c6af3e331a1",
-    "assets/index-DkomaXSg.js": "e25efd6b9175c376d113d148b02afe13c56a23f6b474c82d17cae7ffcb1bf19f"
+    "assets/index-_zrdab61.js": "9d58d22f4410554698dad27bf28766b8cec36b1b6ee521c816c4d094143e5174"
   }
 }

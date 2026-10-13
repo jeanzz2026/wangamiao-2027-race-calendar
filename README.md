@@ -12,6 +12,8 @@
 - 两台电脑的更新与合并流程见 [协作说明](docs/COLLABORATION.md)，恢复局限见 [源码恢复说明](docs/SOURCE_RECOVERY.md)。
 - 仅提交源码和对应构建资源，不覆盖在线 state.json / itra_data.json，不提交 token。
 
+v1.1.1：完整本机状态使用 IndexedDB（兼容读取旧 localStorage）。干净缓存会自动检查云端；旧版未知缓存或未同步修改不会被自动覆盖。出现版本差异时，先核对并选择“从云端下载”或明确确认上传本机版本。云端 SHA 冲突不再自动覆盖其他设备。
+
 🌐 在线地址：https://jeanzz2026.github.io/wangamiao-2027-race-calendar/
 
 ---

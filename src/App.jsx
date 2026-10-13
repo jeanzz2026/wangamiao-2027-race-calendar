@@ -1,6 +1,13 @@
 // Recovered application component. See docs/SOURCE_RECOVERY.md.
 // Recovered from the published bundle. See docs/SOURCE_RECOVERY.md.
 import React from "react";
+import {
+  fingerprint,
+  isSynced,
+  markSynced,
+  backupLocalState,
+} from "./lib/local-state.js";
+import { hasCommentContent } from "./lib/comments.js";
 import * as jsxRuntime from "react/jsx-runtime";
 import {
   Jy,
@@ -276,6 +283,65 @@ export default function App() {
     [Xl, Gt] = React.useState(""),
     [La, nu] = React.useState(!1),
     Ga = React.useRef(null);
+  const syncBlocked = React.useRef(true);
+  const startup = React.useRef(false);
+  const refreshing = React.useRef(false);
+  const snapshotRef = React.useRef(null);
+  snapshotRef.current = {
+    placements: T,
+    trainings: yt,
+    library: ft,
+    defaultLibrary: ll,
+    theme: Ne,
+    takeaways: ce,
+    raceEdits,
+  };
+  const [initialized, setInitialized] = React.useState(false);
+  const applySnapshot = (state) => {
+    lt({ ...defaultPlacements, ...state.placements });
+    Ot(Array.isArray(state.trainings) ? state.trainings : []);
+    kt(Array.isArray(state.library) ? state.library : defaultTrainingLibrary);
+    jl(
+      Array.isArray(state.defaultLibrary)
+        ? state.defaultLibrary
+        : defaultTrainingLibrary,
+    );
+    if (state.theme === "misty" || state.theme === "dark") qa(state.theme);
+    $l(state.takeaways || Cc(state.trainings || []));
+    setRaceEdits(state.raceEdits || {});
+  };
+  const reconcileCloud = async (local) => {
+    const before = snapshotRef.current;
+    const cloud = await loadCloudState(te.current || undefined);
+    if (!cloud) {
+      gl("无法读取云端，本机数据已保留；恢复网络后重试");
+      return false;
+    }
+    if (
+      initialized &&
+      (await fingerprint(before)) !== (await fingerprint(snapshotRef.current))
+    ) {
+      syncBlocked.current = true;
+      gl("读取期间本机有新改动，已保留，未覆盖；请重新核对云端");
+      return false;
+    }
+    const same =
+      local && (await fingerprint(local)) === (await fingerprint(cloud.state));
+    if (!local || same || (await isSynced(local))) {
+      // A clean cache can advance; an unknown/dirty cache is never overwritten.
+      if (!same) applySnapshot(cloud.state);
+      await saveLocalState(cloud.state);
+      await markSynced(cloud.state);
+      syncBlocked.current = false;
+      gl("已读取云端最新数据 ✓");
+      return true;
+    }
+    syncBlocked.current = true;
+    gl(
+      "云端与本机不同：已保留本机未同步改动。请从云端下载核对，或明确上传本机版本",
+    );
+    return false;
+  };
   (React.useEffect(() => {
     if (!La) return;
     const s = (v) => {
@@ -301,50 +367,11 @@ export default function App() {
     }, []),
     React.useEffect(() => {
       (async () => {
-        const s = loadLocalState();
-        let v = !1;
-        if (
-          (s &&
-            (s.placements &&
-              lt({
-                ...defaultPlacements,
-                ...s.placements,
-              }),
-            Array.isArray(s.trainings) && Ot(s.trainings),
-            Array.isArray(s.library) && kt(s.library),
-            Array.isArray(s.defaultLibrary) && jl(s.defaultLibrary),
-            (s.theme === "misty" || s.theme === "dark") && qa(s.theme),
-            $l(
-              s.takeaways && typeof s.takeaways == "object"
-                ? s.takeaways
-                : Cc(Array.isArray(s.trainings) ? s.trainings : []),
-            ),
-            s.raceEdits && setRaceEdits(s.raceEdits),
-            (v = !0)),
-          !v)
-        ) {
-          const C = await loadCloudState();
-          if (C) {
-            const z = C.state;
-            (z.placements &&
-              lt({
-                ...defaultPlacements,
-                ...z.placements,
-              }),
-              Array.isArray(z.trainings) && Ot(z.trainings),
-              Array.isArray(z.library) && kt(z.library),
-              Array.isArray(z.defaultLibrary) && jl(z.defaultLibrary),
-              (z.theme === "misty" || z.theme === "dark") && qa(z.theme),
-              $l(
-                z.takeaways && typeof z.takeaways == "object"
-                  ? z.takeaways
-                  : Cc(Array.isArray(z.trainings) ? z.trainings : []),
-              ),
-              z.raceEdits && setRaceEdits(z.raceEdits),
-              saveLocalState(z),
-              (v = !0));
-          }
-        }
+        if (startup.current) return;
+        startup.current = true;
+        const s = await loadLocalState();
+        let v = Boolean(s);
+        if (s) applySnapshot(s);
         if (!v) {
           const C = rv();
           if (C)
@@ -377,16 +404,18 @@ export default function App() {
                   (at.theme === "misty" || at.theme === "dark") && qa(at.theme),
                   $l(Cc(at.trainings)),
                   setRaceEdits(at.raceEdits),
-                  saveLocalState(at),
+                  await saveLocalState(at),
                   (v = !0));
               }
             } catch {}
         }
         try {
           const C = localStorage.getItem(wf);
-          C && ((te.current = C), Ra(!0), il(!0), await loadCloudState(C));
+          C && ((te.current = C), Ra(!0), il(!0));
         } catch {}
+        await reconcileCloud(s);
         ((We.current = !0), (window.__wamiaoRaceStateReady = !0));
+        setInitialized(true);
       })();
     }, []));
   const $e = React.useRef(null);
@@ -404,16 +433,26 @@ export default function App() {
               takeaways: ce,
               raceEdits,
             },
-            v = saveLocalState(s);
+            v = await saveLocalState(s);
+          if (syncBlocked.current) {
+            gl(
+              v
+                ? "已保存本机；为保护双方数据，云端同步暂停。请先核对云端版本"
+                : "本机保存失败，请勿关闭页面",
+            );
+            return;
+          }
+          if (await isSynced(s)) return;
           if (te.current) {
             gl("同步到云端…");
             const C = await saveCloudState(s, te.current);
+            if (C.conflict) syncBlocked.current = true;
             gl(
               C.ok
                 ? v
                   ? "已保存并同步到云端 ✓"
                   : "已同步云端 ✓"
-                : `已存本机，但云端同步失败：${C.reason ?? "请重新连接"}`,
+                : `${v ? "已存本机" : "本机保存失败，请勿关闭页面"}，云端同步失败：${C.reason ?? "请重新连接"}`,
             );
           } else gl(v ? "已保存到本机 ✓" : "本机保存失败");
         }, 800)),
@@ -421,7 +460,49 @@ export default function App() {
           $e.current && window.clearTimeout($e.current);
         }
       );
-  }, [T, yt, ft, ll, Ne, ce, raceEdits]);
+  }, [T, yt, ft, ll, Ne, ce, raceEdits, initialized]);
+  React.useEffect(() => {
+    if (!initialized) return;
+    const refresh = async () => {
+      if (document.hidden || refreshing.current || za) return;
+      refreshing.current = true;
+      try {
+        const before = snapshotRef.current;
+        if (!(await isSynced(before))) return;
+        const cloud = await loadCloudState(te.current || undefined, Dc);
+        if (!cloud) return;
+        if (cloud.unchanged) {
+          syncBlocked.current = false;
+          return;
+        }
+        if (
+          (await fingerprint(before)) !==
+          (await fingerprint(snapshotRef.current))
+        ) {
+          syncBlocked.current = true;
+          gl("另一设备已更新，当前本机也有改动；已暂停自动同步，避免覆盖");
+          return;
+        }
+        if ((await fingerprint(before)) !== (await fingerprint(cloud.state))) {
+          applySnapshot(cloud.state);
+          await saveLocalState(cloud.state);
+          await markSynced(cloud.state);
+          syncBlocked.current = false;
+          gl("已更新另一设备的云端数据 ✓");
+        }
+      } finally {
+        refreshing.current = false;
+      }
+    };
+    window.addEventListener("focus", refresh);
+    document.addEventListener("visibilitychange", refresh);
+    const timer = setInterval(refresh, 60000);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("focus", refresh);
+      document.removeEventListener("visibilitychange", refresh);
+    };
+  }, [initialized, za]);
   const Qa = async () => {
       Ha("");
       const s = $n.trim();
@@ -446,7 +527,7 @@ export default function App() {
         Pl(!0),
         window.setTimeout(() => Pl(!1), 2600),
         gl("已连接 GitHub · 可编辑并同步 ✓"),
-        await loadCloudState(s));
+        await reconcileCloud(snapshotRef.current));
     },
     qc = () => {
       try {
@@ -568,6 +649,18 @@ export default function App() {
         oe(!0);
         return;
       }
+      if (syncBlocked.current) {
+        if (
+          !window.confirm(
+            "本机与云端版本不同。上传将用本机完整数据替换云端，可能覆盖其他设备改动。确定上传？建议先下载核对。",
+          )
+        )
+          return;
+        if (!(await loadCloudState(te.current))) {
+          gl("无法读取云端版本，上传已取消");
+          return;
+        }
+      }
       (Pe(!0), gl("上传到云端…"));
       const v = await saveCloudState(
         {
@@ -581,6 +674,8 @@ export default function App() {
         },
         te.current,
       );
+      if (v.ok) syncBlocked.current = false;
+      if (v.conflict) syncBlocked.current = true;
       (Pe(!1),
         gl(v.ok ? "已上传到云端 ✓" : `上传失败：${v.reason ?? "请重试"}`));
     },
@@ -588,6 +683,14 @@ export default function App() {
       var C, z;
       if (!window.confirm("从云端下载将用云端数据覆盖当前本机数据，确定继续？"))
         return;
+      const downloadStart = await fingerprint(snapshotRef.current);
+      if (
+        !(await isSynced(snapshotRef.current)) &&
+        !(await backupLocalState(snapshotRef.current))
+      ) {
+        gl("未能备份本机未同步数据，已取消下载，请勿关闭页面");
+        return;
+      }
       (Pe(!0), gl("从云端下载…"));
       const s = await loadCloudState(te.current || void 0);
       if (!s) {
@@ -595,6 +698,11 @@ export default function App() {
         return;
       }
       const v = s.state;
+      if (downloadStart !== (await fingerprint(snapshotRef.current))) {
+        Pe(false);
+        gl("下载期间本机有新改动，已取消覆盖；请重新下载核对");
+        return;
+      }
       (v.placements &&
         lt({
           ...defaultPlacements,
@@ -610,7 +718,9 @@ export default function App() {
             : Cc(Array.isArray(v.trainings) ? v.trainings : []),
         ),
         v.raceEdits && setRaceEdits(v.raceEdits),
-        saveLocalState(v),
+        await saveLocalState(v),
+        await markSynced(v),
+        (syncBlocked.current = false),
         Pe(!1),
         gl(
           `已从云端下载 ✓（库 ${((C = v.library) == null ? void 0 : C.length) ?? 0} / 计划 ${((z = v.trainings) == null ? void 0 : z.length) ?? 0}）`,
@@ -1007,11 +1117,8 @@ export default function App() {
             pct: z,
             comments: (() => {
               const Qt = Yt.comments.trim();
-              return Qt.replace(/<[^>]*>/g, "")
-                .replace(/&nbsp;/g, " ")
-                .trim()
-                ? _e(Qt)
-                : void 0;
+              const html = _e(Qt);
+              return hasCommentContent(html) ? html : void 0;
             })(),
             locked: Yt.locked || !1,
             garmin: mt == null ? void 0 : mt.garmin,
