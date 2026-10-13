@@ -2,6 +2,16 @@
 
 一个纯静态网页应用，用于管理王阿喵的 **2027 年比赛训练计划、基础训练库与打卡记录**，部署在 GitHub Pages。
 
+## 源码开发（v1.1.0）
+
+源码已从历史发布版恢复。运行 `npm ci`、`npm run dev` 开发，运行 `npm run release` 构建并更新根目录发布文件，运行 `npm run check:release` 验证源码与发布文件一致。
+
+- `src/App.jsx`：页面主体；`src/lib/application-support.js`：默认数据与同步辅助函数。
+- `src/race-editor.js`：赛事编辑；`src/analysis-embed.js`：Streamlit；`src/styles/`：样式。
+- 版本与变更见 `release.json`、[CHANGELOG.md](CHANGELOG.md)。
+- 两台电脑的更新与合并流程见 [协作说明](docs/COLLABORATION.md)，恢复局限见 [源码恢复说明](docs/SOURCE_RECOVERY.md)。
+- 仅提交源码和对应构建资源，不覆盖在线 state.json / itra_data.json，不提交 token。
+
 🌐 在线地址：https://jeanzz2026.github.io/wangamiao-2027-race-calendar/
 
 ---
