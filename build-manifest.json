@@ -3,9 +3,9 @@
   "date": "2026-10-13",
   "description": "Takeaway 图片自动压缩并独立上传，评论保存链接，失败保留本机草稿",
   "files": {
-    "index.html": "7f75eb2881b19c87ee1a30a033b14482fd8267ae3430103b096a838bd6619ee0",
+    "index.html": "ced560a6a4852ffab5172b5a9a5d9928bc7c136384c62630d4fa644aae09034c",
     "assets/dog-float-Bzjz66p3.png": "7c352dd14bb927468ca79bfa2fb52519e9a74e38239ff55f1d64cccb8eefdade",
-    "assets/index-De3XtwCq.js": "a949eebe98a0e15bf07a693723f85b6d1355536425786588a43c410f85ec298f",
-    "assets/index-Dq2Y3C_i.css": "5028b5e38d8b7c6ca7a6909410ab1c63b6d08ea9d62644ea4d80ec871588a098"
+    "assets/index-Dq2Y3C_i.css": "5028b5e38d8b7c6ca7a6909410ab1c63b6d08ea9d62644ea4d80ec871588a098",
+    "assets/index-DvI1gMlc.js": "390ec8f5acade74afd2cb53f67917c3604e3746373a25417c4797523b9d4f1bd"
   }
 }
