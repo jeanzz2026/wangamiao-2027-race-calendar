@@ -3,8 +3,8 @@ import { readEditorDraft, clearEditorDraft } from "./local-state.js";
 
 const API =
   "https://api.github.com/repos/jeanzz2026/wangamiao-2027-race-calendar";
-const RAW =
-  "https://raw.githubusercontent.com/jeanzz2026/wangamiao-2027-race-calendar";
+// 图片走 GitHub Pages 同源地址：不写死 commit（抗 squash 合并），且对国内访问更稳
+const MEDIA_BASE = "https://jeanzz2026.github.io/wangamiao-2027-race-calendar";
 export const MAX_IMAGE_BYTES = 1024 * 1024;
 const inFlight = new Map();
 const uploaded = new Map();
@@ -65,17 +65,22 @@ async function gitBlobSha(bytes) {
   content.set(bytes, header.length);
   return hex(await crypto.subtle.digest("SHA-1", content));
 }
-async function verifyImage(url, id) {
+// 通过 GitHub API 的 blob 接口按内容哈希校验（实时、不依赖 Pages 构建延迟，且 api.github.com 对国内更稳）
+async function verifyImage(id, expectedBlob, token) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 60000);
   try {
-    const response = await fetch(url, {
+    const response = await fetch(`${API}/git/blobs/${expectedBlob}`, {
       signal: controller.signal,
       cache: "no-store",
+      headers: {
+        Accept: "application/vnd.github.raw+json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
     });
     if (!response.ok)
       throw new Error(`图片读取验证失败 HTTP ${response.status}`);
-    const bytes = await response.arrayBuffer();
+    const bytes = new Uint8Array(await response.arrayBuffer());
     if (
       bytes.byteLength > MAX_IMAGE_BYTES ||
       hex(await crypto.subtle.digest("SHA-256", bytes)) !== id
@@ -97,13 +102,9 @@ export async function uploadImage(blob, token) {
     const bytes = new Uint8Array(await blob.arrayBuffer());
     const expectedBlob = await gitBlobSha(bytes);
     const metadata = await request(`${API}/contents/${path}?ref=main`, token);
-    let commit;
     if (metadata.ok) {
       if (JSON.parse(metadata.text).sha !== expectedBlob)
         throw new Error("同名图片内容不一致，未覆盖仓库文件");
-      const head = await request(`${API}/git/ref/heads/main`, token);
-      if (!head.ok) throw new Error(`图片版本读取失败 HTTP ${head.status}`);
-      commit = JSON.parse(head.text).object?.sha;
     } else if (metadata.status === 404) {
       const result = await request(`${API}/contents/${path}`, token, {
         method: "PUT",
@@ -123,11 +124,9 @@ export async function uploadImage(blob, token) {
       const info = JSON.parse(result.text);
       if (info.content?.sha !== expectedBlob)
         throw new Error("仓库图片保存校验失败");
-      commit = info.commit?.sha;
     } else throw new Error(`图片查询失败 HTTP ${metadata.status}`);
-    if (!/^[a-f0-9]{40}$/.test(commit || "")) throw new Error("图片版本无效");
-    const url = `${RAW}/${commit}/${path}`;
-    await verifyImage(url, id);
+    const url = `${MEDIA_BASE}/${path}`;
+    await verifyImage(id, expectedBlob, token);
     uploaded.set(id, url);
     return { id, url };
   });
