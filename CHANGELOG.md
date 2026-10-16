@@ -1,5 +1,13 @@
 # 更新记录
 
+## 1.2.1 — 2026-10-16
+
+- 修复 Takeaway 图片外链：此前图片 URL 写死 `raw.githubusercontent.com/<commit-sha>/uploads/...`，squash 合并后该 commit 不再是 main 祖先导致 404，且该域名国内常被墙。
+- 改为 GitHub Pages 同源地址 `https://jeanzz2026.github.io/wangamiao-2027-race-calendar/uploads/takeaway/<id>.jpg`（抗 squash 合并、国内访问更稳）；上传校验改按 blob 内容哈希走 `api.github.com`（实时、不依赖 Pages 构建延迟）。
+- 重建 index.html / assets / build-manifest，清理 5 个旧哈希产物，保留静态资源 embed-analysis.* / race-editor.js / index-_zrdab61.js；未改动 state.json / itra_data.json / uploads/。
+- 说明：合并前 CI 的 `npm test` 步骤即已存在失败（与本次改动无关），属既有问题，另行处理。
+
+
 ## 1.2.0 — 2026-10-13
 
 - 新增图片（文件选择、截图粘贴或文件拖入）在浏览器缩小到最长边 1600px，压缩为不超过 1 MB 的 JPEG。
