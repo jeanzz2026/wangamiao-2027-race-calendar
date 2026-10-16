@@ -1,7 +1,7 @@
 {
-  "version": "1.2.0",
-  "date": "2026-10-13",
-  "description": "Takeaway 图片自动压缩并独立上传，评论保存链接，失败保留本机草稿",
+  "version": "1.2.1",
+  "date": "2026-10-16",
+  "description": "Takeaway 图片外链改用 GitHub Pages 同源地址（抗 squash 合并、国内更稳）",
   "files": {
     "index.html": "ced560a6a4852ffab5172b5a9a5d9928bc7c136384c62630d4fa644aae09034c",
     "assets/dog-float-Bzjz66p3.png": "7c352dd14bb927468ca79bfa2fb52519e9a74e38239ff55f1d64cccb8eefdade",
