@@ -1,11 +1,11 @@
 {
   "version": "1.2.1",
   "date": "2026-10-16",
-  "description": "Takeaway 图片外链改用 GitHub Pages 同源地址（抗 squash 合并、国内更稳）",
+  "description": "Takeaway 图片外链改用 GitHub Pages 同源地址（抗 squash 合并、国内更稳），上传校验改按 blob 哈希走 api.github.com",
   "files": {
-    "index.html": "ced560a6a4852ffab5172b5a9a5d9928bc7c136384c62630d4fa644aae09034c",
+    "index.html": "9986dce97ec0d708a6d1980b5d1a118c9e93f19a10667b71335fd241db282828",
     "assets/dog-float-Bzjz66p3.png": "7c352dd14bb927468ca79bfa2fb52519e9a74e38239ff55f1d64cccb8eefdade",
     "assets/index-Dq2Y3C_i.css": "5028b5e38d8b7c6ca7a6909410ab1c63b6d08ea9d62644ea4d80ec871588a098",
-    "assets/index-DvI1gMlc.js": "390ec8f5acade74afd2cb53f67917c3604e3746373a25417c4797523b9d4f1bd"
+    "assets/index-ddOvrOb3.js": "c8bf67b0e825192a2e70bac4cd07dfd7527dc0cb18a56f99435d7c17f5789a87"
   }
 }
