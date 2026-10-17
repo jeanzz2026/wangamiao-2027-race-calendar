@@ -1,4 +1,4 @@
-import test from "node:test";
+import test, { afterEach } from "node:test";
 import assert from "node:assert/strict";
 import {
   uploadImage,
@@ -6,6 +6,13 @@ import {
   imageDataUrl,
   MAX_IMAGE_BYTES,
 } from "../src/lib/image-uploads.js";
+const originalFetch = globalThis.fetch;
+afterEach(() => {
+  globalThis.fetch = originalFetch;
+});
+const API =
+  "https://api.github.com/repos/jeanzz2026/wangamiao-2027-race-calendar";
+const MEDIA_BASE = "https://jeanzz2026.github.io/wangamiao-2027-race-calendar";
 async function gitSha(blob) {
   const bytes = new Uint8Array(await blob.arrayBuffer());
   const header = new TextEncoder().encode(`blob ${bytes.length}\0`);
@@ -18,26 +25,41 @@ const make = (n) =>
   new Blob([new Uint8Array([255, 216, 255, n, 255, 217])], {
     type: "image/jpeg",
   });
-test("image is stored independently and immutable raw URL is verified", async () => {
+test("image is stored independently, verified by blob SHA and returns a Pages URL", async () => {
   const blob = make(1),
     sha = await gitSha(blob),
     id = await imageId(blob);
-  let put;
+  let put, verification;
   globalThis.fetch = async (url, options = {}) => {
-    if (String(url).includes("raw.githubusercontent.com"))
+    if (String(url) === `${API}/git/blobs/${sha}`) {
+      verification = options;
       return new Response(await blob.arrayBuffer());
-    if (options.method === "PUT") {
+    }
+    if (
+      String(url) === `${API}/contents/uploads/takeaway/${id}.jpg` &&
+      options.method === "PUT"
+    ) {
       put = JSON.parse(options.body);
       return new Response(
         JSON.stringify({ content: { sha }, commit: { sha: "a".repeat(40) } }),
       );
     }
+    assert.equal(
+      String(url),
+      `${API}/contents/uploads/takeaway/${id}.jpg?ref=main`,
+    );
     return new Response("{}", { status: 404 });
   };
   const result = await uploadImage(blob, "fake");
   assert.equal(result.id, id);
-  assert.match(result.url, new RegExp(`/a{40}/uploads/takeaway/${id}\\.jpg$`));
-  assert.equal(Buffer.from(put.content, "base64").length, blob.size);
+  assert.equal(result.url, `${MEDIA_BASE}/uploads/takeaway/${id}.jpg`);
+  assert.equal(verification.headers.Accept, "application/vnd.github.raw+json");
+  assert.equal(verification.headers.Authorization, "Bearer fake");
+  assert.equal(verification.cache, "no-store");
+  assert.deepEqual(
+    Buffer.from(put.content, "base64"),
+    Buffer.from(await blob.arrayBuffer()),
+  );
   assert.equal(put.branch, "main");
 });
 test("concurrent same image requests deduplicate to one PUT", async () => {
@@ -45,7 +67,7 @@ test("concurrent same image requests deduplicate to one PUT", async () => {
     sha = await gitSha(blob);
   let puts = 0;
   globalThis.fetch = async (url, options = {}) => {
-    if (String(url).includes("raw.githubusercontent.com"))
+    if (String(url) === `${API}/git/blobs/${sha}`)
       return new Response(await blob.arrayBuffer());
     if (options.method === "PUT") {
       puts++;
@@ -60,6 +82,10 @@ test("concurrent same image requests deduplicate to one PUT", async () => {
     uploadImage(blob, "fake"),
   ]);
   assert.equal(puts, 1);
+  assert.equal(
+    results[0].url,
+    `${MEDIA_BASE}/uploads/takeaway/${await imageId(blob)}.jpg`,
+  );
   assert.equal(results[0].url, results[1].url);
 });
 test("existing matching file is reused without overwriting", async () => {
@@ -67,18 +93,19 @@ test("existing matching file is reused without overwriting", async () => {
     sha = await gitSha(blob);
   let puts = 0;
   globalThis.fetch = async (url, options = {}) => {
-    if (String(url).includes("raw.githubusercontent.com"))
+    if (String(url) === `${API}/git/blobs/${sha}`)
       return new Response(await blob.arrayBuffer());
     if (options.method === "PUT") puts++;
-    return new Response(
-      JSON.stringify(
-        String(url).includes("/git/ref/")
-          ? { object: { sha: "c".repeat(40) } }
-          : { sha },
-      ),
+    assert.equal(
+      String(url),
+      `${API}/contents/uploads/takeaway/${await imageId(blob)}.jpg?ref=main`,
     );
+    return new Response(JSON.stringify({ sha }));
   };
-  assert.match((await uploadImage(blob, "fake")).url, /c{40}/);
+  assert.equal(
+    (await uploadImage(blob, "fake")).url,
+    `${MEDIA_BASE}/uploads/takeaway/${await imageId(blob)}.jpg`,
+  );
   assert.equal(puts, 0);
 });
 test("403 is an upload failure rather than a false success", async () => {
@@ -90,7 +117,7 @@ test("mismatched downloaded bytes prevent publishing a link", async () => {
   const blob = make(5),
     sha = await gitSha(blob);
   globalThis.fetch = async (url, options = {}) => {
-    if (String(url).includes("raw.githubusercontent.com"))
+    if (String(url) === `${API}/git/blobs/${sha}`)
       return new Response("wrong bytes");
     return options.method === "PUT"
       ? new Response(
@@ -114,4 +141,35 @@ test("token, file size and MIME are validated before writing", async () => {
     /JPEG/,
   );
   assert.match(await imageDataUrl(make(7)), /^data:image\/jpeg;base64,/);
+});
+
+test("blob verification HTTP failure publishes no link and permits retry", async () => {
+  const blob = make(8),
+    sha = await gitSha(blob);
+  let reads = 0;
+  globalThis.fetch = async (url, options = {}) => {
+    assert.notEqual(options.method, "PUT");
+    if (String(url) === `${API}/git/blobs/${sha}`) {
+      reads++;
+      return reads === 1
+        ? new Response("unavailable", { status: 503 })
+        : new Response(await blob.arrayBuffer());
+    }
+    assert.equal(
+      String(url),
+      `${API}/contents/uploads/takeaway/${await imageId(blob)}.jpg?ref=main`,
+    );
+    return new Response(JSON.stringify({ sha }));
+  };
+  await assert.rejects(uploadImage(blob, "fake"), /读取验证失败 HTTP 503/);
+  const result = await uploadImage(blob, "fake");
+  assert.equal(
+    result.url,
+    `${MEDIA_BASE}/uploads/takeaway/${await imageId(blob)}.jpg`,
+  );
+  assert.equal(
+    reads,
+    2,
+    "failed verification must not cache a successful upload",
+  );
 });
