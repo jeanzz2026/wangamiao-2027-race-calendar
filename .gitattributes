@@ -1,0 +1,7 @@
+# 强制所有文本文件以 LF 存储与检出，保证 Windows/Linux 构建产物可复现，
+# 避免 check:release（重新构建后逐字节比对）因行尾不同在 CI(Linux) 失败。
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.svg text eol=lf
